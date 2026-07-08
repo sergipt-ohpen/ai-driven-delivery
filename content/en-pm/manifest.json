@@ -1,0 +1,79 @@
+{
+  "lang": "en",
+  "title": "AI for Product People — PO/PM Edition",
+  "brand": "🧭 AI for Product People",
+  "subtitle": "A practical guide for POs & PMs, based on AI4Devs 2026/06",
+  "ui": { "pending": "pending", "videoTip": "Video not included", "theme": "Toggle theme" },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        { "type": "page", "label": "🧭 How to Use This Guide", "file": "pm-00-how-to-use-this-guide.md" }
+      ]
+    },
+    {
+      "title": "Why AI changes your job",
+      "items": [
+        { "type": "page", "label": "🚀 What AI Actually Does in Software Delivery Today", "file": "pm-01-ai-in-software-delivery-today.md" },
+        { "type": "page", "label": "🧑‍🚀 The AI-Augmented Team (and Where You Fit)", "file": "pm-02-the-ai-augmented-team.md" },
+        { "type": "page", "label": "🔄 AI Across the Delivery Lifecycle", "file": "pm-03-ai-across-the-delivery-lifecycle.md" }
+      ]
+    },
+    {
+      "title": "Foundations, no jargon",
+      "items": [
+        { "type": "page", "label": "🧠 How LLMs Work — Just Enough to Be Effective", "file": "pm-04-how-llms-work.md" },
+        { "type": "page", "label": "🗺️ The AI Assistant Landscape in 2026", "file": "pm-05-the-assistant-landscape.md" }
+      ]
+    },
+    {
+      "title": "The 3 pillars, applied to product work",
+      "items": [
+        { "type": "page", "label": "🗒️ The 3-Pillar Mental Model", "file": "pm-06-the-3-pillar-mental-model.md" },
+        { "type": "page", "label": "🛠️ Pillar 1 — Picking the Right Tool", "file": "pm-07-pillar-1-the-tool.md" },
+        { "type": "page", "label": "📂 Pillar 2 — Context Is Everything", "file": "pm-08-pillar-2-context.md" },
+        { "type": "page", "label": "💬 Pillar 3 — Asking Well: Prompts That Work", "file": "pm-09-pillar-3-prompts.md" }
+      ]
+    },
+    {
+      "title": "Specs: the new shared language",
+      "items": [
+        { "type": "page", "label": "📝 Spec-Driven Development — Why POs Should Care", "file": "pm-10-sdd-for-product-people.md" },
+        { "type": "page", "label": "📄 What a Spec Looks Like (and What You Contribute)", "file": "pm-11-what-a-spec-looks-like.md" }
+      ]
+    },
+    {
+      "title": "Working with Claude day-to-day",
+      "items": [
+        { "type": "page", "label": "▶️ Getting Started with Claude", "file": "pm-12-getting-started-with-claude.md" },
+        { "type": "page", "label": "🤖 What a Modern AI Assistant Can Actually Do", "file": "pm-13-what-an-assistant-can-do.md" },
+        { "type": "page", "label": "🧭 Explore, Plan, Execute: A Method That Works", "file": "pm-14-explore-plan-execute.md" },
+        { "type": "page", "label": "💸 Costs, Governance & When to Use What", "file": "pm-15-costs-and-governance.md" }
+      ]
+    },
+    {
+      "title": "Planning with AI (your home turf)",
+      "items": [
+        { "type": "page", "label": "🧩 Planning Is Changing: New Paradigms", "file": "pm-16-planning-new-paradigms.md" },
+        { "type": "page", "label": "📋 Anatomy of an AI-Ready Backlog", "file": "pm-17-ai-ready-backlog.md" },
+        { "type": "page", "label": "⏱️ AI-Assisted Estimation", "file": "pm-18-ai-assisted-estimation.md" },
+        { "type": "page", "label": "🧰 PM Tools + AI in 2026", "file": "pm-19-pm-tools-plus-ai.md" },
+        { "type": "page", "label": "♻️ Continuous Agile Planning", "file": "pm-20-continuous-planning.md" }
+      ]
+    },
+    {
+      "title": "Documentation & shared knowledge",
+      "items": [
+        { "type": "page", "label": "🕳️ The Documentation Deficit (and How AI Fixes It)", "file": "pm-21-documentation-deficit.md" },
+        { "type": "page", "label": "🏛️ Architecture Decisions, Explained for Non-Engineers", "file": "pm-22-architecture-decisions.md" },
+        { "type": "page", "label": "🤝 Docs That Humans and AI Can Both Use", "file": "pm-23-docs-for-humans-and-ai.md" }
+      ]
+    },
+    {
+      "title": "Your playbook",
+      "items": [
+        { "type": "page", "label": "🎯 10 Things to Try with Claude This Week", "file": "pm-24-playbook.md" }
+      ]
+    }
+  ]
+}

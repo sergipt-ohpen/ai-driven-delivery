@@ -1,0 +1,289 @@
+{
+  "lang": "es",
+  "title": "AI4Devs 2026/06 Seniors — Curso",
+  "brand": "🎓 AI4Devs 2026/06 Seniors",
+  "subtitle": "Documentación del curso",
+  "ui": {
+    "pending": "pendiente",
+    "videoTip": "Vídeo no incluido en este paquete",
+    "theme": "Cambiar tema"
+  },
+  "sections": [
+    {
+      "title": "👋 Bienvenida y expectativas — 29 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "👋 Bienvenida y expectativas — 29 min",
+          "file": "01-bienvenida-y-expectativas-29-min.md"
+        },
+        {
+          "type": "page",
+          "label": "💬 Expectativas — 9 min",
+          "file": "02-expectativas-9-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🎥 Presentación del programa 🤖 — 6 min",
+          "file": "03-presentacion-del-programa-6-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🎥 Consejos de nuestros alumnos 🤖 — 9 min",
+          "file": "04-consejos-de-nuestros-alumnos-9-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🚦 Sistema de Emojis — 1 min",
+          "file": "05-sistema-de-emojis-1-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🗓️ Agenda — 3 min",
+          "file": "06-agenda-3-min.md"
+        },
+        {
+          "type": "page",
+          "label": "⚒️ Enlaces útiles y soporte — 1 min",
+          "file": "07-enlaces-utiles-y-soporte-1-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📜 Política de Gestión de Repositorios",
+          "file": "08-politica-de-gestion-de-repositorios.md"
+        }
+      ]
+    },
+    {
+      "title": "Pre-curso: Introducción a la IA en Desarrollo de Software — 102 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "🎥 Papel actual de la IA en desarrollo de software 🔴 — 12 min",
+          "file": "09-papel-actual-de-la-ia-en-desarrollo-de-software-12-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🎥 El futuro del desarrollador: aumentado por IA 🔴 — 13 min",
+          "file": "10-el-futuro-del-desarrollador-aumentado-por-ia-13-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🎥 El ecosistema de asistentes en 2026 🔴 — 23 min",
+          "file": "11-el-ecosistema-de-asistentes-en-2026-23-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🎥 Impacto de la IA en el SDLC 🔴 — 18 min",
+          "file": "12-impacto-de-la-ia-en-el-sdlc-18-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🎥 Fundamentos: de Machine Learning a LLMs 🟢 — 19 min",
+          "file": "13-fundamentos-de-machine-learning-a-llms-19-min.md"
+        },
+        {
+          "type": "page",
+          "label": "🤖 Git con IA: lo que cambió en tu workflow 🔴 — 17 min",
+          "file": "14-git-con-ia-lo-que-cambio-en-tu-workflow-17-min.md"
+        }
+      ]
+    },
+    {
+      "title": "Módulo de bienvenida — 2 min",
+      "items": [
+        {
+          "type": "video",
+          "label": "📼 Grabación de sesión"
+        }
+      ]
+    },
+    {
+      "title": "Módulo 1. Los 3 pilares del uso efectivo de copilotos IA — 51 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "🗒️ El modelo mental de los 3 pilares 🔴 — 11 min",
+          "file": "15-el-modelo-mental-de-los-3-pilares-11-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Pilar 1 — La Herramienta 🔴 — 18 min",
+          "file": "16-pilar-1-la-herramienta-18-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Pilar 2 — El Contexto 🔴 — 17 min",
+          "file": "17-pilar-2-el-contexto-17-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Pilar 3 — El Prompt + Integración 🔴 — 21 min",
+          "file": "18-pilar-3-el-prompt-integracion-21-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📚 Recursos adicionales 🟢",
+          "file": "19-recursos-adicionales.md"
+        },
+        {
+          "type": "page",
+          "label": "✍️ ¿Qué te gustaría tratar en la sesión 1? 🔴",
+          "file": "20-que-te-gustaria-tratar-en-la-sesion-1.md"
+        },
+        {
+          "type": "video",
+          "label": "📼 Grabación de sesión y material 🟢"
+        }
+      ]
+    },
+    {
+      "title": "Módulo 2. Spec-Driven Development (SDD) — 68 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "✍️ Ejercicio previo: Instalar SDD en un proyecto limpio 🔴",
+          "file": "21-ejercicio-previo-instalar-sdd-en-un-proyecto-limpio.md"
+        },
+        {
+          "type": "page",
+          "label": "📝 Qué es Spec-Driven Development 🔴 — 15 min",
+          "file": "22-que-es-spec-driven-development-15-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 El ecosistema SDD en 2026 🔴 — 15 min",
+          "file": "23-el-ecosistema-sdd-en-2026-15-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Anatomía de OpenSpec 🔴 — 16 min",
+          "file": "24-anatomia-de-openspec-16-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Cheat-sheet OpenSpec 🔴 — 6 min",
+          "file": "25-cheat-sheet-openspec-6-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📚 Recursos adicionales 🟢",
+          "file": "26-recursos-adicionales.md"
+        },
+        {
+          "type": "video",
+          "label": "📼 Grabación de sesión y material 🟢"
+        }
+      ]
+    },
+    {
+      "title": "Módulo 3. Sistema operativo: Copilotos IA — 84 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "✍️ Ejercicio previo: Auditoría de contexto y creación de skill 🔴",
+          "file": "27-ejercicio-previo-auditoria-de-contexto-y-creacion-de-skill.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 El copiloto en serio: instalación, planes y primera sesión real 🔴 — 14 min",
+          "file": "28-el-copiloto-en-serio-instalacion-planes-y-primera-sesion-rea.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Anatomía de un copiloto moderno 🔴 — 28 min",
+          "file": "29-anatomia-de-un-copiloto-moderno-28-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Cómo se trabaja: Explore-Plan-Execute y copilotos SDD-aware 🔴 — 22 min",
+          "file": "30-como-se-trabaja-explore-plan-execute-y-copilotos-sdd-aware-2.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Decisiones de senior: cuándo qué, costes reales, gobernanza 🔴 — 20 min",
+          "file": "31-decisiones-de-senior-cuando-que-costes-reales-gobernanza-20-.md"
+        },
+        {
+          "type": "page",
+          "label": "📚 Recursos adicionales 🟢",
+          "file": "32-recursos-adicionales.md"
+        },
+        {
+          "type": "video",
+          "label": "📼 Grabación de sesión y material"
+        }
+      ]
+    },
+    {
+      "title": "Módulo 4. Planificación efectiva con IA — 65 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "✍️ Ejercicio previo: Inventario del backlog 🔴",
+          "file": "33-ejercicio-previo-inventario-del-backlog.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 La planificación cambia: nuevos paradigmas 🔴 — 11 min",
+          "file": "34-la-planificacion-cambia-nuevos-paradigmas-11-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Anatomía de un backlog AI-ready 🔴 — 16 min",
+          "file": "35-anatomia-de-un-backlog-ai-ready-16-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Estimación asistida por IA 🔴 — 13 min",
+          "file": "36-estimacion-asistida-por-ia-13-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 PM tools + IA en 2026 🔴 — 13 min",
+          "file": "37-pm-tools-ia-en-2026-13-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Planificación ágil continua 🔴 — 12 min",
+          "file": "38-planificacion-agil-continua-12-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📚 Recursos adicionales 🟢",
+          "file": "39-recursos-adicionales.md"
+        }
+      ]
+    },
+    {
+      "title": "Módulo 5. Documentación efectiva con IA — 138 min",
+      "items": [
+        {
+          "type": "page",
+          "label": "📄 El déficit documental en la era IA 🔴 — 10 min",
+          "file": "40-el-deficit-documental-en-la-era-ia-10-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Arquitectura documentada: ADRs + diagramas C4 con IA 🔴 — 14 min",
+          "file": "41-arquitectura-documentada-adrs-diagramas-c4-con-ia-14-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Documentación de API y código 🔴 — 16 min",
+          "file": "42-documentacion-de-api-y-codigo-16-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📄 Testing de documentación en CI y docs para LLMs 🔴 — 13 min",
+          "file": "43-testing-de-documentacion-en-ci-y-docs-para-llms-13-min.md"
+        },
+        {
+          "type": "page",
+          "label": "📚 Recursos adicionales 🟢",
+          "file": "44-recursos-adicionales.md"
+        }
+      ]
+    }
+  ]
+}
