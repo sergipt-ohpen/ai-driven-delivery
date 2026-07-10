@@ -32,6 +32,14 @@ Most people use AI by describing their product from memory and hoping. The answe
 
 This workflow removes the guessing. When the real project is open in front of Claude, "how does our login work?" or "what would this change touch?" get answered from **your** code and **your** docs. When Jira and Confluence are connected, a refined story doesn't get copy-pasted by hand — Claude reads the ticket and updates it in place. Your job shifts from *typing things up* to *deciding and directing*.
 
+## It has a name: AI-driven Delivery
+
+Everything in this guide is one half of something bigger: **AI-driven Delivery**, the whole path from a raw idea to shipped software, grounded in the real project at every step instead of guesswork.
+
+Your half starts before any spec exists — turning a rough idea into a refined backlog item, a clear ticket, a PRD, an estimate a stakeholder can trust. Once that's solid, it hands off into **Spec-Driven Development**, the practice your engineering team uses to turn a written spec into a contract an AI copilot can implement against. Same grounding, same "project as source of truth" principle — just the other half of the pipeline.
+
+You don't need to run SDD yourself to benefit from it: the clearer your ticket, the more literally an AI can build it. That's the whole point of AI-driven Delivery — product and engineering, both working from the same real project, handing off clean instead of re-explaining from memory.
+
 ## The five steps
 
 1. **The project is the source of truth.** Your team's repository — the code and its docs — lives on GitHub.
