@@ -32,6 +32,12 @@
       "items": [
         { "type": "page", "label": "🎬 Copy-Paste Playbook", "file": "pm-07-playbook.md" }
       ]
+    },
+    {
+      "title": "Going further",
+      "items": [
+        { "type": "page", "label": "⚙️ Configure Your Own Claude", "file": "pm-08-your-claude-config.md" }
+      ]
     }
   ]
 }
