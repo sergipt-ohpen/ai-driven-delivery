@@ -139,6 +139,8 @@ article pre:has(code.language-diagram)::before{content:"🗺️ How it fits toge
 article pre:has(code.language-diagram) code{display:inline-block;font-size:12.5px;line-height:1.55;}
 article code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em;}
 article pre code{background:none;padding:0;}
+.diagram-wrap{margin:1.4em 0;overflow-x:auto;}
+.diagram-wrap svg{display:block;width:100%;height:auto;min-width:560px;}
 article blockquote{position:relative;margin:1.4em 0;padding:1.6em 1.1em .9em;border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:10px;background:var(--quote-bg);color:var(--fg);}
 article blockquote::before{content:"💬 Try this prompt";position:absolute;top:.7em;left:1.1em;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent2);}
 article blockquote p{margin:0;font-style:italic;}

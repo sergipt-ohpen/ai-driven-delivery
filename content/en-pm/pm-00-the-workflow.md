@@ -8,23 +8,64 @@ Before any prompt, any tool, any trick — this is the one idea the whole guide 
 
 ## The picture
 
-```diagram
-   GitHub  ──clone / pull──▶   The project folder on your laptop
- (the source                    (real code + real docs)
-  of truth)                             │
-                                        │  opened in Claude Desktop (Code mode)
-                                        ▼
-                                  ┌───────────────┐
-     Jira Cloud  ◀───────────────│               │
-   (tickets)      via Atlassian   │    CLAUDE     │   ← you work here
-                   connector      │               │
-   Confluence  ◀───────────────  └───────────────┘
-   (docs)                                 ▲
-                                          │
-                                        YOU
-                            (refine backlog, write stories,
-                             PRDs, estimates, updates)
-```
+<div class="diagram-wrap">
+<svg viewBox="0 0 900 510" role="img" aria-label="Diagram: GitHub feeds the project folder, opened in Claude Desktop. Claude connects to Jira and Confluence via the Atlassian connector. You direct Claude by refining the backlog, writing stories, PRDs, estimates and updates.">
+<defs>
+<marker id="wfArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0L10,5L0,10z" style="fill:var(--muted)"/>
+</marker>
+</defs>
+<style>
+.wf-box{fill:var(--card);stroke:var(--line);stroke-width:1.5;}
+.wf-box.hub{stroke:var(--accent);stroke-width:2.5;}
+.wf-t{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;fill:var(--fg);}
+.wf-t.sub{fill:var(--muted);font-size:13px;}
+.wf-t.lbl{fill:var(--muted);font-size:12px;}
+.wf-line{stroke:var(--muted);stroke-width:1.6;fill:none;marker-end:url(#wfArrow);}
+.wf-line.both{marker-start:url(#wfArrow);}
+</style>
+
+<rect class="wf-box" x="20" y="40" width="180" height="90" rx="14"/>
+<text class="wf-t" x="110" y="80" font-size="15" font-weight="700" text-anchor="middle">🐙 GitHub</text>
+<text class="wf-t sub" x="110" y="102" text-anchor="middle">the source of truth</text>
+
+<rect class="wf-box" x="320" y="20" width="280" height="110" rx="14"/>
+<text class="wf-t" x="460" y="58" font-size="15" font-weight="700" text-anchor="middle">💻 Project folder</text>
+<text class="wf-t sub" x="460" y="80" text-anchor="middle">on your laptop</text>
+<text class="wf-t sub" x="460" y="100" text-anchor="middle">real code + real docs</text>
+
+<rect class="wf-box" x="280" y="190" width="200" height="70" rx="14"/>
+<text class="wf-t" x="380" y="222" font-size="15" font-weight="700" text-anchor="middle">🎫 Jira Cloud</text>
+<text class="wf-t sub" x="380" y="242" text-anchor="middle">tickets</text>
+
+<rect class="wf-box" x="280" y="290" width="200" height="70" rx="14"/>
+<text class="wf-t" x="380" y="322" font-size="15" font-weight="700" text-anchor="middle">📄 Confluence</text>
+<text class="wf-t sub" x="380" y="342" text-anchor="middle">docs</text>
+
+<rect class="wf-box hub" x="580" y="170" width="220" height="160" rx="18"/>
+<text class="wf-t" x="690" y="232" font-size="28" text-anchor="middle">🧭</text>
+<text class="wf-t" x="690" y="266" font-size="17" font-weight="700" text-anchor="middle">CLAUDE</text>
+<text class="wf-t sub" x="690" y="288" text-anchor="middle">you work here</text>
+
+<rect class="wf-box" x="580" y="400" width="220" height="90" rx="14"/>
+<text class="wf-t" x="690" y="428" font-size="15" font-weight="700" text-anchor="middle">🧑‍💻 YOU</text>
+<text class="wf-t sub" x="690" y="450" text-anchor="middle">refine backlog, write stories,</text>
+<text class="wf-t sub" x="690" y="466" text-anchor="middle">PRDs, estimates, updates</text>
+
+<path class="wf-line" d="M200,82 L320,75"/>
+<text class="wf-t lbl" x="260" y="68" text-anchor="middle">clone / pull</text>
+
+<path class="wf-line" d="M460,130 L460,155 L690,155 L690,170"/>
+<text class="wf-t lbl" x="575" y="148" text-anchor="middle">opened in Claude Desktop (Code mode)</text>
+
+<path class="wf-line both" d="M480,222 L580,222"/>
+<path class="wf-line both" d="M480,318 L580,300"/>
+<text class="wf-t lbl" x="530" y="270" text-anchor="middle">via Atlassian</text>
+<text class="wf-t lbl" x="530" y="285" text-anchor="middle">connector</text>
+
+<path class="wf-line" d="M690,400 L690,330"/>
+</svg>
+</div>
 
 ## Why this is the whole game
 

@@ -55,6 +55,8 @@ article pre:has(code.language-diagram)::before{content:"🗺️ How it fits toge
 article pre:has(code.language-diagram) code{display:inline-block;font-size:12.5px;line-height:1.55;}
 article code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em;}
 article pre code{background:none;padding:0;}
+.diagram-wrap{margin:1.4em 0;overflow-x:auto;}
+.diagram-wrap svg{display:block;width:100%;height:auto;min-width:560px;}
 article blockquote{position:relative;margin:1.4em 0;padding:1.6em 1.1em .9em;border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:10px;background:var(--quote-bg);color:var(--fg);}
 article blockquote::before{content:"💬 Try this prompt";position:absolute;top:.7em;left:1.1em;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent2);}
 article blockquote p{margin:0;font-style:italic;}
@@ -80,28 +82,49 @@ article blockquote p{margin:0;font-style:italic;}
 </style></head>
 <body><button id="burger">☰</button><div id="layout">
 <nav id="side"><div id="brand"><b>🧭 Claude for Product People</b><span>One workflow: your project as source of truth, in Claude Desktop</span><button id="theme" title="Toggle theme">🌙</button></div><div class="mod"><div class="mod-t"><span>Start here</span><span class="mod-count" data-total="1">0/1</span></div><ul><li><a href="#p1" data-id="p1"><span class="ic">🧭</span><span class="tx">The Workflow (read this first)</span><span class="chk">✓</span></a></li></ul></div><div class="mod"><div class="mod-t"><span>Set it up once</span><span class="mod-count" data-total="2">0/2</span></div><ul><li><a href="#p2" data-id="p2"><span class="ic">📂</span><span class="tx">Get Your Project into Claude</span><span class="chk">✓</span></a></li><li><a href="#p3" data-id="p3"><span class="ic">🔗</span><span class="tx">Connect Jira &amp; Confluence</span><span class="chk">✓</span></a></li></ul></div><div class="mod"><div class="mod-t"><span>Using it day to day</span><span class="mod-count" data-total="4">0/4</span></div><ul><li><a href="#p4" data-id="p4"><span class="ic">🎯</span><span class="tx">The Project as Source of Truth</span><span class="chk">✓</span></a></li><li><a href="#p5" data-id="p5"><span class="ic">📋</span><span class="tx">Backlog &amp; User Stories in Jira</span><span class="chk">✓</span></a></li><li><a href="#p6" data-id="p6"><span class="ic">📄</span><span class="tx">PRDs &amp; Docs in Confluence</span><span class="chk">✓</span></a></li><li><a href="#p7" data-id="p7"><span class="ic">⏱️</span><span class="tx">Estimates &amp; Stakeholder Updates</span><span class="chk">✓</span></a></li></ul></div><div class="mod"><div class="mod-t"><span>Playbook</span><span class="mod-count" data-total="1">0/1</span></div><ul><li><a href="#p8" data-id="p8"><span class="ic">🎬</span><span class="tx">Copy-Paste Playbook</span><span class="chk">✓</span></a></li></ul></div></nav>
-<div id="main"><div id="progresswrap"><div id="progressbar"></div></div><div id="content"><article id="p1"><div class="art-meta"><span class="badge sec">Start here</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 1</span><span class="dot">·</span><span class="badge time">⏱ 3 min</span></div><h1>🧭 The Workflow (read this first)</h1>
+<div id="main"><div id="progresswrap"><div id="progressbar"></div></div><div id="content"><article id="p1"><div class="art-meta"><span class="badge sec">Start here</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 1</span><span class="dot">·</span><span class="badge time">⏱ 4 min</span></div><h1>🧭 The Workflow (read this first)</h1>
 <p>Before any prompt, any tool, any trick — this is the one idea the whole guide is built on. Get this, and the rest is just detail.</p>
 <h2>The one-line version</h2>
 <p><strong>You open the real project in Claude, and Claude answers from it — not from guesses.</strong> Around that, your tickets live in Jira and your docs live in Confluence, both connected so Claude can read and update them. That&#39;s it.</p>
 <h2>The picture</h2>
-<pre><code class="language-diagram">   GitHub  ──clone / pull──▶   The project folder on your laptop
- (the source                    (real code + real docs)
-  of truth)                             │
-                                        │  opened in Claude Desktop (Code mode)
-                                        ▼
-                                  ┌───────────────┐
-     Jira Cloud  ◀───────────────│               │
-   (tickets)      via Atlassian   │    CLAUDE     │   ← you work here
-                   connector      │               │
-   Confluence  ◀───────────────  └───────────────┘
-   (docs)                                 ▲
-                                          │
-                                        YOU
-                            (refine backlog, write stories,
-                             PRDs, estimates, updates)
-</code></pre>
-<h2>Why this is the whole game</h2>
+<div class="diagram-wrap">
+<svg viewBox="0 0 900 510" role="img" aria-label="Diagram: GitHub feeds the project folder, opened in Claude Desktop. Claude connects to Jira and Confluence via the Atlassian connector. You direct Claude by refining the backlog, writing stories, PRDs, estimates and updates.">
+<defs>
+<marker id="wfArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0L10,5L0,10z" style="fill:var(--muted)"/>
+</marker>
+</defs>
+<style>
+.wf-box{fill:var(--card);stroke:var(--line);stroke-width:1.5;}
+.wf-box.hub{stroke:var(--accent);stroke-width:2.5;}
+.wf-t{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;fill:var(--fg);}
+.wf-t.sub{fill:var(--muted);font-size:13px;}
+.wf-t.lbl{fill:var(--muted);font-size:12px;}
+.wf-line{stroke:var(--muted);stroke-width:1.6;fill:none;marker-end:url(#wfArrow);}
+.wf-line.both{marker-start:url(#wfArrow);}
+</style><rect class="wf-box" x="20" y="40" width="180" height="90" rx="14"/>
+<text class="wf-t" x="110" y="80" font-size="15" font-weight="700" text-anchor="middle">🐙 GitHub</text>
+<text class="wf-t sub" x="110" y="102" text-anchor="middle">the source of truth</text><rect class="wf-box" x="320" y="20" width="280" height="110" rx="14"/>
+<text class="wf-t" x="460" y="58" font-size="15" font-weight="700" text-anchor="middle">💻 Project folder</text>
+<text class="wf-t sub" x="460" y="80" text-anchor="middle">on your laptop</text>
+<text class="wf-t sub" x="460" y="100" text-anchor="middle">real code + real docs</text><rect class="wf-box" x="280" y="190" width="200" height="70" rx="14"/>
+<text class="wf-t" x="380" y="222" font-size="15" font-weight="700" text-anchor="middle">🎫 Jira Cloud</text>
+<text class="wf-t sub" x="380" y="242" text-anchor="middle">tickets</text><rect class="wf-box" x="280" y="290" width="200" height="70" rx="14"/>
+<text class="wf-t" x="380" y="322" font-size="15" font-weight="700" text-anchor="middle">📄 Confluence</text>
+<text class="wf-t sub" x="380" y="342" text-anchor="middle">docs</text><rect class="wf-box hub" x="580" y="170" width="220" height="160" rx="18"/>
+<text class="wf-t" x="690" y="232" font-size="28" text-anchor="middle">🧭</text>
+<text class="wf-t" x="690" y="266" font-size="17" font-weight="700" text-anchor="middle">CLAUDE</text>
+<text class="wf-t sub" x="690" y="288" text-anchor="middle">you work here</text><rect class="wf-box" x="580" y="400" width="220" height="90" rx="14"/>
+<text class="wf-t" x="690" y="428" font-size="15" font-weight="700" text-anchor="middle">🧑‍💻 YOU</text>
+<text class="wf-t sub" x="690" y="450" text-anchor="middle">refine backlog, write stories,</text>
+<text class="wf-t sub" x="690" y="466" text-anchor="middle">PRDs, estimates, updates</text><path class="wf-line" d="M200,82 L320,75"/>
+<text class="wf-t lbl" x="260" y="68" text-anchor="middle">clone / pull</text><path class="wf-line" d="M460,130 L460,155 L690,155 L690,170"/>
+<text class="wf-t lbl" x="575" y="148" text-anchor="middle">opened in Claude Desktop (Code mode)</text><path class="wf-line both" d="M480,222 L580,222"/>
+<path class="wf-line both" d="M480,318 L580,300"/>
+<text class="wf-t lbl" x="530" y="270" text-anchor="middle">via Atlassian</text>
+<text class="wf-t lbl" x="530" y="285" text-anchor="middle">connector</text><path class="wf-line" d="M690,400 L690,330"/>
+</svg>
+</div><h2>Why this is the whole game</h2>
 <p>Most people use AI by describing their product from memory and hoping. The answers come back fluent and generic — and often wrong, because the AI never saw the actual thing.</p>
 <p>This workflow removes the guessing. When the real project is open in front of Claude, &quot;how does our login work?&quot; or &quot;what would this change touch?&quot; get answered from <strong>your</strong> code and <strong>your</strong> docs. When Jira and Confluence are connected, a refined story doesn&#39;t get copy-pasted by hand — Claude reads the ticket and updates it in place. Your job shifts from <em>typing things up</em> to <em>deciding and directing</em>.</p>
 <h2>It has a name: AI-driven Delivery</h2>
