@@ -135,7 +135,7 @@ article blockquote p{margin:0;font-style:italic;}
 <ol>
 <li><strong>The project is the source of truth.</strong> Your team&#39;s repository — the code and its docs — lives on GitHub.</li>
 <li><strong>You open that project folder in Claude.</strong> In the Claude Desktop app you switch to <strong>Code mode</strong> and point it at the folder. Now Claude can read every file.</li>
-<li><strong>You keep it fresh.</strong> Because Code mode has Git, you just tell Claude <em>&quot;pull the latest&quot;</em> at the start of a session. Now it sees today&#39;s reality, not last month&#39;s.</li>
+<li><strong>You keep it fresh.</strong> With Git installed once (see the setup page), you just tell Claude <em>&quot;pull the latest&quot;</em> at the start of a session — Claude runs it, you never type a command. Now it sees today&#39;s reality, not last month&#39;s.</li>
 <li><strong>Jira and Confluence are connected.</strong> Through the official Atlassian connector, Claude can read your tickets and pages — and create or update them.</li>
 <li><strong>You drive the product work.</strong> Refine the backlog, write stories and PRDs, sanity-check estimates, write stakeholder updates — every answer grounded in the actual project, tickets, and docs.</li>
 </ol>
@@ -146,12 +146,13 @@ article blockquote p{margin:0;font-style:italic;}
 <li><strong>Playbook</strong> — copy-paste prompts for when you just want to get going.</li>
 </ul>
 <p>Skim the daily-use pages, then live in the Playbook. You don&#39;t need to remember any of this — you need to do it once and feel the difference.</p>
-<nav class="art-nav"><span class="nav-spacer"></span><a class="nav-btn next" href="#p2" data-id="p2"><span class="nb-dir">Next →</span><span class="nb-label">📂 Get Your Project into Claude</span></a></nav></article><article id="p2"><div class="art-meta"><span class="badge sec">Set it up once</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 2</span><span class="dot">·</span><span class="badge time">⏱ 2 min</span></div><h1>📂 Get Your Project into Claude</h1>
+<nav class="art-nav"><span class="nav-spacer"></span><a class="nav-btn next" href="#p2" data-id="p2"><span class="nb-dir">Next →</span><span class="nb-label">📂 Get Your Project into Claude</span></a></nav></article><article id="p2"><div class="art-meta"><span class="badge sec">Set it up once</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 2</span><span class="dot">·</span><span class="badge time">⏱ 3 min</span></div><h1>📂 Get Your Project into Claude</h1>
 <p>This is the setup that makes everything else work: the real project, open in Claude. It takes about ten minutes the first time, and then you never think about it again.</p>
 <h2>What you need</h2>
 <ul>
 <li>The <strong>Claude Desktop</strong> app (download it and sign in with your work account).</li>
 <li>A <strong>paid Claude plan</strong> — Code mode is part of it.</li>
+<li><strong>Git installed on your laptop.</strong> Claude drives it for you — you&#39;ll never type a git command — but the real <code>git</code> still has to be on your machine first. Windows: download the installer from <a href="https://git-scm.com/downloads">git-scm.com</a> and accept every default. Mac: open Terminal, type <code>git --version</code>, and if it&#39;s missing macOS offers to install it on the spot. Stuck? Any engineer can do this in two minutes.</li>
 <li><strong>Access to your team&#39;s repository</strong> on GitHub. If you&#39;re not sure you have it, ask any engineer to add you and share the repo&#39;s address (a URL like <code>github.com/your-company/your-product</code>).</li>
 </ul>
 <h2>Step 1 — Turn on Code mode</h2>
@@ -173,7 +174,7 @@ Then tell me the folder path so I can select it.
 <pre><code>Pull the latest from the repository, then give me a 5-line summary
 of what changed since I last worked here.
 </code></pre>
-<p>Because Code mode has Git built in, Claude runs the update itself — no separate app, no buttons. Do this at the start of a session and you&#39;re always working against today&#39;s reality.</p>
+<p>Claude runs this with the Git you installed earlier — no separate app, no buttons, no commands to remember. Do this at the start of a session and you&#39;re always working against today&#39;s reality.</p>
 <h2>Sanity check</h2>
 <p>Confirm it&#39;s wired up correctly with a question only the real project can answer:</p>
 <pre><code>Look at the actual code and docs in this folder and tell me, in plain

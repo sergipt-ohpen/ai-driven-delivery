@@ -85,7 +85,7 @@ You don't need to run SDD yourself to benefit from it: the clearer your ticket, 
 
 1. **The project is the source of truth.** Your team's repository — the code and its docs — lives on GitHub.
 2. **You open that project folder in Claude.** In the Claude Desktop app you switch to **Code mode** and point it at the folder. Now Claude can read every file.
-3. **You keep it fresh.** Because Code mode has Git, you just tell Claude *"pull the latest"* at the start of a session. Now it sees today's reality, not last month's.
+3. **You keep it fresh.** With Git installed once (see the setup page), you just tell Claude *"pull the latest"* at the start of a session — Claude runs it, you never type a command. Now it sees today's reality, not last month's.
 4. **Jira and Confluence are connected.** Through the official Atlassian connector, Claude can read your tickets and pages — and create or update them.
 5. **You drive the product work.** Refine the backlog, write stories and PRDs, sanity-check estimates, write stakeholder updates — every answer grounded in the actual project, tickets, and docs.
 

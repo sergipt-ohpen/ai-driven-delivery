@@ -6,6 +6,7 @@ This is the setup that makes everything else work: the real project, open in Cla
 
 - The **Claude Desktop** app (download it and sign in with your work account).
 - A **paid Claude plan** — Code mode is part of it.
+- **Git installed on your laptop.** Claude drives it for you — you'll never type a git command — but the real `git` still has to be on your machine first. Windows: download the installer from [git-scm.com](https://git-scm.com/downloads) and accept every default. Mac: open Terminal, type `git --version`, and if it's missing macOS offers to install it on the spot. Stuck? Any engineer can do this in two minutes.
 - **Access to your team's repository** on GitHub. If you're not sure you have it, ask any engineer to add you and share the repo's address (a URL like `github.com/your-company/your-product`).
 
 ## Step 1 — Turn on Code mode
@@ -42,7 +43,7 @@ Pull the latest from the repository, then give me a 5-line summary
 of what changed since I last worked here.
 ```
 
-Because Code mode has Git built in, Claude runs the update itself — no separate app, no buttons. Do this at the start of a session and you're always working against today's reality.
+Claude runs this with the Git you installed earlier — no separate app, no buttons, no commands to remember. Do this at the start of a session and you're always working against today's reality.
 
 ## Sanity check
 
