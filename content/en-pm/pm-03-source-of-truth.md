@@ -14,17 +14,20 @@ Claude runs `git pull` for you and tells you what moved. Make this your opening 
 
 ## Vague question vs. real question
 
-Watch the difference. Here's the vague version:
+Watch the difference — same goal, two very different prompts:
 
-> "How does our login work? Write a story to add password reset."
-
-Claude has nothing to hold onto, so it invents a plausible-sounding login and a plausible-sounding story. Some of it will be wrong, and you won't know which parts.
-
-Now the grounded version:
-
-> "Read the auth code and docs in the attached project. Based on how login *actually* works today, draft a story for password reset."
-
-Same goal, completely different answer. Claude now cites the real files, notices we already use email-based sessions, spots that there's no email-sending service wired up yet, and writes a story that fits the product you actually have.
+<div class="cmp">
+<div class="cmp-card bad">
+<div class="lbl">❌ Vague</div>
+<p class="prompt">"How does our login work? Write a story to add password reset."</p>
+<p class="why">Claude has nothing to hold onto, so it invents a plausible-sounding login and a plausible-sounding story. Some of it will be wrong, and you won't know which parts.</p>
+</div>
+<div class="cmp-card good">
+<div class="lbl">✅ Grounded</div>
+<p class="prompt">"Read the auth code and docs in the attached project. Based on how login <em>actually</em> works today, draft a story for password reset."</p>
+<p class="why">Claude cites the real files, notices we already use email-based sessions, spots that there's no email-sending service wired up yet, and writes a story that fits the product you actually have.</p>
+</div>
+</div>
 
 Grounding changes three things:
 
