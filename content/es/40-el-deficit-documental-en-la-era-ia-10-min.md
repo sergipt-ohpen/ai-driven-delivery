@@ -1,4 +1,4 @@
-# 📄 El déficit documental en la era IA 🔴 — 10 min | AI4Devs 2026/06 Seniors
+# 📄 El déficit documental en la era IA 🔴 — 10 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 10 min
 

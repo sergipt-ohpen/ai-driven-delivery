@@ -1,4 +1,4 @@
-# 📄 Decisiones de senior: cuándo qué, costes reales, gobernanza 🔴 — 20 min | AI4Devs 2026/06 Seniors
+# 📄 Decisiones de senior: cuándo qué, costes reales, gobernanza 🔴 — 20 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 20 min
 

@@ -1,4 +1,4 @@
-# 🎥 Papel actual de la IA en desarrollo de software 🔴 — 12 min | AI4Devs 2026/06 Seniors
+# 🎥 Papel actual de la IA en desarrollo de software 🔴 — 12 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 12 min
 

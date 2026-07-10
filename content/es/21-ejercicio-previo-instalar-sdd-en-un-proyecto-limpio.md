@@ -1,4 +1,4 @@
-# ✍️ Ejercicio previo: Instalar SDD en un proyecto limpio 🔴 | AI4Devs 2026/06 Seniors
+# ✍️ Ejercicio previo: Instalar SDD en un proyecto limpio 🔴 | AI-Driven Delivery
 
 ---
 

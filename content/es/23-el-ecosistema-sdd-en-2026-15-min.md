@@ -1,4 +1,4 @@
-# 📄 El ecosistema SDD en 2026 🔴 — 15 min | AI4Devs 2026/06 Seniors
+# 📄 El ecosistema SDD en 2026 🔴 — 15 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 15 min
 

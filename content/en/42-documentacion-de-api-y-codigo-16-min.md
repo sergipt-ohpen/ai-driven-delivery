@@ -1,4 +1,4 @@
-# 📄 API and code documentation 🔴 — 16 min | AI4Devs 2026/06 Seniors
+# 📄 API and code documentation 🔴 — 16 min | AI-Driven Delivery
 
 ⏳ Estimated time: 16 min
 

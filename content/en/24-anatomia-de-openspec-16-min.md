@@ -1,4 +1,4 @@
-# 📄 Anatomy of OpenSpec 🔴 — 16 min | AI4Devs 2026/06 Seniors
+# 📄 Anatomy of OpenSpec 🔴 — 16 min | AI-Driven Delivery
 
 ⏳ Estimated time: 16 min
 

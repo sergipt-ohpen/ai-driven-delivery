@@ -1,4 +1,4 @@
-# 📄 The documentation deficit in the AI era 🔴 — 10 min | AI4Devs 2026/06 Seniors
+# 📄 The documentation deficit in the AI era 🔴 — 10 min | AI-Driven Delivery
 
 ⏳ Estimated time: 10 min
 

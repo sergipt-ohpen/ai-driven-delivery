@@ -1,4 +1,4 @@
-# ✍️Ejercicio previo: Inventario del backlog🔴 | AI4Devs 2026/06 Seniors
+# ✍️Ejercicio previo: Inventario del backlog🔴 | AI-Driven Delivery
 
 **Fecha de entrega: 29 JUNIO, al final del día**
 

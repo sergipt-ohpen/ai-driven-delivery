@@ -1,4 +1,4 @@
-# 🗒️ The 3-Pillar Mental Model 🔴 — 11 min | AI4Devs 2026/06 Seniors
+# 🗒️ The 3-Pillar Mental Model 🔴 — 11 min | AI-Driven Delivery
 
 ⏳ Estimated time: 11 min
 

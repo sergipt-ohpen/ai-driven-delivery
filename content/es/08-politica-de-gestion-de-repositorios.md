@@ -1,4 +1,4 @@
-# 📜 Política de Gestión de Repositorios | AI4Devs 2026/06 Seniors
+# 📜 Política de Gestión de Repositorios | AI-Driven Delivery
 
 **1\. Objetivo**  
 Establecer lineamientos claros para la gestión de repositorios de proyectos dentro del programa IA4Devs, equilibrando la visibilidad profesional de los alumnos con la protección de información sensible.

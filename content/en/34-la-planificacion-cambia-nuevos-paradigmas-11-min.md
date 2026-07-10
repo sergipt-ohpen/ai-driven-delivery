@@ -1,4 +1,4 @@
-# 📄 Planning changes: new paradigms 🔴— 11 min | AI4Devs 2026/06 Seniors
+# 📄 Planning changes: new paradigms 🔴— 11 min | AI-Driven Delivery
 
 ⏳ Estimated time: 11 min
 

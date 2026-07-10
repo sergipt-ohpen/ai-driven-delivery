@@ -1,9 +1,5 @@
 # 👋 Bienvenida y expectativas — 29 min
 
-![Antonio Perez](https://media1-production-mightynetworks.imgix.net/asset/4849c519-3006-4bfb-880a-96be73926c3f/c3eccac37426c36f.jpg?ixlib=rails-4.3.1&fm=jpg&q=100&auto=format&w=192&h=192&fit=crop&crop=faces&impolicy=Avatar)
-
-[Antonio Perez](https://training.lidr.co/members/36030888 "Antonio Perez")
-
 ⏳ Tiempo estimado: 4 min
 
 **¡Bienvenid@!** 🤖

@@ -1,4 +1,4 @@
-# ✍️Pre-session exercise: Backlog inventory🔴 | AI4Devs 2026/06 Seniors
+# ✍️Pre-session exercise: Backlog inventory🔴 | AI-Driven Delivery
 
 **Due date: JUNE 29, end of day**
 

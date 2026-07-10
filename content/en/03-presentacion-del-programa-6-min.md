@@ -1,4 +1,4 @@
-# 🎥 Program Overview 🤖 — 6 min | AI4Devs 2026/06 Seniors
+# 🎥 Program Overview 🤖 — 6 min | AI-Driven Delivery
 
 ⏳ Estimated time: 6 min 
 

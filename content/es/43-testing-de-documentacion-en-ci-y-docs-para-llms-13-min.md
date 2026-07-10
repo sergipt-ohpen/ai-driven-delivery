@@ -1,4 +1,4 @@
-# 📄 Testing de documentación en CI y docs para LLMs 🔴 — 13 min | AI4Devs 2026/06 Seniors
+# 📄 Testing de documentación en CI y docs para LLMs 🔴 — 13 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 13 min
 

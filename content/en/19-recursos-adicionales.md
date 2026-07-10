@@ -1,4 +1,4 @@
-# 📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors
+# 📚  Additional resources 🟢 | AI-Driven Delivery
 
 > This lesson unifies all the deep-dive resources from the async content, organized by pillar (mirroring the structure of lessons 1–4). Use it as a **post-session reference**: when you want to go deeper into a specific pillar or cite a source, come back here.
 > 

@@ -1,4 +1,4 @@
-# 💬 Expectativas — 9 min | AI4Devs 2026/06 Seniors
+# 💬 Expectativas — 9 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 6 min 
 

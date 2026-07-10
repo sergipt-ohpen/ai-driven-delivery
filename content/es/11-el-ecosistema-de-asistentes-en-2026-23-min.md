@@ -1,4 +1,4 @@
-# 🎥 El ecosistema de asistentes en 2026 🔴 — 23 min | AI4Devs 2026/06 Seniors
+# 🎥 El ecosistema de asistentes en 2026 🔴 — 23 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 23 min  
 

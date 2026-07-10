@@ -1,4 +1,4 @@
-# 📄 La planificación cambia: nuevos paradigmas 🔴— 11 min | AI4Devs 2026/06 Seniors
+# 📄 La planificación cambia: nuevos paradigmas 🔴— 11 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 11 min
 

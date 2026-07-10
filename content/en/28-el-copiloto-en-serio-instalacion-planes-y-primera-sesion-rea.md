@@ -1,4 +1,4 @@
-# 📄The copilot for real: installation, plans, and first real session 🔴 — 14 min | AI4Devs 2026/06 Seniors
+# 📄The copilot for real: installation, plans, and first real session 🔴 — 14 min | AI-Driven Delivery
 
 ⏳ Estimated time: 14 min
 

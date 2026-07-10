@@ -1,4 +1,4 @@
-# 📄  Pillar 1 — The Tool 🔴 — 18 min | AI4Devs 2026/06 Seniors
+# 📄  Pillar 1 — The Tool 🔴 — 18 min | AI-Driven Delivery
 
 Estimated time: 18 min
 

@@ -1,4 +1,4 @@
-# 🎥 The current role of AI in software development 🔴 — 12 min | AI4Devs 2026/06 Seniors
+# 🎥 The current role of AI in software development 🔴 — 12 min | AI-Driven Delivery
 
 ⏳ Estimated time: 12 min
 

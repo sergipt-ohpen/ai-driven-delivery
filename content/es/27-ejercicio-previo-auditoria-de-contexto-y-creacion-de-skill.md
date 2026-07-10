@@ -1,4 +1,4 @@
-# ✍️Ejercicio previo: Auditoría de contexto y creación de skill🔴 | AI4Devs 2026/06 Seniors
+# ✍️Ejercicio previo: Auditoría de contexto y creación de skill🔴 | AI-Driven Delivery
 
 **Fecha de entrega: 22 Junio al final del día**
 

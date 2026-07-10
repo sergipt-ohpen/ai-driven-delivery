@@ -1,4 +1,4 @@
-# 📚  Recursos adicionales 🟢 | AI4Devs 2026/06 Seniors
+# 📚  Recursos adicionales 🟢 | AI-Driven Delivery
 
 > Esta lección unifica todos los recursos de profundización del asíncrono, organizados por pilar (espejo de la estructura de las lecciones 1–4). Úsala como **referencia post-sesión**: cuando quieras profundizar en un pilar concreto o citar una fuente, vuelve aquí.
 > 

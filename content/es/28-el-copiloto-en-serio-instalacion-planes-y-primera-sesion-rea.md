@@ -1,4 +1,4 @@
-# 📄El copiloto en serio: instalación, planes y primera sesión real 🔴 — 14 min | AI4Devs 2026/06 Seniors
+# 📄El copiloto en serio: instalación, planes y primera sesión real 🔴 — 14 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 14 min
 

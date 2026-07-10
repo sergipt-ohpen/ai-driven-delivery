@@ -1,4 +1,4 @@
-# ✍️Pre-session exercise: Context audit and skill creation🔴 | AI4Devs 2026/06 Seniors
+# ✍️Pre-session exercise: Context audit and skill creation🔴 | AI-Driven Delivery
 
 **Due date: June 22 by end of day**
 

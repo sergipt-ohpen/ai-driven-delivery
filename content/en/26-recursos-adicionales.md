@@ -1,4 +1,4 @@
-# 📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors
+# 📚  Additional resources 🟢 | AI-Driven Delivery
 
 ## SDD — theory and philosophy
 

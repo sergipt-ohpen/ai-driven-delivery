@@ -1,4 +1,4 @@
-# 📄 The SDD ecosystem in 2026 🔴 — 15 min | AI4Devs 2026/06 Seniors
+# 📄 The SDD ecosystem in 2026 🔴 — 15 min | AI-Driven Delivery
 
 ⏳ Estimated time: 15 min
 

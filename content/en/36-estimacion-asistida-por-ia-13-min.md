@@ -1,4 +1,4 @@
-# 📄 AI-assisted estimation 🔴— 13 min | AI4Devs 2026/06 Seniors
+# 📄 AI-assisted estimation 🔴— 13 min | AI-Driven Delivery
 
 ⏳ Estimated time: 13 min
 

@@ -1,4 +1,4 @@
-# 📄 How to work: Explore-Plan-Execute and SDD-aware copilots 🔴 — 22 min | AI4Devs 2026/06 Seniors
+# 📄 How to work: Explore-Plan-Execute and SDD-aware copilots 🔴 — 22 min | AI-Driven Delivery
 
 ⏳ Estimated time: 22 min
 

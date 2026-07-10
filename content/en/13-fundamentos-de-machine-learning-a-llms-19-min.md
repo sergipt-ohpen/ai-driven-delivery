@@ -1,4 +1,4 @@
-# 🎥 Fundamentals: from Machine Learning to LLMs 🟢 — 19 min | AI4Devs 2026/06 Seniors
+# 🎥 Fundamentals: from Machine Learning to LLMs 🟢 — 19 min | AI-Driven Delivery
 
 ⏳ Estimated time: 19 min
 

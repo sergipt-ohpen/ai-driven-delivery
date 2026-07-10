@@ -1,4 +1,4 @@
-# 📄 Continuous agile planning 🔴— 12 min | AI4Devs 2026/06 Seniors
+# 📄 Continuous agile planning 🔴— 12 min | AI-Driven Delivery
 
 ⏳ Estimated time: 12 min
 

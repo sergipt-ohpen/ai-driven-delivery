@@ -1,4 +1,4 @@
-# 🗒️ El modelo mental de los 3 pilares 🔴 — 11 min | AI4Devs 2026/06 Seniors
+# 🗒️ El modelo mental de los 3 pilares 🔴 — 11 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 11 min
 

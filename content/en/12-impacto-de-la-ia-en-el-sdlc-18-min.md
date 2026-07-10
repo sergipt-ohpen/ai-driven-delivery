@@ -1,4 +1,4 @@
-# 🎥 AI's Impact on the SDLC 🔴 — 18 min | AI4Devs 2026/06 Seniors
+# 🎥 AI's Impact on the SDLC 🔴 — 18 min | AI-Driven Delivery
 
 ⏳ Estimated time: 18 min
 

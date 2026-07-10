@@ -1,4 +1,4 @@
-# 🎥 Consejos de nuestros alumnos 🤖 — 9 min | AI4Devs 2026/06 Seniors
+# 🎥 Consejos de nuestros alumnos 🤖 — 9 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 9 min 
 

@@ -1,4 +1,4 @@
-# 📄 Planificación ágil continua 🔴— 12 min | AI4Devs 2026/06 Seniors
+# 📄 Planificación ágil continua 🔴— 12 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 12 min
 

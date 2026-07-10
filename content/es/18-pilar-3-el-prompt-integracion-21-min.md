@@ -1,4 +1,4 @@
-# 📄  Pilar 3 — El Prompt + Integración 🔴 — 21 min | AI4Devs 2026/06 Seniors
+# 📄  Pilar 3 — El Prompt + Integración 🔴 — 21 min | AI-Driven Delivery
 
 ⌛Tiempo estimado: 21 min
 

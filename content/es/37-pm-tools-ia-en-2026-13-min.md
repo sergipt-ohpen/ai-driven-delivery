@@ -1,4 +1,4 @@
-# 📄 PM tools + IA en 2026 🔴— 13 min | AI4Devs 2026/06 Seniors
+# 📄 PM tools + IA en 2026 🔴— 13 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 13 min
 

@@ -1,4 +1,4 @@
-# 🎥 El futuro del desarrollador: aumentado por IA 🔴 — 13 min | AI4Devs 2026/06 Seniors
+# 🎥 El futuro del desarrollador: aumentado por IA 🔴 — 13 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 13 min
 

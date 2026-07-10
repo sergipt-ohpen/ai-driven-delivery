@@ -1,4 +1,4 @@
-# ⚒️ Useful Links and Support — 1 min | AI4Devs 2026/06 Seniors
+# ⚒️ Useful Links and Support — 1 min | AI-Driven Delivery
 
 ⏳ Estimated time: 1 min
 
@@ -11,9 +11,6 @@ This is the room where the sessions will take place. You can save it as a favori
 ---
 
 ### **Contact and support**
-
-👨‍🏫 **Antonio Perez – Lead Mentor**  
-📧 Email: [**direccion.ai4devs@lidr.co**](mailto:direccion.ai4devs@lidr.co)
 
 🧑‍💻**Jorge Pilo – Program Lead**  
 📧 Email: [**jorge@lidr.co**](mailto:jorge@lidr.co)

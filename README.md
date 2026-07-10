@@ -1,4 +1,4 @@
-# AI4Devs 2026/06 Seniors — Curso web
+# AI-Driven Delivery — Curso web
 
 Webs estáticas (un solo `index.html` autocontenido por variante) generadas a
 partir de los apuntes markdown del curso clipeados en `~/Downloads/clippings`.

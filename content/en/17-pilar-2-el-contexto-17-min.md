@@ -1,4 +1,4 @@
-# 📄  Pillar 2 — The Context 🔴 — 17 min | AI4Devs 2026/06 Seniors
+# 📄  Pillar 2 — The Context 🔴 — 17 min | AI-Driven Delivery
 
 ⌛Estimated time: 17 min
 

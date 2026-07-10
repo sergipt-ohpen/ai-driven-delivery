@@ -1,4 +1,4 @@
-# ✍️ Pre-session exercise: Install SDD in a clean project 🔴 | AI4Devs 2026/06 Seniors
+# ✍️ Pre-session exercise: Install SDD in a clean project 🔴 | AI-Driven Delivery
 
 ---
 

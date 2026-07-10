@@ -1,4 +1,4 @@
-# 📄  Pillar 3 — The Prompt + Integration 🔴 — 21 min | AI4Devs 2026/06 Seniors
+# 📄  Pillar 3 — The Prompt + Integration 🔴 — 21 min | AI-Driven Delivery
 
 ⌛Estimated time: 21 min
 

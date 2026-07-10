@@ -1,4 +1,4 @@
-# 🎥 Advice from Our Students 🤖 — 9 min | AI4Devs 2026/06 Seniors
+# 🎥 Advice from Our Students 🤖 — 9 min | AI-Driven Delivery
 
 ⏳ Estimated time: 9 min 
 

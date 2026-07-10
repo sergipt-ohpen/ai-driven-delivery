@@ -1,4 +1,4 @@
-# 📄 Arquitectura documentada: ADRs + diagramas C4 con IA 🔴— 14 min | AI4Devs 2026/06 Seniors
+# 📄 Arquitectura documentada: ADRs + diagramas C4 con IA 🔴— 14 min | AI-Driven Delivery
 
 ⏳ Tiempo estimado: 14 min
 

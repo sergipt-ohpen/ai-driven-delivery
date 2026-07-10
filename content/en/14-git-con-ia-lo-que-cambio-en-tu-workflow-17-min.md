@@ -1,4 +1,4 @@
-# 🤖Git with AI: what changed in your workflow 🔴 — 17 min | AI4Devs 2026/06 Seniors
+# 🤖Git with AI: what changed in your workflow 🔴 — 17 min | AI-Driven Delivery
 
 ⏳ Estimated time: 17 min
 

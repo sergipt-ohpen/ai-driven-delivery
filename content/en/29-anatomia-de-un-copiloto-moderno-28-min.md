@@ -1,4 +1,4 @@
-# 📄 Anatomy of a modern copilot 🔴 — 28 min | AI4Devs 2026/06 Seniors
+# 📄 Anatomy of a modern copilot 🔴 — 28 min | AI-Driven Delivery
 
 ⏳ Estimated time: 28 min
 

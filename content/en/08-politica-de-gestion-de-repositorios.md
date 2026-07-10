@@ -1,4 +1,4 @@
-# 📜 Repository Management Policy | AI4Devs 2026/06 Seniors
+# 📜 Repository Management Policy | AI-Driven Delivery
 
 **1\. Objective**  
 To establish clear guidelines for the management of project repositories within the IA4Devs program, balancing students' professional visibility with the protection of sensitive information.

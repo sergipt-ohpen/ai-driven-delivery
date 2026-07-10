@@ -1,4 +1,4 @@
-# 📝  What is Spec-Driven Development 🔴 — 15 min | AI4Devs 2026/06 Seniors
+# 📝  What is Spec-Driven Development 🔴 — 15 min | AI-Driven Delivery
 
 ⏳ Estimated time: 15 min
 

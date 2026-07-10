@@ -1,4 +1,4 @@
-# 🎥 The assistant ecosystem in 2026 🔴 — 23 min | AI4Devs 2026/06 Seniors
+# 🎥 The assistant ecosystem in 2026 🔴 — 23 min | AI-Driven Delivery
 
 ⏳ Estimated time: 23 min  
 

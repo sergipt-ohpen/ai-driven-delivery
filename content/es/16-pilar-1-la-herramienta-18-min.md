@@ -1,4 +1,4 @@
-# 📄  Pilar 1 — La Herramienta 🔴 — 18 min | AI4Devs 2026/06 Seniors
+# 📄  Pilar 1 — La Herramienta 🔴 — 18 min | AI-Driven Delivery
 
 Tiempo estimado: 18 min
 

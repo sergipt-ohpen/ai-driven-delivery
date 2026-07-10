@@ -1,4 +1,4 @@
-# 📄  Pilar 2 — El Contexto 🔴 — 17 min | AI4Devs 2026/06 Seniors
+# 📄  Pilar 2 — El Contexto 🔴 — 17 min | AI-Driven Delivery
 
 ⌛Tiempo estimado: 17 min
 
