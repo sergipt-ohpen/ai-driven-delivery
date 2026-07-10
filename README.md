@@ -21,6 +21,9 @@ Publicado en GitHub Pages desde `main` / carpeta `docs`.
 - `content/<variante>/` — lecciones en markdown + `manifest.json` (estructura
   de secciones, etiquetas y textos de UI de esa variante).
 - `build-site.mjs <variante>` — genera `docs/<variante>/index.html`.
+- `landing.html` — fuente en claro de la portada (`docs/index.html`); no se
+  edita `docs/index.html` directamente, `protect-site.mjs` lo genera cifrado
+  a partir de este fichero.
 
 ## Regenerar
 
@@ -52,6 +55,13 @@ se comparte aparte con quien deba tener acceso. `.staticrypt.json` sí está
 commiteado: guarda solo la sal (no la contraseña), y hace falta que sea la
 misma en las 4 páginas para que "Remember me" funcione entre ellas.
 
-Hay que volver a correr `npm run protect` cada vez que se regenera `docs/`
-con `build-site.mjs`, porque el build sobreescribe el HTML cifrado con la
-versión en claro.
+Orden importante: `build-site.mjs` **siempre** antes que `protect`. El build
+sobreescribe `docs/<variante>/index.html` con la versión en claro (borrando
+cualquier cifrado anterior), y solo entonces `protect-site.mjs` la cifra. La
+portada (`docs/index.html`) nunca se edita a mano: se genera cifrada a partir
+de `landing.html`, que sí puedes editar libremente.
+
+⚠️ No corras `npm run protect` dos veces seguidas sin un build en medio para
+`es`/`en`/`en-pm` — cifraría la versión ya cifrada por encima (doble capa,
+rompe el "Remember me" y pide la contraseña dos veces). Si pasa, `git
+checkout -- docs/` y vuelve a hacer build + protect en el orden correcto.
