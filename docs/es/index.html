@@ -43,8 +43,8 @@ article h3{font-size:17px;margin-top:1.6em;}
 article p,article li{line-height:1.7;}
 article p{margin:1em 0;}
 article a{color:var(--accent);}
-article img{max-width:100%;height:auto;border-radius:6px;}
-article img.avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;vertical-align:middle;}
+article img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);}
+article img.avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;vertical-align:middle;border:none;}
 article p:has(> img.avatar:only-child){margin-bottom:2px;}
 article table{border-collapse:collapse;width:100%;margin:1em 0;}
 article th,article td{border:1px solid var(--line);padding:7px 10px;text-align:left;}
@@ -55,6 +55,8 @@ article pre:has(code.language-diagram)::before{content:"🗺️ How it fits toge
 article pre:has(code.language-diagram) code{display:inline-block;font-size:12.5px;line-height:1.55;}
 article code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em;}
 article pre code{background:none;padding:0;}
+.diagram-wrap{margin:1.4em 0;overflow-x:auto;}
+.diagram-wrap svg{display:block;width:100%;height:auto;min-width:560px;}
 article blockquote{position:relative;margin:1.4em 0;padding:1.6em 1.1em .9em;border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:10px;background:var(--quote-bg);color:var(--fg);}
 article blockquote::before{content:"💬 Try this prompt";position:absolute;top:.7em;left:1.1em;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent2);}
 article blockquote p{margin:0;font-style:italic;}
@@ -208,7 +210,7 @@ article blockquote p{margin:0;font-style:italic;}
 </li>
 </ul>
 <p>Esto convierte el aprendizaje en algo activo, no pasivo.</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/75992496-4be9-4643-9258-fdb2a87f7e38/0_Aula_Invertida_ES.jpg?ixlib=rails-4.2.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt=""></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/75992496-4be9-4643-9258-fdb2a87f7e38/0_Aula_Invertida_ES.jpg?ixlib=rails-4.2.0&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt=""></p>
 <h3>¿Por qué trabajamos así?</h3>
 <p>Porque en el mundo real:</p>
 <ul>
@@ -311,7 +313,7 @@ article blockquote p{margin:0;font-style:italic;}
 <p>🗓 <strong>Agrégalos a tu calendario haciendo</strong> <a href="https://calendar.google.com/calendar/u/0?cid=Y19kYWY1MTY2OTUwNDZhZGU2NzFkM2YwOTk2YTVkMWY1NDhmMTUyYWIxZWEwZjRmMzQ3NzhlZTFhOTk2ZmYyYzZiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"><strong>click aquí</strong></a></p>
 <hr>
 <h4>Plan de estudio🤖</h4>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/cc089af7-b565-4034-9d92-fb360d728598/211df4f3d98a33af.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/cc089af7-b565-4034-9d92-fb360d728598/211df4f3d98a33af.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h4>Importante</h4>
 <ol>
 <li><p>* Todos los horarios son de España (CEST)</p>
@@ -395,7 +397,7 @@ article blockquote p{margin:0;font-style:italic;}
 <p>En febrero de 2026, Andrej Karpathy — uno de los fundadores de OpenAI — declaró que el &quot;vibe coding&quot; ya estaba pasado de moda y propuso un término distinto para 2026: <strong>agentic engineering</strong>. La frase es oportuna: en 18 meses pasamos de &quot;la IA me sugiere líneas&quot; a &quot;la IA me ejecuta tareas durante 200 minutos seguidos&quot;. Este pre-curso parte de ahí.</p>
 </blockquote>
 <h2>El cambio de paradigma en 4 años</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/757ecd83-bb8a-4cfb-81a1-222b37a9ffd0/cec66baaa68dc0e8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/757ecd83-bb8a-4cfb-81a1-222b37a9ffd0/cec66baaa68dc0e8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>El cuello de botella se está moviendo: ya no es <strong>escribir código</strong>, sino <strong>definir qué construir, dar contexto efectivo y validar que lo generado sirve</strong>.</p>
 <h2>Qué dicen los datos duros (2025–2026)</h2>
 <h3>Adopción casi universal</h3>
@@ -626,11 +628,11 @@ article blockquote p{margin:0;font-style:italic;}
 <p>Aquí están los datos que más impactan a seniors hoy. Son crudos pero verificables.</p>
 <h3>El recorte en hiring junior es real y masivo</h3>
 <p><strong>SignalFire State of Talent Report 2025</strong> (basado en data de Beacon AI sobre 650M de profesionales y 80M de empresas):</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/5d3332f7-f998-492f-8524-7331b5570235/75c56e2d7d394b90.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/5d3332f7-f998-492f-8524-7331b5570235/75c56e2d7d394b90.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Mientras tanto, <strong>las mismas empresas aumentaron contrataciones de devs con 2–5 años de experiencia un +27%</strong> en Big Tech (+14% en startups).</p>
 <h3>Stanford &quot;Canaries in the Coal Mine&quot; (agosto 2025)</h3>
 <p>Este estudio del Digital Economy Lab de Stanford, basado en datos de payroll de ADP, es el más citado en la industria en 2026:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/44ee07e1-b2ca-495d-89cd-c8509a081716/573727376fd665cf.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/44ee07e1-b2ca-495d-89cd-c8509a081716/573727376fd665cf.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>📺 Erik Brynjolfsson (autor principal del estudio) explica los hallazgos en este podcast:</p>
 <p>Video Player is loading.</p>
 <p>Loaded: 0.00%</p>
@@ -685,10 +687,10 @@ article blockquote p{margin:0;font-style:italic;}
 </blockquote>
 <h2>Las dos frustraciones que más reportan los devs senior con IA</h2>
 <p>Stack Overflow Developer Survey 2025 (49.000 respuestas):</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/3cada8e5-cfb8-4c79-a7d4-31a452ff6eff/b5c12e1fff25ae50.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/3cada8e5-cfb8-4c79-a7d4-31a452ff6eff/b5c12e1fff25ae50.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>La conclusión</strong>: los agentes IA son extraordinarios para tareas bien definidas y patrones conocidos. Son limitados para problemas ambiguos, arquitectura compleja, o contextos donde &quot;casi correcto&quot; no es suficiente. Tu trabajo como senior es saber exactamente dónde está esa línea.</p>
 <h2>Cómo cambia el rol concretamente</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/4c9acc62-e6cb-409d-ae91-81206ad5fad6/411959d2f27aa921.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/4c9acc62-e6cb-409d-ae91-81206ad5fad6/411959d2f27aa921.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h2>Voces relevantes de la industria (2025–2026)</h2>
 <ul>
 <li><p><strong>Erik Brynjolfsson (Stanford)</strong>: <em>&quot;Los jóvenes en ocupaciones expuestas son &#39;canarios en la mina&#39;. Si usamos IA para aumentar y no solo automatizar, ganamos prosperidad compartida.&quot;</em></p>
@@ -739,7 +741,7 @@ article blockquote p{margin:0;font-style:italic;}
 </blockquote>
 <h2>La tendencia de consolidación (últimos 12 meses)</h2>
 <p>El mercado ha experimentado una consolidación violenta. La saga <strong>Windsurf</strong> lo resume mejor que cualquier resumen ejecutivo:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/904afa98-661a-4f0b-9936-a501bb51afc9/b38cd6874551c30f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/904afa98-661a-4f0b-9936-a501bb51afc9/b38cd6874551c30f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Otros movimientos relevantes</strong>:</p>
 <ul>
 <li><p><strong>Anysphere/Cursor</strong> adquirió <strong>Supermaven</strong> (autocompletado) en <strong>noviembre de 2024</strong> y <strong>Graphite</strong> (code review) en <strong>diciembre de 2025</strong>.</p>
@@ -749,7 +751,7 @@ article blockquote p{margin:0;font-style:italic;}
 </ul>
 <p><strong>¿Qué significa esto para ti?</strong> Las grandes empresas están absorbiendo o compitiendo directamente con startups innovadoras. Los desarrolladores buscan cada vez menos herramientas fragmentadas y más <strong>plataformas integradas</strong> que cubran todo el flujo de trabajo. La consolidación no es teórica: ya pasó.</p>
 <h2>Comparativa rápida (abril 2026)</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/32b00a9f-4b59-4e78-b1ee-521935075063/a0556c83633d503d.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/32b00a9f-4b59-4e78-b1ee-521935075063/a0556c83633d503d.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>No memorices estas cifras.</strong> Cambian semana a semana. Lo que importa es la magnitud: ningún momento histórico de herramientas dev ha visto este nivel de inversión y crecimiento. Esto valida el cambio de paradigma — no es hype.</p>
 </blockquote>
@@ -836,7 +838,7 @@ article blockquote p{margin:0;font-style:italic;}
 <p><strong>Con MCP</strong>, Notion expone un servidor MCP y <strong>cualquier herramienta compatible</strong> puede conectarse inmediatamente.</p>
 </blockquote>
 <h3>Adopción masiva en 18 meses</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/e35cad1a-9368-4db2-9d4d-617aa209042c/d5cf2f148f869dec.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/e35cad1a-9368-4db2-9d4d-617aa209042c/d5cf2f148f869dec.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Volúmenes (abril 2026)</strong>:</p>
 <ul>
 <li><p><strong>97 millones de descargas mensuales</strong> de SDKs MCP (vs. ~100 mil al lanzamiento).</p>
@@ -1014,7 +1016,7 @@ article blockquote p{margin:0;font-style:italic;}
 </ul>
 <p>Cada una de estas fases ha cambiado en los últimos 18 meses. Vamos por las que más impacto tienen.</p>
 <h2>Cómo cambia cada fase del SDLC con IA</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/aa45ddda-80e6-4aa7-8070-c190fba7abe5/30a7cc7ddf4eef4f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/aa45ddda-80e6-4aa7-8070-c190fba7abe5/30a7cc7ddf4eef4f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Lectura del mapa</strong>: cada celda de la columna &quot;Sesión del máster&quot; es donde profundizamos en esa fase. Si una sesión te genera más curiosidad que otra, es buena señal — significa que ya identificaste tu palanca prioritaria.</p>
 </blockquote>
@@ -1362,10 +1364,10 @@ jobs:
 </ul>
 <h2>Familias de modelos</h2>
 <p>Aunque &quot;LLM&quot; suena monolítico, hay tres familias principales:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/f0284032-d668-493a-8dd7-4e6884c0271a/1af6048e8f3f4a38.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/f0284032-d668-493a-8dd7-4e6884c0271a/1af6048e8f3f4a38.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Los LLMs comerciales que usas hoy son todos decoder-only</strong>. Cuando hablamos de &quot;LLM&quot; en el máster nos referimos casi siempre a esta familia.</p>
 <h2>Modelos LLMs principales (snapshot abril 2026)</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/172bae15-e02b-4a77-9d74-3a4316251925/d30ea2487cf530d7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/172bae15-e02b-4a77-9d74-3a4316251925/d30ea2487cf530d7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>No te aprendas las cifras</strong>. La tabla es para que tengas un mapa al ver nombres en la documentación de las herramientas. Lo que importa: <strong>los tres líderes (GPT, Claude, Gemini) convergieron en ~1M tokens de contexto en 2026</strong> — un cambio cualitativo para developers.</p>
 </blockquote>
@@ -1493,7 +1495,7 @@ jobs:
 <p>💡 <strong>Por qué importa</strong>: cuando ves &quot;Opus thinking&quot; o &quot;GPT-5 thinking&quot; en una herramienta, estás activando un modelo entrenado con RLVR que <strong>piensa antes de responder</strong>. Cuesta más latencia pero reduce errores en tareas complejas. Los modelos sin &quot;thinking&quot; son más rápidos y baratos para tareas simples.</p>
 </blockquote>
 <h3>7. Fine-tuning vs. RAG (la decisión más común que enfrentarás)</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/ebf3aa53-0d4c-48d2-9d65-1722ba83ae6d/8551a020b44b0b1f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/ebf3aa53-0d4c-48d2-9d65-1722ba83ae6d/8551a020b44b0b1f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Regla práctica</strong>:</p>
 <ul>
 <li><p>¿Tus datos cambian frecuentemente? → <strong>RAG</strong>.</p>
@@ -1733,27 +1735,27 @@ git push origin --delete alumno/jorge-pilo/s01-justfile
 <h2>Parte 2: Cómo cambia esto con IA (2026)</h2>
 <p>Ahora que tienes el flujo clásico claro, esto es lo que cambió y vas a usar todos los días en el máster.</p>
 <h3>Lo que cambió en cada paso del flujo PR</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/18e66cd6-daf7-40a2-bfd5-14f4094a3ee6/d0f7b9368aee5c49.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/18e66cd6-daf7-40a2-bfd5-14f4094a3ee6/d0f7b9368aee5c49.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Cheatsheet: comandos y atajos por herramienta</h3>
 <h3>Generación de commit messages</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/1ef20fe5-7599-4127-a2d1-232067916e0a/9b1c0b9a8ec69180.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/1ef20fe5-7599-4127-a2d1-232067916e0a/9b1c0b9a8ec69180.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 Configura el estilo (Conventional Commits, Gitmoji, custom) en los settings de tu herramienta para que los mensajes salgan ya con el formato que tu equipo usa.</p>
 </blockquote>
 <h3>Generación de descripción de PR</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/4a587ee7-4621-4f4a-b00e-4d361e427690/d7f53de40dde5675.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/4a587ee7-4621-4f4a-b00e-4d361e427690/d7f53de40dde5675.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ La IA <strong>no conoce el contexto del issue ni el por qué del cambio</strong>. Siempre revisa la descripción y añade el &quot;por qué&quot; — es lo que te diferencia de un PR generado.</p>
 </blockquote>
 <h3>Resolución de merge conflicts</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/a7b06d5f-6bdf-47e7-93aa-39f0a7236386/e7dc66f56838b42f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/a7b06d5f-6bdf-47e7-93aa-39f0a7236386/e7dc66f56838b42f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ La IA no conoce tu lógica de negocio. Resuelve <strong>patrones de código</strong>, no decisiones de producto. Siempre revisa la resolución propuesta antes de marcar como resuelto.</p>
 </blockquote>
 <h3>Asignar tareas a agentes desde GitHub</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/5300c715-aeb9-4e8b-ad4e-40005d084b98/742c6d719badbba8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/5300c715-aeb9-4e8b-ad4e-40005d084b98/742c6d719badbba8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Code Review automatizado</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/37398e88-2661-4a4d-8968-f3460227e2e1/9ea87a9c97792e6a.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/37398e88-2661-4a4d-8968-f3460227e2e1/9ea87a9c97792e6a.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>📊 <strong>Datos oficiales (GitHub Blog, marzo 2026)</strong>: Copilot Code Review ha hecho <strong>60M de reviews acumuladas</strong>, <strong>&gt;1 de cada 5</strong> reviews en GitHub, <strong>71%</strong> dejan comentarios accionables, promedio <strong>5,1 comentarios</strong> por review.</p>
 <h3>Setup mínimo: Claude Code GitHub Action</h3>
 <p>Si vas a configurar tu repo del máster para que Claude Code responda a <code>@claude</code> mentions en PRs e issues, este es el archivo mínimo:</p>
@@ -1989,7 +1991,7 @@ jobs:
 </blockquote>
 <h2>Diferencia que NO es de categoría: completion vs agentic</h2>
 <p>Dentro de la categoría A misma puedes operar en dos modos muy distintos:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/d1ad3b6c-1db8-45cb-85a3-940bdb89ed71/8874385a964b99b9.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/d1ad3b6c-1db8-45cb-85a3-940bdb89ed71/8874385a964b99b9.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Decisión arquitectónica clave</strong>: cuándo cambias de modo. Como regla práctica:</p>
 <ul>
 <li><p>Si la tarea cabe <strong>dentro de una función o un par de archivos relacionados</strong> → completion + chat lateral.</p>
@@ -2003,7 +2005,7 @@ jobs:
 <h2>Matriz de decisión: cinco criterios prácticos</h2>
 <p>Cuando un senior dev en 2026 elige herramienta, no se basa en benchmarks: se basa en cinco criterios prácticos. Esta es la matriz que recomiendo internalizar:</p>
 <h3>Criterio 1 — Tamaño y forma del codebase</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/58eb9bb5-4f27-42c9-a560-4952858295ac/6c7f8471ccd60a32.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/58eb9bb5-4f27-42c9-a560-4952858295ac/6c7f8471ccd60a32.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Criterio 2 — Lenguaje principal</h3>
 <ul>
 <li><p><strong>Python / JavaScript / TypeScript</strong>: cualquier herramienta. La mayoría de modelos están sobreentrenados en estos lenguajes.</p>
@@ -2027,7 +2029,7 @@ jobs:
 </li>
 </ul>
 <h3>Criterio 4 — Presupuesto</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/af5f93b1-9ecd-4988-a4d9-0cb60adb898e/aaa01c149f1cff92.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/af5f93b1-9ecd-4988-a4d9-0cb60adb898e/aaa01c149f1cff92.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ <strong>Cifra a vigilar</strong>: GitHub Copilot anunció el 22 de abril de 2026 que migra a <em>usage-based billing</em> el 1 de junio de 2026 (1 AI credit = $0.01) y pausó signups de Pro/Pro+. Si lees esto después de junio, las cifras de arriba pueden estar desactualizadas — ve a <code>docs.github.com/copilot/billing</code>.</p>
 </blockquote>
@@ -2044,13 +2046,13 @@ jobs:
 </ul>
 <h2>Modelos disponibles dentro de las herramientas (snapshot abril 2026)</h2>
 <p>Con la consolidación post-2025, casi todas las herramientas son <strong>multi-modelo</strong>. El acceso al modelo top no determina ya la herramienta — la herramienta determina el harness:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/a5a5e9b9-baed-4ea7-9411-29896cac6d35/23afdedd85f3b3a9.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/a5a5e9b9-baed-4ea7-9411-29896cac6d35/23afdedd85f3b3a9.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Implicación</strong>: en 2026 la pregunta &quot;¿esta herramienta usa el mejor modelo?&quot; casi siempre se responde &quot;sí, con tu suscripción adecuada&quot;. La diferencia real está en el harness: cómo el modelo accede a tools, cómo gestiona contexto, qué workflows soporta.</p>
 </blockquote>
 <h2>Benchmarks: cómo leerlos sin engañarte</h2>
 <p>Si vas a comparar herramientas vía benchmarks públicos, <strong>lee estos cuatro y descarta el resto</strong>:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/65b563e3-d5a4-4bdc-9c0b-3039758e8f12/8e1677f8467cc1e4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/65b563e3-d5a4-4bdc-9c0b-3039758e8f12/8e1677f8467cc1e4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ <strong>Trampa común</strong>: comparar SWE-Bench Verified scores entre vendors. La mayoría son self-reported con scaffolding propio. Si Vendor A reporta 87% y Vendor B reporta 85%, es probable que la diferencia sea más harness que modelo. Para comparativas honestas: <a href="http://vals.ai/">vals.ai</a>, <a href="https://swe-rebench.com/">SWE-rebench</a>, <a href="https://aider.chat/docs/leaderboards/">Aider leaderboards</a>.</p>
 </blockquote>
@@ -2161,7 +2163,7 @@ jobs:
 </blockquote>
 <h2>Tipos de contexto: qué meter, qué dejar fuera</h2>
 <p>Para tomar decisiones conscientes hay que distinguir <strong>qué tipos de contexto</strong> existen. En 2026 esta es la taxonomía que más circula entre seniors:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/ebf89709-269f-4123-a428-f7367bde79f4/569e1200cafaa525.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/ebf89709-269f-4123-a428-f7367bde79f4/569e1200cafaa525.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ <strong>Anti-patrón</strong>: meter código de &quot;por si acaso&quot;. Cada archivo no relevante es ruido que distrae al modelo y consume budget. Si no estás 80% seguro de que el modelo necesita un archivo, <strong>no lo metas</strong> — déjalo descubrirlo via Grep/Read si lo necesita.</p>
 </blockquote>
@@ -2208,7 +2210,7 @@ Dockerizada. Todo el stack se levanta con `docker compose up`.
 - NO introducir dependencias nuevas sin justificarlas en el PR.
 </code></pre>
 <h3>Comparativa de mecanismos</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/0298ba33-594c-40a1-8be5-4735e06a570f/02fe4382c7538d93.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/0298ba33-594c-40a1-8be5-4735e06a570f/02fe4382c7538d93.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Patrón emergente 2026</strong>: un solo <code>AGENTS.md</code> como <strong>fuente única de verdad</strong>, referenciado desde los archivos vendor-específicos. Ej.: <code>CLAUDE.md</code> consiste en una línea <code>@AGENTS.md</code> que importa el contenido. Así mantienes portabilidad multi-agente sin duplicar.</p>
 </blockquote>
@@ -2273,7 +2275,7 @@ Dockerizada. Todo el stack se levanta con `docker compose up`.
 </blockquote>
 <h2>Ventanas de contexto actuales (snapshot abril 2026)</h2>
 <p>Confirmando lo que viste en el pre-curso, la convergencia ~1M tokens se mantiene:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/74ceb89d-176b-4686-8bd3-c546d4205a92/1a413d8ec70e1f4e.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/74ceb89d-176b-4686-8bd3-c546d4205a92/1a413d8ec70e1f4e.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ Recordatorio: estos son <strong>techos físicos</strong>, no objetivos. El context rot empieza mucho antes.</p>
 </blockquote>
@@ -2309,7 +2311,7 @@ Dockerizada. Todo el stack se levanta con `docker compose up`.
 <p>En 2026, <strong>eso ya no es verdad</strong> — al menos no para coding con modelos razonadores. La razón: los modelos top (Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro Deep Think) tienen <strong>adaptive thinking budget</strong>: deciden por sí mismos cuánto razonar antes de responder. Decirles &quot;piensa paso a paso&quot; puede ser ruido o, peor, contraproducente.</p>
 <p>Anthropic lo dice explícitamente en su guía oficial 2026: <em>&quot;el mejor prompt no es el más largo ni el más complejo. Es el que logra tu objetivo de forma fiable con la mínima estructura necesaria.&quot;</em></p>
 <h3>Qué del prompt engineering clásico sigue vigente</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/e96ad7b9-8256-4250-8ef4-56560f3e8b8a/81501ab79b08f0c5.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/e96ad7b9-8256-4250-8ef4-56560f3e8b8a/81501ab79b08f0c5.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>La anatomía de un prompt técnico 2026</h3>
 <p>Convergencia de Anthropic best-practices, OpenAI Cookbook y Codex <a href="http://agents.md/">AGENTS.md</a> guidance:</p>
 <pre><code>1. CONTEXTO/ROLE  (corto, solo si añade restricciones reales)
@@ -3052,14 +3054,14 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 <hr>
 <h2>Los tres niveles de rigor</h2>
 <p>No todo proyecto necesita el mismo nivel de formalismo. El paper <em>&quot;Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants&quot;</em> (arXiv 2602.00180, Piskala 2026) propone una taxonomía útil:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/c3ea98df-c2e7-44e5-b56a-b1cef90856be/be60b18eb0807294.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/c3ea98df-c2e7-44e5-b56a-b1cef90856be/be60b18eb0807294.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ La mayoría de prácticas que llamamos &quot;SDD&quot; en 2026 son <strong>spec-first</strong> o <strong>spec-anchored</strong>. <em>Spec-as-source</em> sigue siendo aspiracional para la mayoría de equipos.</p>
 </blockquote>
 <hr>
 <h2>SDD vs. TDD, BDD, DDD</h2>
 <p>Confundir SDD con sus primos cercanos es habitual. La diferencia clave: <strong>qué es el artefacto primario y quién lo lee</strong>.</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/18979528-3462-4df7-acc5-d7ac2c64071a/34cd665cb15d53e1.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/18979528-3462-4df7-acc5-d7ac2c64071a/34cd665cb15d53e1.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 La diferencia operativa más importante: <strong>TDD especifica el comportamiento mediante ejemplos</strong> (tests). <strong>SDD especifica el comportamiento mediante reglas</strong> (requirements + scenarios). Los tests son la consecuencia de la spec, no el reemplazo.</p>
 </blockquote>
@@ -3172,7 +3174,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 <hr>
 <h2>Mapa del territorio</h2>
 <p>A abril de 2026 hay cinco herramientas / frameworks SDD relevantes con tracción real (más allá de prototipos académicos), cada uno con filosofía distinta:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/01ca5d5e-7001-438c-8295-488e1acfd594/5015321902e03623.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/01ca5d5e-7001-438c-8295-488e1acfd594/5015321902e03623.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Junto a estas hay <strong>frameworks de convenciones</strong> que se montan encima de una herramienta SDD. El propio LIDR mantiene dos:</p>
 <ul>
 <li><p><code>LIDR-academy/ai-specs</code> — convenciones LIDR pensadas para usar con OpenSpec.</p>
@@ -3197,7 +3199,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 </li>
 </ol>
 <p>Aplicado a las 5 opciones de la tabla:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/91b55240-1870-4f97-aaf7-df1fe0b16346/609df2e1ef421dd3.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/91b55240-1870-4f97-aaf7-df1fe0b16346/609df2e1ef421dd3.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⭐ Cita textual de LIDR sobre OpenSpec: <em>&quot;OpenSpec: bueno tanto para proyectos nuevos como existentes.</em> <em><strong>Nuestra recomendación para empezar.</strong></em><em>&quot;</em></p>
 </blockquote>
@@ -3234,7 +3236,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 </li>
 </ul>
 <p><strong>Diferencias filosóficas con OpenSpec</strong>:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/a50d96bb-a715-41c6-a9e9-02e1e2e82f36/4eb6a48855ede625.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/a50d96bb-a715-41c6-a9e9-02e1e2e82f36/4eb6a48855ede625.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Cuándo usar uno u otro</strong>: spec-kit si arrancás un proyecto desde cero con requisitos compliance/regulatorios fuertes. OpenSpec si trabajás sobre código existente y querés iterar rápido. En el máster: OpenSpec.</p>
 </blockquote>
@@ -3333,7 +3335,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 <h2>La filosofía brownfield-first (importante)</h2>
 <p>Una de las decisiones más fuertes de OpenSpec — y por la que encaja con el máster — es priorizar <strong>brownfield</strong> (sistemas existentes que evolucionan) sobre <strong>greenfield</strong> (proyectos nuevos).</p>
 <p>¿Por qué importa?</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/a0c3db33-eec0-43a8-9ef1-68d710579252/f6c8296a9dec26e7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/a0c3db33-eec0-43a8-9ef1-68d710579252/f6c8296a9dec26e7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>La mayoría del trabajo profesional es brownfield. Empresas con startups que crecen, productos que iteran, refactors continuos. Greenfield es la excepción, no la regla. El código que vas a escribir en tu carrera es mayoritariamente código que modifica código existente, no código nuevo. SDD útil tiene que asumir eso.</p>
 <hr>
 <h2>El concepto delta spec (preview)</h2>
@@ -3419,10 +3421,10 @@ openspec init
 <p>OpenSpec ofrece dos perfiles de workflow:</p>
 <h3>Profile <code>core</code> (default)</h3>
 <p>Tres comandos. La opción recomendada para empezar.</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/96f13472-f8aa-422b-94d1-b590febe496a/bbbc7f17c8803301.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/96f13472-f8aa-422b-94d1-b590febe496a/bbbc7f17c8803301.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Profile <code>expanded</code></h3>
 <p>Para flujos más controlados con más artefactos intermedios. Se activa con <code>openspec config profile</code>.</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/132ef282-abf7-437d-a445-7c3b85a95e19/a962f467aec5496d.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/132ef282-abf7-437d-a445-7c3b85a95e19/a962f467aec5496d.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Recomendación del máster</strong>: empezá con <code>core</code>. Cambiá a <code>expanded</code> solo cuando necesites el control extra (típicamente en proyectos con varios devs trabajando sobre el mismo repo).</p>
 <hr>
 <h2>La estructura de un <code>change</code></h2>
@@ -3585,9 +3587,9 @@ openspec view                    # Dashboard interactivo TUI
 <p>⏳ Tiempo estimado: 6 min</p>
 <h2>Slash commands</h2>
 <h3>Perfil <code>core</code> (default — los 3 que vas a usar el 90% del tiempo)</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/402d1ab1-9d71-4b6f-9e9a-a27fe04abc52/d8b65cb6f7340658.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/402d1ab1-9d71-4b6f-9e9a-a27fe04abc52/d8b65cb6f7340658.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Perfil <code>expanded</code> (opt-in — más control granular)</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/8f45241d-0884-4228-92c8-06156e8e2795/e0d883e2f78f5b32.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/8f45241d-0884-4228-92c8-06156e8e2795/e0d883e2f78f5b32.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h2>💻 CLI (terminal)</h2>
 <pre><code>openspec --version              # Versión instalada
 openspec init                   # Inicializa OpenSpec en el proyecto actual
@@ -3655,7 +3657,7 @@ export DO_NOT_TRACK=1          # Standard equivalente
 </code></pre>
 <hr>
 <h2>Errores comunes y cómo resolverlos</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/e4062998-872c-40e5-99a5-5cb304555069/f00ff1d3986818d4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/e4062998-872c-40e5-99a5-5cb304555069/f00ff1d3986818d4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <hr>
 <h2>Flujo de trabajo típico (memorízalo)</h2>
 <pre><code class="language-diagram">┌─────────────────────────────────────────────────────────────┐
@@ -4098,7 +4100,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 <hr>
 <h2>Por qué dos herramientas en el máster</h2>
 <p>El máster usa <strong>Claude Code</strong> y <strong>Cursor</strong>. No porque sean &quot;las mejores&quot;, sino porque ocupan los dos extremos del espectro práctico:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/47e6e3eb-ee6d-48c9-992d-afb0ecbf7975/a03cc85809ad0cfd.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/47e6e3eb-ee6d-48c9-992d-afb0ecbf7975/a03cc85809ad0cfd.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>El objetivo no es elegir una. Es <strong>dominar las primitivas que comparten</strong> — ese conocimiento se transfiere a cualquier copiloto que aparezca en los próximos 18 meses.</p>
 <blockquote>
 <p>⚠ Todo el contenido de esta sesión es <strong>agnóstico</strong>. Cuando muestre comandos concretos serán de Claude Code (la herramienta principal del máster), pero cada concepto se traduce a su equivalente en Cursor en la lección 2.</p>
@@ -4135,14 +4137,14 @@ claude          # primer arranque: te abre una pestaña del navegador para auten
 <h2>Planes y economía 2026</h2>
 <p>Esta tabla es la única &quot;tabla de precios&quot; que necesitas memorizar como referencia operativa. <strong>Datos confirmados a finales de abril 2026.</strong></p>
 <h3>Claude Code</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/17eb9fab-2134-419c-9648-a94a8b2527be/002a3b3b4b9090d7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/17eb9fab-2134-419c-9648-a94a8b2527be/002a3b3b4b9090d7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Modelos y precios API</strong> (útil saberlos para entender qué consume cada subagent):</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/0c58234d-ba8a-460a-a01a-bab76a46866a/537aa231e4a8355f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/0c58234d-ba8a-460a-a01a-bab76a46866a/537aa231e4a8355f.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Truco de coste</strong>: los planes incluyen <em>prompt caching</em> automático. En sesiones largas, <strong>&gt;90% de los tokens son cache reads</strong> (10% del precio input). Eso es lo que hace que el plan flat-rate sea 2-3× más barato que la API equivalente para uso continuo.</p>
 </blockquote>
 <h3>Cursor</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/2424228c-c091-4f0e-8b05-817febf30acc/e5b8b4d055171631.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/2424228c-c091-4f0e-8b05-817febf30acc/e5b8b4d055171631.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>🔑 <strong>Detalle clave de Cursor</strong>: Auto mode (Composer 2) <strong>no consume el pool</strong>. Ese pool sólo se gasta cuando eliges manualmente Sonnet 4.6, Opus 4.6, GPT-5.4 o Gemini 3.1 Pro. Si vives en Auto, $20/mes te da uso prácticamente ilimitado. Overage al precio API sin markup.</p>
 </blockquote>
@@ -4198,7 +4200,7 @@ claude
 <hr>
 <h2>Comandos esenciales de sesión interactiva (Claude Code)</h2>
 <p>Memoriza estos 8. Cubren el 90% de lo que vas a hacer en el máster:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/263d0faf-95c7-45c5-ae0c-f1e5dfef6544/4d40cbc5f96ebb6c.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/263d0faf-95c7-45c5-ae0c-f1e5dfef6544/4d40cbc5f96ebb6c.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>En Cursor el equivalente vive en el <strong>command palette</strong> (Cmd/Ctrl+Shift+P → buscar &quot;Plan&quot;, &quot;Agents&quot;, &quot;MCP&quot;…) y en los comandos slash dentro del chat (<code>/multitask</code>, <code>/best-of-n</code>, <code>/worktree</code>, <code>/btw</code>).</p>
 <hr>
 <h2>Anti-patrones del primer día</h2>
@@ -4235,7 +4237,7 @@ claude
 </li>
 </ol>
 <p>Las <strong>7 primitivas</strong> que comparten todos los copilotos serios en abril 2026:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/e242077c-5aed-48db-9820-ac3a54a0e757/783031282fc56fbd.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/e242077c-5aed-48db-9820-ac3a54a0e757/783031282fc56fbd.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>El resto de la lección explica cada una con su instanciación concreta. Cierra con una <strong>tabla de traducción agnóstica</strong> lista para imprimir.</p>
 <hr>
 <h2>1 · Memoria persistente del proyecto</h2>
@@ -4244,7 +4246,7 @@ claude
 </blockquote>
 <p>El agente arranca cada sesión sin memoria. La memoria persistente del proyecto resuelve eso: un archivo en tu repo que se carga automáticamente en cada sesión.</p>
 <h3>El archivo según la herramienta</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/28c24e44-c471-4729-96cb-454be21009e4/680e4ea6ae8a8593.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/28c24e44-c471-4729-96cb-454be21009e4/680e4ea6ae8a8593.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>El estándar emergente: <a href="http://agents.md/">AGENTS.md</a></h3>
 <p><code>AGENTS.md</code> es el formato común que la mayoría de herramientas adoptaron en 2025-2026. Está bajo <em>stewardship</em> de la <strong>Linux Foundation</strong> (Agentic AI Foundation) y lo soportan Codex, Cursor, Copilot, Gemini, Windsurf, OpenCode, Jules… y prácticamente cualquier herramienta seria. <strong>&gt;60.000 repos públicos en GitHub ya lo usan</strong> (Apache Airflow, Temporal, Vercel Next.js, Inngest, entre los referencia).</p>
 <p>Claude Code es la <strong>excepción</strong> a abril 2026: no lo lee nativamente. El issue <a href="https://github.com/anthropics/claude-code/issues">anthropics/claude-code#6235</a> lleva miles de upvotes pidiéndolo. La comunidad lo resolvió con un patrón estándar:</p>
@@ -4336,7 +4338,7 @@ NO modifiques archivos. Solo análisis.
 </ul>
 <h3>Skills bundled en Claude Code</h3>
 <p>Vienen de fábrica y siempre disponibles:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/7ada2f5b-4ef7-4a81-8159-23c095f64861/d4dea7efd31e33e6.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/7ada2f5b-4ef7-4a81-8159-23c095f64861/d4dea7efd31e33e6.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>En Cursor</h3>
 <p>Idéntico concepto: archivos <code>SKILL.md</code> con frontmatter, carpeta <code>.cursor/skills/</code> o reconocidos vía rule. Cursor también lee skills de Claude por compatibilidad cross-tool (Agent Skills es un open standard).</p>
 <blockquote>
@@ -4346,7 +4348,7 @@ NO modifiques archivos. Solo análisis.
 <h2>3 · Subagents</h2>
 <p>Un subagent es una <strong>instancia del modelo con su propio contexto, sus propios permisos y su propio resumen de salida</strong>. Cuando el principal delega, el subagent trabaja, devuelve un resumen, y nada de lo que vio entra en el contexto principal.</p>
 <h3>Built-in en Claude Code</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/30b88e6c-5e13-4286-ad46-0f6230ce1e72/57cb71c514287a93.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/30b88e6c-5e13-4286-ad46-0f6230ce1e72/57cb71c514287a93.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Tú no los invocas explícitamente. El agente principal decide. Tu único trabajo es <strong>redactar el prompt de forma que el modelo entienda que conviene delegar</strong>.</p>
 <p>Ejemplo:</p>
 <pre><code>&gt; Antes de implementar la nueva funcionalidad de notificaciones,
@@ -4419,7 +4421,7 @@ Sé conciso. Cita rutas/líneas y URLs específicas. No propongas implementació
     No, keep planning
 </code></pre>
 <h3>Cuándo SÍ usarlo</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/82b21637-204d-4a52-9b6c-afb1c515de96/c5b84e514858797b.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/82b21637-204d-4a52-9b6c-afb1c515de96/c5b84e514858797b.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Cuándo NO usarlo</h3>
 <ul>
 <li><p>Fix tipográfico, formateo, añadir log único.</p>
@@ -4437,7 +4439,7 @@ Sé conciso. Cita rutas/líneas y URLs específicas. No propongas implementació
 <p>Los prompts son interpretables. Los hooks no. Un hook es <strong>un script (o llamada HTTP, o prompt, o agent)</strong> que se ejecuta automáticamente en un evento concreto del ciclo de vida del agente.</p>
 <h3>Eventos disponibles en Claude Code (versión actual, abril 2026)</h3>
 <p>21 puntos del ciclo de vida. Los que vas a usar de verdad:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/aa2f6323-cbbc-4ead-8a4e-6b611e618ecd/31521a0c874be5e8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/aa2f6323-cbbc-4ead-8a4e-6b611e618ecd/31521a0c874be5e8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>4 tipos de handler</h3>
 <pre><code>{
   &quot;hooks&quot;: {
@@ -4518,7 +4520,7 @@ claude mcp get &lt;nombre&gt;
 claude mcp remove &lt;nombre&gt;
 </code></pre>
 <h3>Scopes (dónde vive la configuración)</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/43d7ad0b-e308-4e28-b0c3-e2b82aa28a5d/32b44769f36f2de8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/43d7ad0b-e308-4e28-b0c3-e2b82aa28a5d/32b44769f36f2de8.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Regla de oro</strong>: lo que requiere credenciales personales (tu PAT de GitHub, tu API key de Notion) va en <code>--scope user</code>. Lo que es del proyecto y no tiene secrets (un servidor MCP custom de tu equipo) va en <code>--scope project</code> y se commitea.</p>
 </blockquote>
@@ -4551,7 +4553,7 @@ claude mcp remove &lt;nombre&gt;
 <h2>7 · Output Styles — cambiar la &quot;personalidad&quot;</h2>
 <p>Output styles <strong>reemplazan</strong> el system prompt de Claude Code. No es lo mismo que <a href="http://claude.md/">CLAUDE.md</a> (que añade contexto encima del system prompt) ni que skills (que se invocan on-demand). Es un cambio de personalidad <strong>persistente</strong> durante la sesión.</p>
 <h3>Built-in</h3>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/816e6072-d829-4103-8fdd-3043fc81bf15/c55e8ffe51aac516.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/816e6072-d829-4103-8fdd-3043fc81bf15/c55e8ffe51aac516.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>Custom</h3>
 <pre><code>&gt; /output-style:new
 </code></pre>
@@ -4571,7 +4573,7 @@ claude mcp remove &lt;nombre&gt;
 <hr>
 <h2>Tabla de traducción agnóstica</h2>
 <p>Llévate ésta a tu siguiente sesión:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/05ca0612-f9d6-44fe-8334-effd4cb82380/2c206babfdfd8390.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/05ca0612-f9d6-44fe-8334-effd4cb82380/2c206babfdfd8390.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <hr>
 <h2>Bonus · Plugins: cómo se distribuye todo lo anterior</h2>
 <p>Las 7 primitivas son lo que <em>hace</em> el copiloto. Los plugins son <strong>cómo se empaquetan y se comparten</strong>. No son una primitiva más; son el mecanismo de distribución de las anteriores.</p>
@@ -4934,13 +4936,13 @@ Cambios listos para commit.
 <p>⏳ Tiempo estimado: 20 min</p>
 <h2>Claude Code vs Cursor: matriz decisional concreta</h2>
 <p>La pregunta no es &quot;cuál es mejor&quot;. Es &quot;cuál usas para esta tarea ahora mismo&quot;. Tabla de campo:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/d3cc7978-8af5-48cf-9093-f6cdf2a92dc2/56cd7e0f88a67f3b.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/d3cc7978-8af5-48cf-9093-f6cdf2a92dc2/56cd7e0f88a67f3b.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Patrón normal de un senior productivo</strong>: ambos abiertos. Cursor para la edición fina del archivo activo. Claude Code en una pestaña de terminal aparte para tareas largas en background. El &quot;composable AI coding stack&quot; de The New Stack no es metáfora — es la realidad operativa.</p>
 </blockquote>
 <hr>
 <h2>Plan recomendado por perfil</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/7c170771-8729-442c-a0d1-caebd7237b3a/f7ae0ad06c11d054.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/7c170771-8729-442c-a0d1-caebd7237b3a/f7ae0ad06c11d054.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>📌 <strong>Regla de bolsillo</strong>: el upgrade tiene sentido cuando <strong>te interrumpe el trabajo más de 2 veces por semana</strong>. Si no, Pro + extra usage en spike weeks es más barato.</p>
 </blockquote>
@@ -5692,7 +5694,7 @@ El MVP se considera exitoso si, tras 4 semanas con usuarios reales:
 <p><em>¿Qué capacidades del equipo + capacidades de los copilotos se combinan para entregar este conjunto de outcomes?</em></p>
 </blockquote>
 <p>La diferencia es operativa, no semántica:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/1af5ccc8-032e-453f-acf3-d5a1d23fa7be/3bfcf9abb377cca4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/1af5ccc8-032e-453f-acf3-d5a1d23fa7be/3bfcf9abb377cca4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>El trabajo del senior planificando ya no es &quot;dividir features en tareas pequeñas&quot;. Es <strong>diseñar las condiciones bajo las cuales una tarea puede completarse rápido</strong>: spec clara, contexto en <code>AGENTS.md</code>, MCPs configurados, tests de referencia accesibles. Si esas condiciones existen, la tarea es trivial. Si no, ningún modelo te salva.</p>
 <hr>
 <h2>Adopción real en planificación, no en hype</h2>
@@ -5799,7 +5801,7 @@ El MVP se considera exitoso si, tras 4 semanas con usuarios reales:
 <hr>
 <h2>INVEST sigue aplicando. Y ahora más.</h2>
 <p>INVEST es de 2003 (Bill Wake) pero los seis criterios son la mejor checklist barata para evaluar si una story es &quot;AI-ready&quot;:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/37f4f86a-007c-4753-9429-fc78a74c4f04/3ef7089cf49bcdc7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/37f4f86a-007c-4753-9429-fc78a74c4f04/3ef7089cf49bcdc7.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Patrón senior</strong>: usa INVEST como <strong>filtro de entrada al sprint</strong>, no como aspiración. Cualquier story que falle 2+ de los 6 criterios vuelve a refinamiento. Sin negociación. La IA no rescata stories vagas, las amplifica.</p>
 </blockquote>
@@ -5861,7 +5863,7 @@ Scenario: Filtro con valor inválido
 <hr>
 <h2>Backlog (product layer) ↔ OpenSpec (spec layer)</h2>
 <p>Aquí es donde S4 conecta con S2 sin pisarse. Son dos capas con propósitos distintos:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/b9803a69-f13d-4718-a2e8-a4cb728b7e47/bfafa15f239e6750.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/b9803a69-f13d-4718-a2e8-a4cb728b7e47/bfafa15f239e6750.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>El flujo canónico de un story bien planificado</h3>
 <pre><code class="language-diagram">PRD          ────► User Story            ────► OpenSpec change       ────► Código
 (página/    (Linear/Jira ticket          (openspec/changes/...        (PR mergeable)
@@ -5944,7 +5946,7 @@ una llamada extra desde el frontend.
 <p>⏳ Tiempo estimado: 13 min</p>
 <h2>El gran debate falso: SP vs horas vs t-shirts</h2>
 <p>El debate sigue activo y la mitad de la industria sigue equivocada en una dirección u otra. Lectura corta para no perder tiempo:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/3e31140e-e591-48c2-beea-711f43d1d4ce/534a9777bc3632dc.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/3e31140e-e591-48c2-beea-711f43d1d4ce/534a9777bc3632dc.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>La trampa de las horas en la era de IA</h3>
 <blockquote>
 <p>⚠ <strong>Por qué las horas dejaron de funcionar como unidad interna de planificación</strong>:</p>
@@ -6031,7 +6033,7 @@ una llamada extra desde el frontend.
 <hr>
 <h2>Estimación de tareas que no son código</h2>
 <p>Aquí es donde casi todos los planes fallan. La IA acelera <em>escribir código</em>. Acelera mucho menos:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/007e185c-839b-4a1d-b12a-df21111789ba/2208539278cb93a0.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/007e185c-839b-4a1d-b12a-df21111789ba/2208539278cb93a0.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Lectura senior</strong>: el 70-80% del tiempo de un equipo no se va escribiendo código nuevo. Va a debugging, revisión, alineación, refinamiento, deployment, soporte. <strong>La IA acelera la parte que ya era pequeña en el cómputo total</strong>. Por eso los multipliers grandes son irreales para outcomes de equipo.</p>
 </blockquote>
@@ -6100,7 +6102,7 @@ Buffer AI-aware (30%):                     28 SP comprometidos
 </li>
 </ol>
 <p>Tabla rápida (datos verificados abril 2026):</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/325ad8ca-31db-4cc9-8cb1-1c3c714605ff/d55b8d76552b434c.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/325ad8ca-31db-4cc9-8cb1-1c3c714605ff/d55b8d76552b434c.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>⚠ <strong>Datos a verificar al ejecutar la sesión</strong>: el ecosistema cambia rápido. Lo de arriba está validado a abril 2026 con changelogs oficiales. Si haces esta sesión 6 meses después, vuelve a verificar las versiones (sobre todo de los agentes que son beta).</p>
 </blockquote>
@@ -6268,7 +6270,7 @@ Buffer AI-aware (30%):                     28 SP comprometidos
 <p>⏳ Tiempo estimado: 12 min</p>
 <h2>El refinamiento ya no es una ceremonia, es un proceso de fondo</h2>
 <p>La ceremonia clásica de &quot;backlog refinement&quot; — todo el equipo, una hora, una vez por sprint — sigue existiendo, pero está perdiendo el monopolio. Con IA en el flujo, el refinamiento se vuelve <strong>continuo y asincrónico</strong>:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/4cb84ad4-8b87-493c-b42c-a7f9f3216b45/052a44347a5e1d49.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/4cb84ad4-8b87-493c-b42c-a7f9f3216b45/052a44347a5e1d49.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <blockquote>
 <p>💡 <strong>Patrón canónico para el flujo continuo</strong>:</p>
 <ol>
@@ -6587,7 +6589,7 @@ calendarios sin recurrencias.&quot;
 </ul>
 <hr>
 <h2>👥 Personas a seguir en este nicho</h2>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/886cb48e-8033-4a71-85fe-e6fa10b45f8b/fb1022e2d31192e9.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/886cb48e-8033-4a71-85fe-e6fa10b45f8b/fb1022e2d31192e9.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <hr>
 <h2>🇪🇸 Recursos en español</h2>
 <ul>
@@ -6675,7 +6677,7 @@ calendarios sin recurrencias.&quot;
 <h2>La IA como compañero de documentación, no como generador automático</h2>
 <p>El modelo mental correcto para esta sesión es el siguiente: <strong>la IA no reemplaza el juicio sobre qué documentar — lo amplifica</strong>.</p>
 <p>Las tareas donde la IA aporta valor real en documentación:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/09ce6026-a09b-46ed-9ee1-33ab3bc10a07/aa279cc50de459c0.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/09ce6026-a09b-46ed-9ee1-33ab3bc10a07/aa279cc50de459c0.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Las tareas donde la IA <strong>no sustituye</strong> al developer:</p>
 <ul>
 <li><p>Decidir <em>qué</em> merece ser documentado y con qué nivel de detalle</p>
@@ -6801,7 +6803,7 @@ Nombra el archivo con la fecha de hoy y el slug apropiado.
 
     Note over C: Almacena token en localStorage / HttpOnly cookie
 </code></pre>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/80d0811b-acf5-48b9-80dc-c013d55bb661/56a9b6da4b563078.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/80d0811b-acf5-48b9-80dc-c013d55bb661/56a9b6da4b563078.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p><strong>Diagrama de contexto C4 básico (Mermaid):</strong></p>
 <pre><code>graph LR
     User[&quot;👤 Usuario\\n[Persona]&quot;]
@@ -6813,7 +6815,7 @@ Nombra el archivo con la fecha de hoy y el slug apropiado.
     FE --&gt;|&quot;HTTP/JSON\\nBearerToken: oat_*&quot;| BE
     BE --&gt;|&quot;SQL\\nvia Lucid ORM&quot;| DB
 </code></pre>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/283e109c-84e9-423a-9df1-b7138885583c/diagram.jpg?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="diagram.jpg" title="diagram.jpg"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/283e109c-84e9-423a-9df1-b7138885583c/diagram.jpg?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="diagram.jpg" title="diagram.jpg"></p>
 <blockquote>
 <p><strong>Nota sobre Mermaid en GitHub</strong></p>
 <p>Funciona bien para la mayoría de tipos de diagrama. Limitaciones conocidas: los hyperlinks clickables en nodos no siempre funcionan en GitHub Preview, y algunos símbolos de FontAwesome (<code>fa:fa-ban</code>) no renderizan. Para diagramas de producción que necesiten precisión, usa Structurizr DSL (ver más abajo).</p>
@@ -7039,7 +7041,7 @@ export type LoginInput = InferInput&lt;typeof loginValidator&gt;
 <h2>Scalar: el renderer moderno para OpenAPI specs</h2>
 <p><strong>Scalar</strong> ha desplazado a Swagger UI como el estándar moderno para visualizar OpenAPI specs. Microsoft lo eligió como reemplazo oficial en .NET 9 y .NET 10. La razón es sencilla: mejor UX con menos ruido visual.</p>
 <p>Diferencias prácticas relevantes:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/f79e5890-5435-422d-abee-fa249ac0a9db/0ca0a328cd1977e2.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/f79e5890-5435-422d-abee-fa249ac0a9db/0ca0a328cd1977e2.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Scalar también tiene un <strong>modo standalone</strong> para incluir en el sitio de Starlight:</p>
 <pre><code>npm install @scalar/api-reference
 </code></pre>
@@ -7203,7 +7205,7 @@ Más espacio para lógica de negocio, menos para instrucciones técnicas
 <h2>La documentación también se testea</h2>
 <p>Si el código sin tests es deuda técnica, la documentación sin validación automatizada es deuda documental. La diferencia es que la deuda documental es silenciosa: los enlaces rotos que nadie detecta, el Markdown que rompe el build del sitio, la prosa que usa terminología inconsistente — todo eso llega al lector sin que nadie lo vea en PR.</p>
 <p>La validación de documentación en CI tiene cuatro capas:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/2769b156-128a-4810-8199-5af0d7d4a570/2817dffe06afc10e.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/2769b156-128a-4810-8199-5af0d7d4a570/2817dffe06afc10e.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Ninguna de estas herramientas es costosa de configurar. La GitHub Action completa corre en menos de 2 minutos.</p>
 <hr>
 <h2>Vale: el linter de prosa</h2>
@@ -7670,7 +7672,7 @@ Para el contexto completo (más verboso), ver llms-full.txt
 <hr>
 <h2>Plataformas SaaS de documentación (para referencia)</h2>
 <p>Mencionadas en la sesión pero fuera del scope del proyecto del máster por coste o enfoque:</p>
-<p><img src="https://media1-production-mightynetworks.imgix.net/asset/97f8e80d-15c3-43dc-b763-c07e3b412a28/511474ef89bf04fe.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
+<p><img loading="lazy" decoding="async" src="https://media1-production-mightynetworks.imgix.net/asset/97f8e80d-15c3-43dc-b763-c07e3b412a28/511474ef89bf04fe.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <p>Para el proyecto del máster y para la mayoría de proyectos internos: <strong>Starlight + GitHub Pages = $0</strong> cubre el 90% de las necesidades.</p>
 <hr>
 <h2>Personas y canales a seguir</h2>

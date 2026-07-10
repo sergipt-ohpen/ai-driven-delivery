@@ -40,6 +40,7 @@ for (let s = 0; s < manifest.sections.length; s++) {
     const mins = Math.max(1, Math.round(words / 200));
     let html = marked.parse(raw);
     html = html.replace(/<img\b([^>]*?impolicy=Avatar[^>]*?)>/g, '<img class="avatar"$1>');
+    html = html.replace(/<img\b(?![^>]*\bclass=)([^>]*?)>/g, '<img loading="lazy" decoding="async"$1>');
     const { icon, text } = splitIcon(it.label);
     pages.push({ id, secTitle: sec.title, secIdx: s, idxInSec, totalInSec: secTotals[s], icon, text, label: it.label, html, mins });
   }
@@ -127,8 +128,8 @@ article h3{font-size:17px;margin-top:1.6em;}
 article p,article li{line-height:1.7;}
 article p{margin:1em 0;}
 article a{color:var(--accent);}
-article img{max-width:100%;height:auto;border-radius:6px;}
-article img.avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;vertical-align:middle;}
+article img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);}
+article img.avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;vertical-align:middle;border:none;}
 article p:has(> img.avatar:only-child){margin-bottom:2px;}
 article table{border-collapse:collapse;width:100%;margin:1em 0;}
 article th,article td{border:1px solid var(--line);padding:7px 10px;text-align:left;}
@@ -212,4 +213,11 @@ const out = `<!doctype html><html lang="${manifest.lang}"><head><meta charset="u
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, out);
+
+const IMAGES_SRC = path.join(SRC, 'images');
+const IMAGES_OUT = path.join(path.dirname(OUT), 'images');
+if (fs.existsSync(IMAGES_SRC)) {
+  fs.cpSync(IMAGES_SRC, IMAGES_OUT, { recursive: true });
+}
+
 console.log(`[${variant}] lecciones: ${pid} → ${OUT}`);
