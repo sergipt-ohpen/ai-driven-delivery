@@ -35,3 +35,23 @@ node build-site.mjs en-pm
 Si añades lecciones nuevas: tras `extract.mjs`, traduce los md nuevos a
 `content/en/` (mismo nombre de archivo) y añade la entrada al `manifest.json`
 de cada variante.
+
+## Protección con contraseña
+
+El sitio es público (GitHub Pages en repo público, cuenta personal gratuita),
+así que las 4 páginas de `docs/` se cifran con [staticrypt](https://github.com/robinmoisson/staticrypt)
+tras cada build: sin la contraseña no se puede leer el contenido, ni siquiera
+mirando el HTML crudo.
+
+```bash
+STATICRYPT_PASSWORD="..." npm run protect
+```
+
+La contraseña **no está en el repo** (ni en este README, ni en ningún script);
+se comparte aparte con quien deba tener acceso. `.staticrypt.json` sí está
+commiteado: guarda solo la sal (no la contraseña), y hace falta que sea la
+misma en las 4 páginas para que "Remember me" funcione entre ellas.
+
+Hay que volver a correr `npm run protect` cada vez que se regenera `docs/`
+con `build-site.mjs`, porque el build sobreescribe el HTML cifrado con la
+versión en claro.

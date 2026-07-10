@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "protect": "node protect-site.mjs"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +12,8 @@
   "description": "",
   "dependencies": {
     "marked": "^18.0.5"
+  },
+  "devDependencies": {
+    "staticrypt": "^3.5.4"
   }
 }
