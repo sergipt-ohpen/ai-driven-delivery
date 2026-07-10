@@ -147,7 +147,7 @@ You now have the three pillars separately. Now comes the operational question: *
 
 This is the decision tree I recommend adopting:
 
-```
+```diagram
 Paso 1: CARACTERIZA LA TAREA
 ├── ¿Toca un solo archivo o varios?
 ├── ¿Necesita ejecutar comandos (build, tests, migrations)?

@@ -315,7 +315,7 @@ The `llms-full.txt` file is an expanded version with all the documentation seria
 
 At the project root and, if you have a docs site, at the site root:
 
-```
+```diagram
 flowsync/
 ├── llms.txt           # Versión concisa para el repo
 ├── llms-full.txt      # Versión expandida (generada, no escrita a mano)
@@ -345,7 +345,7 @@ flowsync/
 
 ## The complete docs pipeline in a single image
 
-```
+```diagram
 Código + Markdown en el repo
         │
         ├── Push a main

@@ -157,7 +157,7 @@ Cuando configures la conexión Claude Code ↔ tu PM tool, hay tres niveles de p
 
 ### Read-only
 
-```
+```diagram
 Claude Code ──► (read) ──► Linear/Jira
 ```
 
@@ -165,7 +165,7 @@ El agente solo puede leer. Útil para **research, summaries, generar reports**. 
 
 ### Write (controlado)
 
-```
+```diagram
 Claude Code ──► (read + create) ──► Linear/Jira
 ```
 
@@ -173,7 +173,7 @@ El agente puede leer y crear, pero no modificar/cerrar/mover. Útil para **bulk 
 
 ### Two-way (full)
 
-```
+```diagram
 Claude Code ──► (read + create + update + close) ──► Linear/Jira
 ```
 
@@ -209,7 +209,7 @@ Mención obligada: el ecosistema MCP tuvo varios issues de seguridad en los últ
 
 ## Decisión operativa AI4Devs
 
-```
+```diagram
 ┌──────────────────────────────────────────────────┐
 │ Stack PM para FlowSync (este proyecto):          │
 │                                                  │

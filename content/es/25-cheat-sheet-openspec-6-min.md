@@ -32,7 +32,7 @@ openspec feedback               # Crea un GitHub Issue con metadata
 
 ## 📁 Estructura de carpetas tras `openspec init`
 
-```
+```diagram
 openspec/
 ├── project.md                  # contexto del proyecto (lo curás vos)
 ├── changes/                    # propuestas activas
@@ -102,7 +102,7 @@ export DO_NOT_TRACK=1          # Standard equivalente
 
 ## Flujo de trabajo típico (memorízalo)
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────────┐
 │  1.  /opsx:propose "describe lo que queres hacer"           │
 │      → AI genera proposal.md + specs/ + design.md + tasks.md│

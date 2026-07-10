@@ -41,7 +41,7 @@ OpenAI publicó en febrero de 2026 un memo titulado *Harness Engineering: levera
 
 En este máster vamos a trabajar con **tres pilares que determinan la efectividad de cualquier copiloto de IA**, en orden de profundidad ascendente:
 
-```
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                                                 │
 │  PROMPT      ← lo que dices en cada turno       │

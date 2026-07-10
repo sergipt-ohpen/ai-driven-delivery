@@ -141,7 +141,7 @@ Cada PR (y cada commit) lleva una etiqueta del origen:
 
 ### Métricas que importan, segmentadas
 
-```
+```diagram
                  Velocity   Bugs/PR   Time-to-merge   Rework rate
 ─────────────────────────────────────────────────────────────────
 Human only        15 SP      0.3        2.1 días        8%
@@ -222,7 +222,7 @@ La IA puede ayudar en retrospectivas analizando datos:
 
 ## El bucle que cierra todo
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │    ┌─────────┐      ┌──────────┐      ┌──────────┐      │

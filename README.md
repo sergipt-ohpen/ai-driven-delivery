@@ -7,9 +7,11 @@ partir de los apuntes markdown del curso clipeados en `~/Downloads/clippings`.
 
 | Variante | Web | Contenido |
 |----------|-----|-----------|
-| `es` | `site/es/index.html` | Curso original en español (44 lecciones) |
-| `en` | `site/en/index.html` | Traducción íntegra al inglés |
-| `en-pm` | `site/en-pm/index.html` | Edición PO/PM en inglés: curada, práctica, enfocada a qué puede hacer un PO/PM con Claude |
+| `es` | `docs/es/index.html` | Curso original en español (44 lecciones) |
+| `en` | `docs/en/index.html` | Traducción íntegra al inglés |
+| `en-pm` | `docs/en-pm/index.html` | Edición PO/PM en inglés: curada, práctica, enfocada a qué puede hacer un PO/PM con Claude |
+
+Publicado en GitHub Pages desde `main` / carpeta `docs`.
 
 ## Estructura
 
@@ -18,7 +20,7 @@ partir de los apuntes markdown del curso clipeados en `~/Downloads/clippings`.
   `content/es/` + `manifest.json`.
 - `content/<variante>/` — lecciones en markdown + `manifest.json` (estructura
   de secciones, etiquetas y textos de UI de esa variante).
-- `build-site.mjs <variante>` — genera `site/<variante>/index.html`.
+- `build-site.mjs <variante>` — genera `docs/<variante>/index.html`.
 
 ## Regenerar
 

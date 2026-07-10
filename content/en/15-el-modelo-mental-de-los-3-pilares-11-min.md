@@ -41,7 +41,7 @@ OpenAI published a memo in February 2026 titled *Harness Engineering: leveraging
 
 In this master's program we're going to work with **three pillars that determine the effectiveness of any AI copilot**, in order of increasing depth:
 
-```
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                                                 │
 │  PROMPT      ← lo que dices en cada turno       │

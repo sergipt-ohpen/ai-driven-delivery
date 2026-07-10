@@ -93,7 +93,7 @@ REPOSITORY](https://github.com/LIDR-academy/ai4devs-s04-planificacion-ia-2026-06
 
 Upload to your `alumno/<nombre-apellido>` branch of the program repo a folder `entregables/sesion-04/` with:
 
-```
+```diagram
 entregables/sesion-04/
 ├── prompt.md         # Your complete prompt
 ├── output.md         # The raw AI output (untouched)

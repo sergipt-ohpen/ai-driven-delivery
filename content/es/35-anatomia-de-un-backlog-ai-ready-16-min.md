@@ -17,7 +17,7 @@ Esto cambia el coste relativo de la ambigüedad. En la era pre-IA, una story alg
 
 ## La pirámide y qué hace cada capa
 
-```
+```diagram
 ┌──────────────────────┐  Visión, alcance MVP, decisiones de
 │         PRD          │  arquitectura, métricas de éxito.
 └──────────┬───────────┘  (Producto + Tech, semanas/meses)
@@ -134,7 +134,7 @@ Aquí es donde S4 conecta con S2 sin pisarse. Son dos capas con propósitos dist
 
 ### El flujo canónico de un story bien planificado
 
-```
+```diagram
 PRD          ────► User Story            ────► OpenSpec change       ────► Código
 (página/    (Linear/Jira ticket          (openspec/changes/...        (PR mergeable)
  docs)       con AC en GWT)               markdown formal)
@@ -217,7 +217,7 @@ Si la story dice "implementa el endpoint /me extendido", el agente puede decidir
 
 ## Recap operativo
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │ Una story es AI-ready si:                               │
 │                                                         │

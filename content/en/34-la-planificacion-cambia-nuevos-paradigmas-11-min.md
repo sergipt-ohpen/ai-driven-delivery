@@ -103,7 +103,7 @@ This one deserves its own section because it's showing up in 2026 reports with a
 
 If you had to draw where risk concentrates in a project in 2026 vs 2020, the peaks have shifted:
 
-```
+```diagram
 2020 (sin IA):                2026 (con IA):
    ▁▂▆█▆▂▁                       ▆██▂▁▁▁▂▆
    D R I T D                      D R I T D

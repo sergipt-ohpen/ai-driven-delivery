@@ -17,7 +17,7 @@ This changes the relative cost of ambiguity. In the pre-AI era, a somewhat vague
 
 ## The pyramid and what each layer does
 
-```
+```diagram
 ┌──────────────────────┐  Visión, alcance MVP, decisiones de
 │         PRD          │  arquitectura, métricas de éxito.
 └──────────┬───────────┘  (Producto + Tech, semanas/meses)
@@ -134,7 +134,7 @@ This is where S4 connects with S2 without stepping on it. They are two layers wi
 
 ### The canonical flow of a well-planned story
 
-```
+```diagram
 PRD          ────► User Story            ────► OpenSpec change       ────► Código
 (página/    (Linear/Jira ticket          (openspec/changes/...        (PR mergeable)
  docs)       con AC en GWT)               markdown formal)
@@ -217,7 +217,7 @@ If the story says "implement the extended /me endpoint", the agent may decide to
 
 ## Operational recap
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │ Una story es AI-ready si:                               │
 │                                                         │

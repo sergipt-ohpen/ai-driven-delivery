@@ -141,7 +141,7 @@ Every PR (and every commit) carries an origin label:
 
 ### Metrics that matter, segmented
 
-```
+```diagram
                  Velocity   Bugs/PR   Time-to-merge   Rework rate
 ─────────────────────────────────────────────────────────────────
 Human only        15 SP      0.3        2.1 days        8%
@@ -222,7 +222,7 @@ AI can help in retrospectives by analyzing data:
 
 ## The loop that closes everything
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │    ┌─────────┐      ┌──────────┐      ┌──────────┐      │

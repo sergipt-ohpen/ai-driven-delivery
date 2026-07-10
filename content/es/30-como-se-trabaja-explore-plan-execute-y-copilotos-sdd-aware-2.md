@@ -8,7 +8,7 @@ EPE no lo inventó nadie en concreto. Apareció en paralelo en los blogs de Anth
 
 La idea es trivial: **separar exploración, planificación y ejecución en fases distintas, con modelos y permisos distintos**.
 
-```
+```diagram
 ┌──────────────┐        ┌──────────────┐        ┌──────────────┐
 │   EXPLORE    │   →    │     PLAN     │   →    │   EXECUTE    │
 ├──────────────┤        ├──────────────┤        ├──────────────┤
@@ -90,7 +90,7 @@ El plan, en cambio, es **el momento exacto donde un error se vuelve caro**: si a
 
 ## Plan mode vs agéntico directo: árbol de decisión
 
-```
+```diagram
 ¿La tarea toca > 3 archivos?
 ├── Sí → PLAN MODE
 └── No → ¿Tiene side-effects (DB, deploy, rm, secrets)?

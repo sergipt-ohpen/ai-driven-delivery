@@ -56,7 +56,7 @@ openspec init
 
 El wizard te pregunta qué herramientas usás (Claude Code, Cursor, Codex, etc.) y crea:
 
-```
+```diagram
 my-project/
 ├── openspec/
 │   ├── project.md           # contexto del proyecto (stack, convenciones)
@@ -100,7 +100,7 @@ Para flujos más controlados con más artefactos intermedios. Se activa con `ope
 
 Cuando ejecutas `/opsx:propose add-refresh-tokens`, OpenSpec genera:
 
-```
+```diagram
 openspec/changes/add-refresh-tokens/
 ├── proposal.md      # por qué y qué
 ├── specs/           # delta specs (qué cambia en las capabilities)

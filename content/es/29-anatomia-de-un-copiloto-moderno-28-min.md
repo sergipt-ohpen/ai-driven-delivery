@@ -51,7 +51,7 @@ Eso es todo. Tu `AGENTS.md` se vuelve la única fuente de verdad y Claude Code l
 
 ### Estructura recomendada del repo
 
-```
+```diagram
 your-repo/
 ├── AGENTS.md                       ← Source of truth multi-tool
 ├── CLAUDE.md → AGENTS.md           ← Symlink
@@ -98,7 +98,7 @@ Las skills son **instrucciones empaquetadas que el agente puede invocar** (manua
 
 ### Anatomía de una skill en Claude Code
 
-```
+```diagram
 .claude/
 └── skills/
     └── pr-review/
@@ -245,7 +245,7 @@ Plan mode es el modo donde el agente **solo lee** (Read, Grep, Glob, LS, WebSear
 
 Al terminar, el agente te presenta:
 
-```
+```diagram
 Accept plan?
   ▶ Yes, auto-accept future similar tool calls
     Yes, manually approve each tool call
@@ -458,7 +458,7 @@ Las 7 primitivas son lo que *hace* el copiloto. Los plugins son **cómo se empaq
 
 ### Anatomía de un plugin de Claude Code
 
-```
+```diagram
 my-plugin/
 ├── .claude-plugin/
 │   └── plugin.json          ← Manifest obligatorio

@@ -103,7 +103,7 @@ Este merece sección propia porque está saliendo en los reports de 2026 con un 
 
 Si tuvieras que dibujar dónde se concentra el riesgo en un proyecto en 2026 vs 2020, los picos se han desplazado:
 
-```
+```diagram
 2020 (sin IA):                2026 (con IA):
    ▁▂▆█▆▂▁                       ▆██▂▁▁▁▂▆
    D R I T D                      D R I T D

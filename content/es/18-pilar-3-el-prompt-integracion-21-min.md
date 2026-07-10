@@ -147,7 +147,7 @@ Ya tienes los tres pilares por separado. Ahora viene la pregunta operativa: **¿
 
 Este es el árbol de decisión que recomiendo adoptar:
 
-```
+```diagram
 Paso 1: CARACTERIZA LA TAREA
 ├── ¿Toca un solo archivo o varios?
 ├── ¿Necesita ejecutar comandos (build, tests, migrations)?

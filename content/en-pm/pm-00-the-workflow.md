@@ -8,7 +8,7 @@ Before any prompt, any tool, any trick — this is the one idea the whole guide 
 
 ## The picture
 
-```
+```diagram
    GitHub  ──clone / pull──▶   The project folder on your laptop
  (the source                    (real code + real docs)
   of truth)                             │

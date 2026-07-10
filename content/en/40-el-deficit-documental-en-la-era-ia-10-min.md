@@ -24,7 +24,7 @@ And then there is the audience problem nobody expected.
 
 Before talking about tools, you need a clear mental map. Technical documentation has four layers with distinct audiences. Mixing them in the same place is the root of most maintenance problems.
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────────┐
 │  LAYER             AUDIENCE           LIFECYCLE              │
 ├─────────────────────────────────────────────────────────────┤

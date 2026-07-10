@@ -77,7 +77,7 @@ npx log4brains preview
 
 La estructura que crea `log4brains init`:
 
-```
+```diagram
 docs/
 └── adr/
     ├── README.md              # Índice de ADRs

@@ -93,7 +93,7 @@ GITHUB](https://github.com/LIDR-academy/ai4devs-s04-planificacion-ia-2026-06-Sen
 
 Sube a tu rama `alumno/<nombre-apellido>` del repo del programa una carpeta `entregables/sesion-04/` con:
 
-```
+```diagram
 entregables/sesion-04/
 ├── prompt.md         # Tu prompt completo
 ├── output.md         # El output crudo de la IA (sin retocar)

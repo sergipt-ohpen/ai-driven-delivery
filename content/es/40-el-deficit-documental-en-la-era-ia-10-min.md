@@ -24,7 +24,7 @@ Y luego está el problema de la audiencia que nadie esperaba.
 
 Antes de hablar de herramientas, necesitas un mapa mental claro. La documentación técnica tiene cuatro capas con audiencias distintas. Mezclarlas en el mismo lugar es el origen de la mayoría de los problemas de mantenimiento.
 
-```
+```diagram
 ┌─────────────────────────────────────────────────────────────┐
 │  CAPA              AUDIENCIA          CICLO DE VIDA          │
 ├─────────────────────────────────────────────────────────────┤

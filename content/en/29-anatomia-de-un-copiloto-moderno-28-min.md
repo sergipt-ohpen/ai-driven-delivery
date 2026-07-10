@@ -51,7 +51,7 @@ That's it. Your `AGENTS.md` becomes the single source of truth and Claude Code r
 
 ### Recommended repo structure
 
-```
+```diagram
 your-repo/
 ├── AGENTS.md                       ← Source of truth multi-tool
 ├── CLAUDE.md → AGENTS.md           ← Symlink
@@ -98,7 +98,7 @@ Skills are **packaged instructions the agent can invoke** (manually or automatic
 
 ### Anatomy of a skill in Claude Code
 
-```
+```diagram
 .claude/
 └── skills/
     └── pr-review/
@@ -245,7 +245,7 @@ Plan mode is the mode where the agent **only reads** (Read, Grep, Glob, LS, WebS
 
 When it finishes, the agent presents you with:
 
-```
+```diagram
 Accept plan?
   ▶ Yes, auto-accept future similar tool calls
     Yes, manually approve each tool call
@@ -458,7 +458,7 @@ The 7 primitives are what the copilot *does*. Plugins are **how they get package
 
 ### Anatomy of a Claude Code plugin
 
-```
+```diagram
 my-plugin/
 ├── .claude-plugin/
 │   └── plugin.json          ← Manifest obligatorio

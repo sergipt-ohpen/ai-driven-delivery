@@ -8,7 +8,7 @@ Nobody in particular invented EPE. It appeared in parallel in the Anthropic blog
 
 The idea is trivial: **separate exploration, planning, and execution into distinct phases, with different models and permissions**.
 
-```
+```diagram
 ┌──────────────┐        ┌──────────────┐        ┌──────────────┐
 │   EXPLORE    │   →    │     PLAN     │   →    │   EXECUTE    │
 ├──────────────┤        ├──────────────┤        ├──────────────┤
@@ -90,7 +90,7 @@ The plan, on the other hand, is **the exact moment where a mistake becomes expen
 
 ## Plan mode vs direct agentic: decision tree
 
-```
+```diagram
 ¿La tarea toca > 3 archivos?
 ├── Sí → PLAN MODE
 └── No → ¿Tiene side-effects (DB, deploy, rm, secrets)?

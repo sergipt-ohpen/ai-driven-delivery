@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI4Devs 2026/06 Seniors — Course</title><style>
-:root{--bg:#fff;--fg:#1e1e22;--muted:#7a7a85;--accent:#c0392b;--line:#ececf0;--side:#f7f7f9;--hover:#efeff3;--card:#fff;--code:#f0f0f4;--pre:#f6f6f8;--sidew:340px;}
-[data-theme="dark"]{--bg:#16161a;--fg:#e6e6ea;--muted:#8b8b96;--accent:#ff6b5e;--line:#2b2b33;--side:#1c1c22;--hover:#26262e;--card:#1f1f26;--code:#2a2a33;--pre:#1f1f26;}
+:root{--bg:#fff;--fg:#1e1e22;--muted:#7a7a85;--accent:#c0392b;--accent2:#2f6fed;--line:#ececf0;--side:#f7f7f9;--hover:#efeff3;--card:#fff;--code:#f0f0f4;--pre:#f6f6f8;--quote-bg:rgba(47,111,237,.06);--sidew:340px;}
+[data-theme="dark"]{--bg:#16161a;--fg:#e6e6ea;--muted:#8b8b96;--accent:#ff6b5e;--accent2:#5b9bff;--line:#2b2b33;--side:#1c1c22;--hover:#26262e;--card:#1f1f26;--code:#2a2a33;--pre:#1f1f26;--quote-bg:rgba(91,155,255,.1);}
 *{box-sizing:border-box;}
 html,body{margin:0;height:100%;}
 body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg);}
@@ -11,46 +11,76 @@ body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;colo
 #brand span{font-size:12px;color:var(--muted);}
 #theme{position:absolute;top:16px;right:16px;width:32px;height:32px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;cursor:pointer;font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center;}
 #theme:hover{background:var(--hover);}
-.mod{padding:6px 0;}
-.mod-t{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;padding:12px 20px 4px;}
+.mod{padding:10px 0;}
+.mod-t{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;padding:12px 20px 6px;}
+.mod-count{font-size:10px;letter-spacing:0;text-transform:none;font-weight:700;color:var(--muted);background:var(--hover);border-radius:20px;padding:2px 8px;}
 .mod ul{list-style:none;margin:0;padding:0;}
 .mod li{font-size:13.5px;line-height:1.35;}
-.mod li a{display:block;padding:7px 20px 7px 24px;color:var(--fg);text-decoration:none;border-left:3px solid transparent;}
+.mod li a{display:flex;align-items:center;gap:9px;padding:7px 16px 7px 20px;color:var(--fg);text-decoration:none;border-left:3px solid transparent;}
+.mod li a .ic{font-size:15px;flex:0 0 auto;}
+.mod li a .tx{flex:1;}
+.mod li a .chk{flex:0 0 auto;font-size:12px;color:#2e9e5b;opacity:0;transform:scale(.6);transition:opacity .15s,transform .15s;}
+.mod li a.done .chk{opacity:1;transform:none;}
 .mod li a:hover{background:var(--hover);}
 .mod li a.active{background:var(--card);border-left-color:var(--accent);color:var(--accent);font-weight:600;}
 .mod li.dis{padding:7px 20px 7px 24px;color:#b6b6bf;cursor:default;}
 .mod li.pend,.mod li .pend{font-size:10px;color:#bbb;background:#eee;border-radius:3px;padding:1px 5px;margin-left:4px;}
 .mod li.vid{color:#9a9aa3;}
-#main{flex:1;overflow-y:auto;}
-#content{max-width:820px;margin:0 auto;padding:44px 56px 120px;}
+#main{flex:1;overflow-y:auto;position:relative;}
+#progresswrap{position:sticky;top:0;height:3px;background:var(--line);z-index:3;}
+#progressbar{height:100%;width:0;background:var(--accent);transition:width .3s;}
+#content{max-width:820px;margin:0 auto;padding:40px 56px 100px;}
 article{display:none;}
 article.show{display:block;animation:f .18s ease;}
 @keyframes f{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
-.crumb{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:20px;}
-article h1{font-size:26px;line-height:1.2;margin:.2em 0 .6em;}
-article h2{font-size:20px;margin-top:1.6em;}
-article h3{font-size:17px;}
+.art-meta{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+.art-meta .badge{font-size:11.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;}
+.art-meta .badge.sec{color:var(--accent);}
+.art-meta .dot{color:var(--line);}
+article h1{font-size:27px;line-height:1.25;margin:.1em 0 .7em;}
+article h2{font-size:20px;margin-top:2em;padding-top:.6em;border-top:1px solid var(--line);}
+article h3{font-size:17px;margin-top:1.6em;}
+article p,article li{line-height:1.7;}
+article p{margin:1em 0;}
 article a{color:var(--accent);}
 article img{max-width:100%;height:auto;border-radius:6px;}
 article img.avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;vertical-align:middle;}
 article p:has(> img.avatar:only-child){margin-bottom:2px;}
 article table{border-collapse:collapse;width:100%;margin:1em 0;}
 article th,article td{border:1px solid var(--line);padding:7px 10px;text-align:left;}
-article pre{background:var(--pre);padding:14px;border-radius:8px;overflow:auto;border:1px solid var(--line);}
+article pre{position:relative;background:var(--pre);padding:30px 14px 14px;border-radius:10px;overflow:auto;border:1px solid var(--line);}
+article pre::before{content:"📋 Copy this";position:absolute;top:9px;left:14px;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);}
+article pre:has(code.language-diagram){background:var(--card);}
+article pre:has(code.language-diagram)::before{content:"🗺️ How it fits together";}
+article pre:has(code.language-diagram) code{display:inline-block;font-size:12.5px;line-height:1.55;}
 article code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em;}
 article pre code{background:none;padding:0;}
-article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--line);color:var(--muted);}
+article blockquote{position:relative;margin:1.4em 0;padding:1.6em 1.1em .9em;border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:10px;background:var(--quote-bg);color:var(--fg);}
+article blockquote::before{content:"💬 Try this prompt";position:absolute;top:.7em;left:1.1em;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--accent2);}
+article blockquote p{margin:0;font-style:italic;}
+.art-nav{display:flex;gap:14px;margin-top:3em;padding-top:1.6em;border-top:1px solid var(--line);}
+.nav-btn{flex:1;display:flex;flex-direction:column;gap:3px;padding:12px 16px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--fg);background:var(--card);}
+.nav-btn:hover{background:var(--hover);}
+.nav-btn.next{text-align:right;align-items:flex-end;}
+.nav-btn.next:not(.done){background:var(--accent);border-color:var(--accent);color:#fff;}
+.nav-btn.next:not(.done) .nb-dir{color:rgba(255,255,255,.8);}
+.nav-btn.next.done{cursor:default;text-align:center;align-items:center;}
+.nb-dir{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);}
+.nb-label{font-size:13.5px;font-weight:600;}
+.nav-spacer{flex:1;}
 #burger{display:none;position:fixed;top:12px;left:12px;z-index:10;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;width:42px;height:40px;font-size:20px;cursor:pointer;}
 @media(max-width:780px){
  #side{position:fixed;left:0;top:0;height:100%;z-index:9;transform:translateX(-100%);transition:transform .2s;box-shadow:0 0 30px rgba(0,0,0,.15);}
  body.open #side{transform:none;}
  #burger{display:block;}
  #content{padding:70px 22px 100px;}
+ .art-nav{flex-direction:column;}
+ .nav-btn.next{text-align:left;align-items:flex-start;}
 }
 </style></head>
 <body><button id="burger">☰</button><div id="layout">
-<nav id="side"><div id="brand"><b>🎓 AI4Devs 2026/06 Seniors</b><span>Course documentation (English edition)</span><button id="theme" title="Toggle theme">🌙</button></div><div class="mod"><div class="mod-t">👋 Welcome &amp; Expectations — 29 min</div><ul><li><a href="#p1" data-id="p1">👋 Welcome &amp; Expectations — 29 min</a></li><li><a href="#p2" data-id="p2">💬 Expectations — 9 min</a></li><li><a href="#p3" data-id="p3">🎥 Program Overview 🤖 — 6 min</a></li><li><a href="#p4" data-id="p4">🎥 Tips from Our Students 🤖 — 9 min</a></li><li><a href="#p5" data-id="p5">🚦 The Emoji System — 1 min</a></li><li><a href="#p6" data-id="p6">🗓️ Agenda — 3 min</a></li><li><a href="#p7" data-id="p7">⚒️ Useful Links &amp; Support — 1 min</a></li><li><a href="#p8" data-id="p8">📜 Repository Management Policy</a></li></ul></div><div class="mod"><div class="mod-t">Pre-course: Introduction to AI in Software Development — 102 min</div><ul><li><a href="#p9" data-id="p9">🎥 The Current Role of AI in Software Development 🔴 — 12 min</a></li><li><a href="#p10" data-id="p10">🎥 The Future Developer: AI-Augmented 🔴 — 13 min</a></li><li><a href="#p11" data-id="p11">🎥 The Assistant Ecosystem in 2026 🔴 — 23 min</a></li><li><a href="#p12" data-id="p12">🎥 AI's Impact on the SDLC 🔴 — 18 min</a></li><li><a href="#p13" data-id="p13">🎥 Fundamentals: From Machine Learning to LLMs 🟢 — 19 min</a></li><li><a href="#p14" data-id="p14">🤖 Git with AI: What Changed in Your Workflow 🔴 — 17 min</a></li></ul></div><div class="mod"><div class="mod-t">Welcome Module — 2 min</div><ul><li class="dis vid" title="Video not included in this package">🎬 Session recording</li></ul></div><div class="mod"><div class="mod-t">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><ul><li><a href="#p15" data-id="p15">🗒️ The 3-Pillar Mental Model 🔴 — 11 min</a></li><li><a href="#p16" data-id="p16">📄 Pillar 1 — The Tool 🔴 — 18 min</a></li><li><a href="#p17" data-id="p17">📄 Pillar 2 — Context 🔴 — 17 min</a></li><li><a href="#p18" data-id="p18">📄 Pillar 3 — The Prompt + Integration 🔴 — 21 min</a></li><li><a href="#p19" data-id="p19">📚 Additional Resources 🟢</a></li><li><a href="#p20" data-id="p20">✍️ What Would You Like to Cover in Session 1? 🔴</a></li><li class="dis vid" title="Video not included in this package">🎬 Session recording &amp; materials 🟢</li></ul></div><div class="mod"><div class="mod-t">Module 2. Spec-Driven Development (SDD) — 68 min</div><ul><li><a href="#p21" data-id="p21">✍️ Pre-exercise: Install SDD in a Clean Project 🔴</a></li><li><a href="#p22" data-id="p22">📝 What Is Spec-Driven Development 🔴 — 15 min</a></li><li><a href="#p23" data-id="p23">📄 The SDD Ecosystem in 2026 🔴 — 15 min</a></li><li><a href="#p24" data-id="p24">📄 Anatomy of OpenSpec 🔴 — 16 min</a></li><li><a href="#p25" data-id="p25">📄 OpenSpec Cheat Sheet 🔴 — 6 min</a></li><li><a href="#p26" data-id="p26">📚 Additional Resources 🟢</a></li><li class="dis vid" title="Video not included in this package">🎬 Session recording &amp; materials 🟢</li></ul></div><div class="mod"><div class="mod-t">Module 3. Operating System: AI Copilots — 84 min</div><ul><li><a href="#p27" data-id="p27">✍️ Pre-exercise: Context Audit &amp; Skill Creation 🔴</a></li><li><a href="#p28" data-id="p28">📄 The Copilot for Real: Installation, Plans &amp; First Real Session 🔴 — 14 min</a></li><li><a href="#p29" data-id="p29">📄 Anatomy of a Modern Copilot 🔴 — 28 min</a></li><li><a href="#p30" data-id="p30">📄 How We Work: Explore-Plan-Execute &amp; SDD-aware Copilots 🔴 — 22 min</a></li><li><a href="#p31" data-id="p31">📄 Senior Decisions: When to Use What, Real Costs, Governance 🔴 — 20 min</a></li><li><a href="#p32" data-id="p32">📚 Additional Resources 🟢</a></li><li class="dis vid" title="Video not included in this package">🎬 Session recording &amp; materials</li></ul></div><div class="mod"><div class="mod-t">Module 4. Effective Planning with AI — 65 min</div><ul><li><a href="#p33" data-id="p33">✍️ Pre-exercise: Backlog Inventory 🔴</a></li><li><a href="#p34" data-id="p34">📄 Planning Is Changing: New Paradigms 🔴 — 11 min</a></li><li><a href="#p35" data-id="p35">📄 Anatomy of an AI-Ready Backlog 🔴 — 16 min</a></li><li><a href="#p36" data-id="p36">📄 AI-Assisted Estimation 🔴 — 13 min</a></li><li><a href="#p37" data-id="p37">📄 PM Tools + AI in 2026 🔴 — 13 min</a></li><li><a href="#p38" data-id="p38">📄 Continuous Agile Planning 🔴 — 12 min</a></li><li><a href="#p39" data-id="p39">📚 Additional Resources 🟢</a></li></ul></div><div class="mod"><div class="mod-t">Module 5. Effective Documentation with AI — 138 min</div><ul><li><a href="#p40" data-id="p40">📄 The Documentation Deficit in the AI Era 🔴 — 10 min</a></li><li><a href="#p41" data-id="p41">📄 Documented Architecture: ADRs + C4 Diagrams with AI 🔴 — 14 min</a></li><li><a href="#p42" data-id="p42">📄 API &amp; Code Documentation 🔴 — 16 min</a></li><li><a href="#p43" data-id="p43">📄 Testing Docs in CI &amp; Docs for LLMs 🔴 — 13 min</a></li><li><a href="#p44" data-id="p44">📚 Additional Resources 🟢</a></li></ul></div></nav>
-<div id="main"><div id="content"><article id="p1"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>👋 Welcome and Expectations — 29 min</h1>
+<nav id="side"><div id="brand"><b>🎓 AI4Devs 2026/06 Seniors</b><span>Course documentation (English edition)</span><button id="theme" title="Toggle theme">🌙</button></div><div class="mod"><div class="mod-t"><span>👋 Welcome &amp; Expectations — 29 min</span><span class="mod-count" data-total="8">0/8</span></div><ul><li><a href="#p1" data-id="p1"><span class="ic">👋</span><span class="tx">Welcome &amp; Expectations — 29 min</span><span class="chk">✓</span></a></li><li><a href="#p2" data-id="p2"><span class="ic">💬</span><span class="tx">Expectations — 9 min</span><span class="chk">✓</span></a></li><li><a href="#p3" data-id="p3"><span class="ic">🎥</span><span class="tx">Program Overview 🤖 — 6 min</span><span class="chk">✓</span></a></li><li><a href="#p4" data-id="p4"><span class="ic">🎥</span><span class="tx">Tips from Our Students 🤖 — 9 min</span><span class="chk">✓</span></a></li><li><a href="#p5" data-id="p5"><span class="ic">🚦</span><span class="tx">The Emoji System — 1 min</span><span class="chk">✓</span></a></li><li><a href="#p6" data-id="p6"><span class="ic">🗓️</span><span class="tx">Agenda — 3 min</span><span class="chk">✓</span></a></li><li><a href="#p7" data-id="p7"><span class="ic">⚒️</span><span class="tx">Useful Links &amp; Support — 1 min</span><span class="chk">✓</span></a></li><li><a href="#p8" data-id="p8"><span class="ic">📜</span><span class="tx">Repository Management Policy</span><span class="chk">✓</span></a></li></ul></div><div class="mod"><div class="mod-t"><span>Pre-course: Introduction to AI in Software Development — 102 min</span><span class="mod-count" data-total="6">0/6</span></div><ul><li><a href="#p9" data-id="p9"><span class="ic">🎥</span><span class="tx">The Current Role of AI in Software Development 🔴 — 12 min</span><span class="chk">✓</span></a></li><li><a href="#p10" data-id="p10"><span class="ic">🎥</span><span class="tx">The Future Developer: AI-Augmented 🔴 — 13 min</span><span class="chk">✓</span></a></li><li><a href="#p11" data-id="p11"><span class="ic">🎥</span><span class="tx">The Assistant Ecosystem in 2026 🔴 — 23 min</span><span class="chk">✓</span></a></li><li><a href="#p12" data-id="p12"><span class="ic">🎥</span><span class="tx">AI's Impact on the SDLC 🔴 — 18 min</span><span class="chk">✓</span></a></li><li><a href="#p13" data-id="p13"><span class="ic">🎥</span><span class="tx">Fundamentals: From Machine Learning to LLMs 🟢 — 19 min</span><span class="chk">✓</span></a></li><li><a href="#p14" data-id="p14"><span class="ic">🤖</span><span class="tx">Git with AI: What Changed in Your Workflow 🔴 — 17 min</span><span class="chk">✓</span></a></li></ul></div><div class="mod"><div class="mod-t"><span>Welcome Module — 2 min</span></div><ul><li class="dis vid" title="Video not included in this package">🎬 Session recording</li></ul></div><div class="mod"><div class="mod-t"><span>Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="mod-count" data-total="6">0/6</span></div><ul><li><a href="#p15" data-id="p15"><span class="ic">🗒️</span><span class="tx">The 3-Pillar Mental Model 🔴 — 11 min</span><span class="chk">✓</span></a></li><li><a href="#p16" data-id="p16"><span class="ic">📄</span><span class="tx">Pillar 1 — The Tool 🔴 — 18 min</span><span class="chk">✓</span></a></li><li><a href="#p17" data-id="p17"><span class="ic">📄</span><span class="tx">Pillar 2 — Context 🔴 — 17 min</span><span class="chk">✓</span></a></li><li><a href="#p18" data-id="p18"><span class="ic">📄</span><span class="tx">Pillar 3 — The Prompt + Integration 🔴 — 21 min</span><span class="chk">✓</span></a></li><li><a href="#p19" data-id="p19"><span class="ic">📚</span><span class="tx">Additional Resources 🟢</span><span class="chk">✓</span></a></li><li><a href="#p20" data-id="p20"><span class="ic">✍️</span><span class="tx">What Would You Like to Cover in Session 1? 🔴</span><span class="chk">✓</span></a></li><li class="dis vid" title="Video not included in this package">🎬 Session recording &amp; materials 🟢</li></ul></div><div class="mod"><div class="mod-t"><span>Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="mod-count" data-total="6">0/6</span></div><ul><li><a href="#p21" data-id="p21"><span class="ic">✍️</span><span class="tx">Pre-exercise: Install SDD in a Clean Project 🔴</span><span class="chk">✓</span></a></li><li><a href="#p22" data-id="p22"><span class="ic">📝</span><span class="tx">What Is Spec-Driven Development 🔴 — 15 min</span><span class="chk">✓</span></a></li><li><a href="#p23" data-id="p23"><span class="ic">📄</span><span class="tx">The SDD Ecosystem in 2026 🔴 — 15 min</span><span class="chk">✓</span></a></li><li><a href="#p24" data-id="p24"><span class="ic">📄</span><span class="tx">Anatomy of OpenSpec 🔴 — 16 min</span><span class="chk">✓</span></a></li><li><a href="#p25" data-id="p25"><span class="ic">📄</span><span class="tx">OpenSpec Cheat Sheet 🔴 — 6 min</span><span class="chk">✓</span></a></li><li><a href="#p26" data-id="p26"><span class="ic">📚</span><span class="tx">Additional Resources 🟢</span><span class="chk">✓</span></a></li><li class="dis vid" title="Video not included in this package">🎬 Session recording &amp; materials 🟢</li></ul></div><div class="mod"><div class="mod-t"><span>Module 3. Operating System: AI Copilots — 84 min</span><span class="mod-count" data-total="6">0/6</span></div><ul><li><a href="#p27" data-id="p27"><span class="ic">✍️</span><span class="tx">Pre-exercise: Context Audit &amp; Skill Creation 🔴</span><span class="chk">✓</span></a></li><li><a href="#p28" data-id="p28"><span class="ic">📄</span><span class="tx">The Copilot for Real: Installation, Plans &amp; First Real Session 🔴 — 14 min</span><span class="chk">✓</span></a></li><li><a href="#p29" data-id="p29"><span class="ic">📄</span><span class="tx">Anatomy of a Modern Copilot 🔴 — 28 min</span><span class="chk">✓</span></a></li><li><a href="#p30" data-id="p30"><span class="ic">📄</span><span class="tx">How We Work: Explore-Plan-Execute &amp; SDD-aware Copilots 🔴 — 22 min</span><span class="chk">✓</span></a></li><li><a href="#p31" data-id="p31"><span class="ic">📄</span><span class="tx">Senior Decisions: When to Use What, Real Costs, Governance 🔴 — 20 min</span><span class="chk">✓</span></a></li><li><a href="#p32" data-id="p32"><span class="ic">📚</span><span class="tx">Additional Resources 🟢</span><span class="chk">✓</span></a></li><li class="dis vid" title="Video not included in this package">🎬 Session recording &amp; materials</li></ul></div><div class="mod"><div class="mod-t"><span>Module 4. Effective Planning with AI — 65 min</span><span class="mod-count" data-total="7">0/7</span></div><ul><li><a href="#p33" data-id="p33"><span class="ic">✍️</span><span class="tx">Pre-exercise: Backlog Inventory 🔴</span><span class="chk">✓</span></a></li><li><a href="#p34" data-id="p34"><span class="ic">📄</span><span class="tx">Planning Is Changing: New Paradigms 🔴 — 11 min</span><span class="chk">✓</span></a></li><li><a href="#p35" data-id="p35"><span class="ic">📄</span><span class="tx">Anatomy of an AI-Ready Backlog 🔴 — 16 min</span><span class="chk">✓</span></a></li><li><a href="#p36" data-id="p36"><span class="ic">📄</span><span class="tx">AI-Assisted Estimation 🔴 — 13 min</span><span class="chk">✓</span></a></li><li><a href="#p37" data-id="p37"><span class="ic">📄</span><span class="tx">PM Tools + AI in 2026 🔴 — 13 min</span><span class="chk">✓</span></a></li><li><a href="#p38" data-id="p38"><span class="ic">📄</span><span class="tx">Continuous Agile Planning 🔴 — 12 min</span><span class="chk">✓</span></a></li><li><a href="#p39" data-id="p39"><span class="ic">📚</span><span class="tx">Additional Resources 🟢</span><span class="chk">✓</span></a></li></ul></div><div class="mod"><div class="mod-t"><span>Module 5. Effective Documentation with AI — 138 min</span><span class="mod-count" data-total="5">0/5</span></div><ul><li><a href="#p40" data-id="p40"><span class="ic">📄</span><span class="tx">The Documentation Deficit in the AI Era 🔴 — 10 min</span><span class="chk">✓</span></a></li><li><a href="#p41" data-id="p41"><span class="ic">📄</span><span class="tx">Documented Architecture: ADRs + C4 Diagrams with AI 🔴 — 14 min</span><span class="chk">✓</span></a></li><li><a href="#p42" data-id="p42"><span class="ic">📄</span><span class="tx">API &amp; Code Documentation 🔴 — 16 min</span><span class="chk">✓</span></a></li><li><a href="#p43" data-id="p43"><span class="ic">📄</span><span class="tx">Testing Docs in CI &amp; Docs for LLMs 🔴 — 13 min</span><span class="chk">✓</span></a></li><li><a href="#p44" data-id="p44"><span class="ic">📚</span><span class="tx">Additional Resources 🟢</span><span class="chk">✓</span></a></li></ul></div></nav>
+<div id="main"><div id="progresswrap"><div id="progressbar"></div></div><div id="content"><article id="p1"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 8</span><span class="dot">·</span><span class="badge time">⏱ 2 min</span></div><h1>👋 Welcome and Expectations — 29 min</h1>
 <p><img class="avatar" src="https://media1-production-mightynetworks.imgix.net/asset/4849c519-3006-4bfb-880a-96be73926c3f/c3eccac37426c36f.jpg?ixlib=rails-4.3.1&fm=jpg&q=100&auto=format&w=192&h=192&fit=crop&crop=faces&impolicy=Avatar" alt="Antonio Perez"></p>
 <p><a href="https://training.lidr.co/members/36030888" title="Antonio Perez">Antonio Perez</a></p>
 <p>⏳ Estimated time: 4 min</p>
@@ -88,7 +118,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <p>Session 16 - Lab 2. Multi-agents</p>
 <p>Session 17 - The future of the role I</p>
 <p>Session 18 - The future of the role II</p>
-</article><article id="p2"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>💬 Expectations — 9 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><span class="nav-spacer"></span><a class="nav-btn next" href="#p2" data-id="p2"><span class="nb-dir">Next →</span><span class="nb-label">💬 Expectations — 9 min</span></a></nav></article><article id="p2"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 8</span><span class="dot">·</span><span class="badge time">⏱ 5 min</span></div><h1>💬 Expectations — 9 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 6 min </p>
 <p>Read this message carefully. It defines how the program works and what you can realistically expect from this experience.</p>
 <hr>
@@ -150,7 +180,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <p><strong>As you can see, both sides must make a conscious effort for AI4Devs to be a success.</strong></p>
 <p><strong>We are 200% in,</strong> </p>
 <p><strong>How about you?</strong></p>
-</article><article id="p3"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>🎥 Program Overview 🤖 — 6 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p1" data-id="p1"><span class="nb-dir">← Previous</span><span class="nb-label">👋 Welcome &amp; Expectations — 29 min</span></a><a class="nav-btn next" href="#p3" data-id="p3"><span class="nb-dir">Next →</span><span class="nb-label">🎥 Program Overview 🤖 — 6 min</span></a></nav></article><article id="p3"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 8</span><span class="dot">·</span><span class="badge time">⏱ 3 min</span></div><h1>🎥 Program Overview 🤖 — 6 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 6 min </p>
 <p>In this section you will understand how AI4Devs really works: not just what you are going to learn, but <strong>how you are going to learn it and with what mindset</strong>.</p>
 <p>Our way of teaching is neither theoretical nor passive. It is designed for you to develop a real advantage in your day-to-day work as a developer.</p>
@@ -234,7 +264,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <p>And it allows us to do so <strong>quickly</strong>, not when it&#39;s already too late.</p>
 <p>In fact, a large part of the program&#39;s improvements come directly from the feedback of students like you</p>
 <p>You can leave your feedback anonymously or publicly here: <a href="https://lidr.typeform.com/feedback-ai4dev">https://lidr.typeform.com/feedback-ai4dev</a></p>
-</article><article id="p4"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>🎥 Advice from Our Students 🤖 — 9 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p2" data-id="p2"><span class="nb-dir">← Previous</span><span class="nb-label">💬 Expectations — 9 min</span></a><a class="nav-btn next" href="#p4" data-id="p4"><span class="nb-dir">Next →</span><span class="nb-label">🎥 Tips from Our Students 🤖 — 9 min</span></a></nav></article><article id="p4"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 8</span><span class="dot">·</span><span class="badge time">⏱ 1 min</span></div><h1>🎥 Advice from Our Students 🤖 — 9 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 9 min </p>
 <p>In this section, you will find advice from Miguel Casallas, a student from a previous edition of <strong>IA4Devs</strong>, sharing his experience and tips on how to get the most out of this master&#39;s program.</p>
 <p>Our students highlight the importance of incorporating artificial intelligence into software development and how this program helped them transform their professional careers. Listen to their stories, learn from their lessons, and get motivated by their achievements.</p>
@@ -263,7 +293,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <li><p>Don&#39;t scatter yourself constantly chasing new tools: focus on the working system the program proposes.</p>
 </li>
 </ul>
-</article><article id="p5"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>🚦 Emoji System — 1 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p3" data-id="p3"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 Program Overview 🤖 — 6 min</span></a><a class="nav-btn next" href="#p5" data-id="p5"><span class="nb-dir">Next →</span><span class="nb-label">🚦 The Emoji System — 1 min</span></a></nav></article><article id="p5"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 8</span><span class="dot">·</span><span class="badge time">⏱ 1 min</span></div><h1>🚦 Emoji System — 1 min | AI4Devs 2026/06 Seniors</h1>
 <p><img class="avatar" src="https://media1-production-mightynetworks.imgix.net/asset/4849c519-3006-4bfb-880a-96be73926c3f/c3eccac37426c36f.jpg?ixlib=rails-4.3.1&fm=jpg&q=100&auto=format&w=192&h=192&fit=crop&crop=faces&impolicy=Avatar" alt="Antonio Perez"></p>
 <p>⏳ Estimated time: 1 min  </p>
 <p>All the content we have developed is valuable for your training as an AI-augmented developer. </p>
@@ -275,7 +305,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <li>✍️ <strong>Mandatory tasks:</strong> Learning by doing! With these exercises you will bring the concepts we teach into YOUR reality so you start seeing real results and progress. </li>
 <li>💪 <strong>Optional tasks:</strong> The extra mile — these are exercises that will add invaluable value but will not affect your performance during the course.</li>
 </ul>
-</article><article id="p6"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>🗓️ Agenda — 3 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p4" data-id="p4"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 Tips from Our Students 🤖 — 9 min</span></a><a class="nav-btn next" href="#p6" data-id="p6"><span class="nb-dir">Next →</span><span class="nb-label">🗓️ Agenda — 3 min</span></a></nav></article><article id="p6"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 6 of 8</span><span class="dot">·</span><span class="badge time">⏱ 1 min</span></div><h1>🗓️ Agenda — 3 min | AI4Devs 2026/06 Seniors</h1>
 <p><img class="avatar" src="https://media1-production-mightynetworks.imgix.net/asset/4849c519-3006-4bfb-880a-96be73926c3f/c3eccac37426c36f.jpg?ixlib=rails-4.3.1&fm=jpg&q=100&auto=format&w=192&h=192&fit=crop&crop=faces&impolicy=Avatar" alt="Antonio Perez"></p>
 <p>In this space you will find the schedule and topic of each of the AI4Devs sessions.</p>
 <p>🗓 <strong>Add them to your calendar by</strong> <a href="https://calendar.google.com/calendar/u/0?cid=Y19kYWY1MTY2OTUwNDZhZGU2NzFkM2YwOTk2YTVkMWY1NDhmMTUyYWIxZWEwZjRmMzQ3NzhlZTFhOTk2ZmYyYzZiQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"><strong>clicking here</strong></a></p>
@@ -289,7 +319,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <li><p>* You must have an invitation to add the calendar in Google Calendar; otherwise, contact the LIDR team.</p>
 </li>
 </ol>
-</article><article id="p7"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>⚒️ Useful Links and Support — 1 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p5" data-id="p5"><span class="nb-dir">← Previous</span><span class="nb-label">🚦 The Emoji System — 1 min</span></a><a class="nav-btn next" href="#p7" data-id="p7"><span class="nb-dir">Next →</span><span class="nb-label">⚒️ Useful Links &amp; Support — 1 min</span></a></nav></article><article id="p7"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 7 of 8</span><span class="dot">·</span><span class="badge time">⏱ 1 min</span></div><h1>⚒️ Useful Links and Support — 1 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 1 min</p>
 <h3><strong>Access to the live sessions</strong></h3>
 <p>📍 <a href="https://us02web.zoom.us/j/88263719441">Zoom – Main meeting room</a><br>This is the room where the sessions will take place. You can save it as a favorite or copy it into your calendar.</p>
@@ -306,7 +336,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <p>📄 <strong>Feedback form:</strong><br> This form is one more way to give the team feedback about the program, either anonymously or publicly, so it should be used thoughtfully and in a detailed, structured manner:</p>
 <p><a href="https://lidr.typeform.com/feedback-ai4dev"><strong>https://lidr.typeform.com/feedback-ai4dev</strong></a></p>
 <p>📢 All announcements will be posted on the platform and in the group.</p>
-</article><article id="p8"><div class="crumb">👋 Welcome &amp; Expectations — 29 min</div><h1>📜 Repository Management Policy | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p6" data-id="p6"><span class="nb-dir">← Previous</span><span class="nb-label">🗓️ Agenda — 3 min</span></a><a class="nav-btn next" href="#p8" data-id="p8"><span class="nb-dir">Next →</span><span class="nb-label">📜 Repository Management Policy</span></a></nav></article><article id="p8"><div class="art-meta"><span class="badge sec">👋 Welcome &amp; Expectations — 29 min</span><span class="dot">·</span><span class="badge idx">Lesson 8 of 8</span><span class="dot">·</span><span class="badge time">⏱ 2 min</span></div><h1>📜 Repository Management Policy | AI4Devs 2026/06 Seniors</h1>
 <p><strong>1. Objective</strong><br>To establish clear guidelines for the management of project repositories within the IA4Devs program, balancing students&#39; professional visibility with the protection of sensitive information.</p>
 <p><strong>2. Repository classification</strong></p>
 <p><strong>2.1 Public repositories</strong><br>Repositories may be public when they meet the following conditions:</p>
@@ -358,7 +388,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <li><p>When in doubt, opt to keep the repository private</p>
 </li>
 </ul>
-</article><article id="p9"><div class="crumb">Pre-course: Introduction to AI in Software Development — 102 min</div><h1>🎥 The current role of AI in software development 🔴 — 12 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p7" data-id="p7"><span class="nb-dir">← Previous</span><span class="nb-label">⚒️ Useful Links &amp; Support — 1 min</span></a><a class="nav-btn next" href="#p9" data-id="p9"><span class="nb-dir">Next →</span><span class="nb-label">🎥 The Current Role of AI in Software Development 🔴 — 12 min</span></a></nav></article><article id="p9"><div class="art-meta"><span class="badge sec">Pre-course: Introduction to AI in Software Development — 102 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 6</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>🎥 The current role of AI in software development 🔴 — 12 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 12 min</p>
 <h2>The current role of AI in software development</h2>
 <blockquote>
@@ -510,7 +540,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <blockquote>
 <p>👉 When you finish reading, leave in the comments: <strong>what percentage of your code in the last month was written or suggested by AI, and where has it made you slower than you expected?</strong> It&#39;s the best way to start the course with honesty.</p>
 </blockquote>
-</article><article id="p10"><div class="crumb">Pre-course: Introduction to AI in Software Development — 102 min</div><h1>🎥 The future of the developer: augmented by AI 🔴 — 13 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p8" data-id="p8"><span class="nb-dir">← Previous</span><span class="nb-label">📜 Repository Management Policy</span></a><a class="nav-btn next" href="#p10" data-id="p10"><span class="nb-dir">Next →</span><span class="nb-label">🎥 The Future Developer: AI-Augmented 🔴 — 13 min</span></a></nav></article><article id="p10"><div class="art-meta"><span class="badge sec">Pre-course: Introduction to AI in Software Development — 102 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>🎥 The future of the developer: augmented by AI 🔴 — 13 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 13 min</p>
 <h2>The future of the developer: augmented by AI</h2>
 <blockquote>
@@ -701,7 +731,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <blockquote>
 <p>👉 To reflect on before session 1: <strong>what percentage of your work in the last month was &quot;writing new code&quot; vs. &quot;reviewing/integrating code generated by AI or by colleagues&quot;?</strong> The answer tells you where your real leverage as a senior lies.</p>
 </blockquote>
-</article><article id="p11"><div class="crumb">Pre-course: Introduction to AI in Software Development — 102 min</div><h1>🎥 The assistant ecosystem in 2026 🔴 — 23 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p9" data-id="p9"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 The Current Role of AI in Software Development 🔴 — 12 min</span></a><a class="nav-btn next" href="#p11" data-id="p11"><span class="nb-dir">Next →</span><span class="nb-label">🎥 The Assistant Ecosystem in 2026 🔴 — 23 min</span></a></nav></article><article id="p11"><div class="art-meta"><span class="badge sec">Pre-course: Introduction to AI in Software Development — 102 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>🎥 The assistant ecosystem in 2026 🔴 — 23 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 23 min  </p>
 <h2>The assistant ecosystem in 2026</h2>
 <blockquote>
@@ -957,7 +987,7 @@ article blockquote{margin:1em 0;padding:.4em 1em;border-left:4px solid var(--lin
 <blockquote>
 <p>👉 <strong>To reflect on before S1</strong>: what is the main tool you use today and why? If it&#39;s not for a solid reason (corporate pricing, the team already uses it, a specific integration), consider which one would win if you were deciding from scratch today.</p>
 </blockquote>
-</article><article id="p12"><div class="crumb">Pre-course: Introduction to AI in Software Development — 102 min</div><h1>🎥 AI&#39;s Impact on the SDLC 🔴 — 18 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p10" data-id="p10"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 The Future Developer: AI-Augmented 🔴 — 13 min</span></a><a class="nav-btn next" href="#p12" data-id="p12"><span class="nb-dir">Next →</span><span class="nb-label">🎥 AI's Impact on the SDLC 🔴 — 18 min</span></a></nav></article><article id="p12"><div class="art-meta"><span class="badge sec">Pre-course: Introduction to AI in Software Development — 102 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 6</span><span class="dot">·</span><span class="badge time">⏱ 10 min</span></div><h1>🎥 AI&#39;s Impact on the SDLC 🔴 — 18 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 18 min</p>
 <blockquote>
 <p>So far you&#39;ve seen data about the market, the developer role, and the tool ecosystem. Now comes the map: <strong>how AI changes each phase of the Software Development Life Cycle (SDLC)</strong>, which tools operate in each one, and where each topic is covered across the master&#39;s 16 sessions. This lesson is your mental map of the program.</p>
@@ -1251,7 +1281,7 @@ jobs:
 <blockquote>
 <p>👉 <strong>To reflect on before S1</strong>: review the last PR you merged. At which L1–L5 level did you operate? Could you have operated at a higher one, or did the context require the level you used? That question is the muscle you&#39;ll train throughout the master.</p>
 </blockquote>
-</article><article id="p13"><div class="crumb">Pre-course: Introduction to AI in Software Development — 102 min</div><h1>🎥 Fundamentals: from Machine Learning to LLMs 🟢 — 19 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p11" data-id="p11"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 The Assistant Ecosystem in 2026 🔴 — 23 min</span></a><a class="nav-btn next" href="#p13" data-id="p13"><span class="nb-dir">Next →</span><span class="nb-label">🎥 Fundamentals: From Machine Learning to LLMs 🟢 — 19 min</span></a></nav></article><article id="p13"><div class="art-meta"><span class="badge sec">Pre-course: Introduction to AI in Software Development — 102 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 6</span><span class="dot">·</span><span class="badge time">⏱ 11 min</span></div><h1>🎥 Fundamentals: from Machine Learning to LLMs 🟢 — 19 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 19 min</p>
 <blockquote>
 <p>The goal of this section is <strong>NOT</strong> for you to master the mathematical details of neural networks. It is for you to understand <strong>the bare minimum needed to not misuse your copilot</strong>. If you finish this lesson knowing what a token is, what the context window is, why LLMs hallucinate, and when to use RAG vs. fine-tuning, you&#39;ve done your pre-course job.</p>
@@ -1538,7 +1568,7 @@ jobs:
 <blockquote>
 <p>👉 <strong>To reflect on before S1</strong>: what temperature does your main copilot use (or use by default) today? If you&#39;ve never configured it, look in the settings and experiment — it&#39;s one of the settings that most changes the experience.</p>
 </blockquote>
-</article><article id="p14"><div class="crumb">Pre-course: Introduction to AI in Software Development — 102 min</div><h1>🤖Git with AI: what changed in your workflow 🔴 — 17 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p12" data-id="p12"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 AI's Impact on the SDLC 🔴 — 18 min</span></a><a class="nav-btn next" href="#p14" data-id="p14"><span class="nb-dir">Next →</span><span class="nb-label">🤖 Git with AI: What Changed in Your Workflow 🔴 — 17 min</span></a></nav></article><article id="p14"><div class="art-meta"><span class="badge sec">Pre-course: Introduction to AI in Software Development — 102 min</span><span class="dot">·</span><span class="badge idx">Lesson 6 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>🤖Git with AI: what changed in your workflow 🔴 — 17 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 17 min</p>
 <h2>Git with AI: from the classic PR to the agentic workflow</h2>
 <blockquote>
@@ -1812,7 +1842,7 @@ jobs:
 <li><p>📺 <a href="https://mouredev.com/cursogit">MoureDev — Git and GitHub Course</a> — 5h, in Spanish. If you need to refresh fundamentals before starting.</p>
 </li>
 </ul>
-</article><article id="p15"><div class="crumb">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><h1>🗒️ The 3-Pillar Mental Model 🔴 — 11 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p13" data-id="p13"><span class="nb-dir">← Previous</span><span class="nb-label">🎥 Fundamentals: From Machine Learning to LLMs 🟢 — 19 min</span></a><a class="nav-btn next" href="#p15" data-id="p15"><span class="nb-dir">Next →</span><span class="nb-label">🗒️ The 3-Pillar Mental Model 🔴 — 11 min</span></a></nav></article><article id="p15"><div class="art-meta"><span class="badge sec">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 6</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>🗒️ The 3-Pillar Mental Model 🔴 — 11 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 11 min</p>
 <blockquote>
 <p>If you&#39;ve come here expecting to learn &quot;the ultimate trick&quot; for using Claude Code or Cursor, this session is going to disappoint you. Because the reality is that <strong>there is no trick</strong>. There is a mental model, and that model rests on three co-equal pillars. All three matter. If you neglect one, the others don&#39;t make up for it.</p>
@@ -1844,7 +1874,7 @@ jobs:
 <p>OpenAI published a memo in February 2026 titled <em>Harness Engineering: leveraging Codex in an agent-first world</em>. Anthropic picks it up in its official documentation. Karpathy tweets it as &quot;context engineering &gt; prompt engineering&quot;. Tobi Lütke (CEO of Shopify) gives it the status of corporate practice. The senior consensus in 2026 is clear: <strong>the prompt is the tip of the iceberg.</strong></p>
 <h2>The 3 pillars: this master&#39;s framework</h2>
 <p>In this master&#39;s program we&#39;re going to work with <strong>three pillars that determine the effectiveness of any AI copilot</strong>, in order of increasing depth:</p>
-<pre><code>┌─────────────────────────────────────────────────┐
+<pre><code class="language-diagram">┌─────────────────────────────────────────────────┐
 │                                                 │
 │  PROMPT      ← lo que dices en cada turno       │
 │                                                 │
@@ -1898,7 +1928,7 @@ jobs:
 <blockquote>
 <p>📚 <strong>Resources to go deeper into this pillar</strong>: they are unified in <strong>lesson 5 — Additional resources</strong>, in the &quot;General mental model&quot; section. There you&#39;ll find the key readings and references to reinforce what you&#39;ve seen in this lesson.</p>
 </blockquote>
-</article><article id="p16"><div class="crumb">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><h1>📄  Pillar 1 — The Tool 🔴 — 18 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p14" data-id="p14"><span class="nb-dir">← Previous</span><span class="nb-label">🤖 Git with AI: What Changed in Your Workflow 🔴 — 17 min</span></a><a class="nav-btn next" href="#p16" data-id="p16"><span class="nb-dir">Next →</span><span class="nb-label">📄 Pillar 1 — The Tool 🔴 — 18 min</span></a></nav></article><article id="p16"><div class="art-meta"><span class="badge sec">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>📄  Pillar 1 — The Tool 🔴 — 18 min | AI4Devs 2026/06 Seniors</h1>
 <p>Estimated time: 18 min</p>
 <blockquote>
 <p>In the pre-course you already saw the ecosystem of assistants and MCP. Here we&#39;re not going to repeat what Claude Code is or what Cursor is. We&#39;re going to the next level: <strong>when to choose each category, what criteria to use, and how to avoid the most common trap — thinking that &quot;better model&quot; means &quot;better tool&quot;</strong>.</p>
@@ -2073,7 +2103,7 @@ jobs:
 <blockquote>
 <p><strong>Next lesson</strong>: pillar 2 — The Context. You&#39;ll understand why the 1M-token window is a ceiling and not a target, what <em>context rot</em> is, and why <a href="http://agents.md/">AGENTS.md</a> is becoming the <code>.editorconfig</code> of agents.</p>
 </blockquote>
-</article><article id="p17"><div class="crumb">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><h1>📄  Pillar 2 — The Context 🔴 — 17 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p15" data-id="p15"><span class="nb-dir">← Previous</span><span class="nb-label">🗒️ The 3-Pillar Mental Model 🔴 — 11 min</span></a><a class="nav-btn next" href="#p17" data-id="p17"><span class="nb-dir">Next →</span><span class="nb-label">📄 Pillar 2 — Context 🔴 — 17 min</span></a></nav></article><article id="p17"><div class="art-meta"><span class="badge sec">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 6</span><span class="dot">·</span><span class="badge time">⏱ 9 min</span></div><h1>📄  Pillar 2 — The Context 🔴 — 17 min | AI4Devs 2026/06 Seniors</h1>
 <p>⌛Estimated time: 17 min</p>
 <blockquote>
 <p>In 2026, context <strong>is</strong> the real bottleneck when working with AI copilots. This lesson gives you the discipline the industry calls <em>context engineering</em> — what to put in the window, what to leave out, how to organize it, and how to avoid the silent quality deterioration as the context grows.</p>
@@ -2267,7 +2297,7 @@ Dockerizada. Todo el stack se levanta con `docker compose up`.
 <blockquote>
 <p><strong>Next lesson</strong>: pillar 3 — The Prompt. You&#39;ll see what from classic prompt engineering remains valid, what became obsolete with reasoning models, and the anatomy of a technical prompt a senior dev would write in 2026 — and then how it all comes together in a single decision framework.</p>
 </blockquote>
-</article><article id="p18"><div class="crumb">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><h1>📄  Pillar 3 — The Prompt + Integration 🔴 — 21 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p16" data-id="p16"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Pillar 1 — The Tool 🔴 — 18 min</span></a><a class="nav-btn next" href="#p18" data-id="p18"><span class="nb-dir">Next →</span><span class="nb-label">📄 Pillar 3 — The Prompt + Integration 🔴 — 21 min</span></a></nav></article><article id="p18"><div class="art-meta"><span class="badge sec">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 6</span><span class="dot">·</span><span class="badge time">⏱ 11 min</span></div><h1>📄  Pillar 3 — The Prompt + Integration 🔴 — 21 min | AI4Devs 2026/06 Seniors</h1>
 <p>⌛Estimated time: 21 min</p>
 <blockquote>
 <p>In this final lesson we cover pillar 3 — The Prompt — and then close by integrating the three pillars into a single decision framework you&#39;ll apply in the live session. You&#39;ll see why classic prompt engineering is being reclassified, not eliminated, and how tool + context + prompt fit together into a coherent architecture.</p>
@@ -2386,7 +2416,7 @@ los criterios de éxito. Luego implementa hasta que todos pasen.&quot;
 <h3>The combined decision framework</h3>
 <p>You now have the three pillars separately. Now comes the operational question: <strong>how do you simultaneously decide tool + context + prompt for a specific task?</strong></p>
 <p>This is the decision tree I recommend adopting:</p>
-<pre><code>Paso 1: CARACTERIZA LA TAREA
+<pre><code class="language-diagram">Paso 1: CARACTERIZA LA TAREA
 ├── ¿Toca un solo archivo o varios?
 ├── ¿Necesita ejecutar comandos (build, tests, migrations)?
 ├── ¿Codebase conocido o exploración?
@@ -2521,7 +2551,7 @@ Paso 5: EJECUTA Y REVISA
 <blockquote>
 <p>📚 <strong>Resources to go deeper</strong>: all the async resources (readings, papers, official documentation, references by pillar) are unified in <strong>lesson 5 — Additional resources</strong>. There you&#39;ll find material organized by pillar to explore further after the live session.</p>
 </blockquote>
-</article><article id="p19"><div class="crumb">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p17" data-id="p17"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Pillar 2 — Context 🔴 — 17 min</span></a><a class="nav-btn next" href="#p19" data-id="p19"><span class="nb-dir">Next →</span><span class="nb-label">📚 Additional Resources 🟢</span></a></nav></article><article id="p19"><div class="art-meta"><span class="badge sec">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 6</span><span class="dot">·</span><span class="badge time">⏱ 6 min</span></div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
 <blockquote>
 <p>This lesson unifies all the deep-dive resources from the async content, organized by pillar (mirroring the structure of lessons 1–4). Use it as a <strong>post-session reference</strong>: when you want to go deeper into a specific pillar or cite a source, come back here.</p>
 <p>You don&#39;t have to read everything. Each section includes a note indicating what to read <strong>if you only have 30 minutes</strong> vs. what to save for later.</p>
@@ -2762,11 +2792,11 @@ Paso 5: EJECUTA Y REVISA
 <li><p>⭐ <strong>Anthropic</strong> — <em>Prompting best practices</em> (20 min) — reinforces lesson 4</p>
 </li>
 </ol>
-</article><article id="p20"><div class="crumb">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</div><h1>✍️ What would you like to cover in session 1? 🔴  | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p18" data-id="p18"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Pillar 3 — The Prompt + Integration 🔴 — 21 min</span></a><a class="nav-btn next" href="#p20" data-id="p20"><span class="nb-dir">Next →</span><span class="nb-label">✍️ What Would You Like to Cover in Session 1? 🔴</span></a></nav></article><article id="p20"><div class="art-meta"><span class="badge sec">Module 1. The 3 Pillars of Effective AI Copilot Use — 51 min</span><span class="dot">·</span><span class="badge idx">Lesson 6 of 6</span><span class="dot">·</span><span class="badge time">⏱ 1 min</span></div><h1>✍️ What would you like to cover in session 1? 🔴  | AI4Devs 2026/06 Seniors</h1>
 <p><img class="avatar" src="https://media1-production-mightynetworks.imgix.net/asset/4849c519-3006-4bfb-880a-96be73926c3f/c3eccac37426c36f.jpg?ixlib=rails-4.3.1&fm=jpg&q=100&auto=format&w=192&h=192&fit=crop&crop=faces&impolicy=Avatar" alt="Antonio Perez"></p>
 <p>Of the different topics covered in the previous content, which would you like us to address in the session? </p>
 <p><strong>Put together a concrete proposal</strong> and, if you can, give <strong>examples of questions or concepts</strong> you&#39;d like to explore. Share it in the comments.</p>
-</article><article id="p21"><div class="crumb">Module 2. Spec-Driven Development (SDD) — 68 min</div><h1>✍️ Pre-session exercise: Install SDD in a clean project 🔴 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p19" data-id="p19"><span class="nb-dir">← Previous</span><span class="nb-label">📚 Additional Resources 🟢</span></a><a class="nav-btn next" href="#p21" data-id="p21"><span class="nb-dir">Next →</span><span class="nb-label">✍️ Pre-exercise: Install SDD in a Clean Project 🔴</span></a></nav></article><article id="p21"><div class="art-meta"><span class="badge sec">Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 6</span><span class="dot">·</span><span class="badge time">⏱ 6 min</span></div><h1>✍️ Pre-session exercise: Install SDD in a clean project 🔴 | AI4Devs 2026/06 Seniors</h1>
 <hr>
 <p><strong>Repository:</strong> <a href="https://github.com/LIDR-academy/ai4devs-openspec-sandbox-2026-06"><strong>Github</strong></a></p>
 <h2>Goal</h2>
@@ -2971,7 +3001,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 </ul>
 <hr>
 <p><strong>Due date: 17 JUN 26</strong></p>
-</article><article id="p22"><div class="crumb">Module 2. Spec-Driven Development (SDD) — 68 min</div><h1>📝  What is Spec-Driven Development 🔴 — 15 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p20" data-id="p20"><span class="nb-dir">← Previous</span><span class="nb-label">✍️ What Would You Like to Cover in Session 1? 🔴</span></a><a class="nav-btn next" href="#p22" data-id="p22"><span class="nb-dir">Next →</span><span class="nb-label">📝 What Is Spec-Driven Development 🔴 — 15 min</span></a></nav></article><article id="p22"><div class="art-meta"><span class="badge sec">Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>📝  What is Spec-Driven Development 🔴 — 15 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 15 min</p>
 <blockquote>
 <p>In S1 we saw that a good prompt includes <strong>explicit outcome + success criteria + constraints</strong>. This session formalizes that idea. The spec is NOT something else: it is the prompt with success criteria, formalized, versioned, and shared.</p>
@@ -3134,7 +3164,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 </ul>
 </blockquote>
 <hr>
-</article><article id="p23"><div class="crumb">Module 2. Spec-Driven Development (SDD) — 68 min</div><h1>📄 The SDD ecosystem in 2026 🔴 — 15 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p21" data-id="p21"><span class="nb-dir">← Previous</span><span class="nb-label">✍️ Pre-exercise: Install SDD in a Clean Project 🔴</span></a><a class="nav-btn next" href="#p23" data-id="p23"><span class="nb-dir">Next →</span><span class="nb-label">📄 The SDD Ecosystem in 2026 🔴 — 15 min</span></a></nav></article><article id="p23"><div class="art-meta"><span class="badge sec">Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>📄 The SDD ecosystem in 2026 🔴 — 15 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 15 min</p>
 <blockquote>
 <p>SDD is not OpenSpec. SDD is the methodology; OpenSpec is one of the tools that implement it. Knowing what else is out there allows you to make informed decisions in your work.</p>
@@ -3324,7 +3354,7 @@ The system MUST require a second factor during login.
 </code></pre>
 <p>When that change is archived, the <code>Requirement: Two-Factor Authentication</code> moves to <code>openspec/specs/auth/spec.md</code> and becomes a living spec. Future changes see 2FA as an existing capability of the system and can modify it, not reinvent it.</p>
 <p>It&#39;s the equivalent of a commit in Git, but for requirements instead of code. It&#39;s what allows OpenSpec to keep specs useful without them turning into mile-long documents that are impossible to review.</p>
-</article><article id="p24"><div class="crumb">Module 2. Spec-Driven Development (SDD) — 68 min</div><h1>📄 Anatomy of OpenSpec 🔴 — 16 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p22" data-id="p22"><span class="nb-dir">← Previous</span><span class="nb-label">📝 What Is Spec-Driven Development 🔴 — 15 min</span></a><a class="nav-btn next" href="#p24" data-id="p24"><span class="nb-dir">Next →</span><span class="nb-label">📄 Anatomy of OpenSpec 🔴 — 16 min</span></a></nav></article><article id="p24"><div class="art-meta"><span class="badge sec">Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 6</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>📄 Anatomy of OpenSpec 🔴 — 16 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 16 min</p>
 <blockquote>
 <p>Dense lesson. After this one you&#39;ll know how to install OpenSpec, understand its folder structure, write a delta spec, and run the <code>propose → apply → archive</code> flow. This is the bulk of what you need operationally.</p>
@@ -3368,7 +3398,7 @@ openspec --version
 openspec init
 </code></pre>
 <p>The wizard asks which tools you use (Claude Code, Cursor, Codex, etc.) and creates:</p>
-<pre><code>my-project/
+<pre><code class="language-diagram">my-project/
 ├── openspec/
 │   ├── project.md           # contexto del proyecto (stack, convenciones)
 │   ├── changes/             # propuestas activas
@@ -3397,7 +3427,7 @@ openspec init
 <hr>
 <h2>The structure of a <code>change</code></h2>
 <p>When you run <code>/opsx:propose add-refresh-tokens</code>, OpenSpec generates:</p>
-<pre><code>openspec/changes/add-refresh-tokens/
+<pre><code class="language-diagram">openspec/changes/add-refresh-tokens/
 ├── proposal.md      # por qué y qué
 ├── specs/           # delta specs (qué cambia en las capabilities)
 │   └── auth/
@@ -3551,7 +3581,7 @@ openspec view                    # Dashboard interactivo TUI
 <li><p><strong>Legacy migration</strong> <code>/openspec:*</code> <strong>→</strong> <code>/opsx:*</code>: in projects created before OpenSpec 1.0, the slash commands had the <code>/openspec:</code> prefix. If you upgrade an old project, you have to run <code>openspec init</code> again and the commands change. The file structure is compatible.</p>
 </li>
 </ul>
-</article><article id="p25"><div class="crumb">Module 2. Spec-Driven Development (SDD) — 68 min</div><h1>📄 OpenSpec cheat sheet 🔴 — 6 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p23" data-id="p23"><span class="nb-dir">← Previous</span><span class="nb-label">📄 The SDD Ecosystem in 2026 🔴 — 15 min</span></a><a class="nav-btn next" href="#p25" data-id="p25"><span class="nb-dir">Next →</span><span class="nb-label">📄 OpenSpec Cheat Sheet 🔴 — 6 min</span></a></nav></article><article id="p25"><div class="art-meta"><span class="badge sec">Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 6</span><span class="dot">·</span><span class="badge time">⏱ 2 min</span></div><h1>📄 OpenSpec cheat sheet 🔴 — 6 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 6 min</p>
 <h2>Slash commands</h2>
 <h3><code>core</code> profile (default — the 3 you&#39;ll use 90% of the time)</h3>
@@ -3573,7 +3603,7 @@ openspec feedback               # Create a GitHub Issue with metadata
 </code></pre>
 <hr>
 <h2>📁 Folder structure after <code>openspec init</code></h2>
-<pre><code>openspec/
+<pre><code class="language-diagram">openspec/
 ├── project.md                  # project context (you curate this)
 ├── changes/                    # active proposals
 │   └── &lt;change-name&gt;/
@@ -3628,7 +3658,7 @@ export DO_NOT_TRACK=1          # Equivalent standard
 <p><img src="https://media1-production-mightynetworks.imgix.net/asset/e4062998-872c-40e5-99a5-5cb304555069/f00ff1d3986818d4.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <hr>
 <h2>Typical workflow (memorize it)</h2>
-<pre><code>┌─────────────────────────────────────────────────────────────┐
+<pre><code class="language-diagram">┌─────────────────────────────────────────────────────────────┐
 │  1.  /opsx:propose &quot;describe what you want to do&quot;           │
 │      → AI generates proposal.md + specs/ + design.md + tasks.md│
 │                                                             │
@@ -3647,7 +3677,7 @@ export DO_NOT_TRACK=1          # Equivalent standard
 │  6.  Commit + push. PR to main.                             │
 └─────────────────────────────────────────────────────────────┘
 </code></pre>
-</article><article id="p26"><div class="crumb">Module 2. Spec-Driven Development (SDD) — 68 min</div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p24" data-id="p24"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Anatomy of OpenSpec 🔴 — 16 min</span></a><a class="nav-btn next" href="#p26" data-id="p26"><span class="nb-dir">Next →</span><span class="nb-label">📚 Additional Resources 🟢</span></a></nav></article><article id="p26"><div class="art-meta"><span class="badge sec">Module 2. Spec-Driven Development (SDD) — 68 min</span><span class="dot">·</span><span class="badge idx">Lesson 6 of 6</span><span class="dot">·</span><span class="badge time">⏱ 5 min</span></div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
 <h2>SDD — theory and philosophy</h2>
 <p>If you want to understand SDD beyond OpenSpec, these are the minimum readings:</p>
 <ul>
@@ -3809,7 +3839,7 @@ export DO_NOT_TRACK=1          # Equivalent standard
 <li>0.25x</li>
 </ul>
 </blockquote>
-</article><article id="p27"><div class="crumb">Module 3. Operating System: AI Copilots — 84 min</div><h1>✍️Pre-session exercise: Context audit and skill creation🔴 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p25" data-id="p25"><span class="nb-dir">← Previous</span><span class="nb-label">📄 OpenSpec Cheat Sheet 🔴 — 6 min</span></a><a class="nav-btn next" href="#p27" data-id="p27"><span class="nb-dir">Next →</span><span class="nb-label">✍️ Pre-exercise: Context Audit &amp; Skill Creation 🔴</span></a></nav></article><article id="p27"><div class="art-meta"><span class="badge sec">Module 3. Operating System: AI Copilots — 84 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 6</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>✍️Pre-session exercise: Context audit and skill creation🔴 | AI4Devs 2026/06 Seniors</h1>
 <p><strong>Due date: June 22 by end of day</strong></p>
 <hr>
 <h2>Objective</h2>
@@ -4051,7 +4081,7 @@ git commit -m &quot;Solve stopwatch exercise&quot;
 <blockquote>
 <p>⚠ <strong>About the example skills repo:</strong> look at it <em>after</em> building your skill, not before. In the live session we want to see your natural approach, not one copied from an example. Your raw first attempt is exactly what gives value to the comparison with SDD.</p>
 </blockquote>
-</article><article id="p28"><div class="crumb">Module 3. Operating System: AI Copilots — 84 min</div><h1>📄The copilot for real: installation, plans, and first real session 🔴 — 14 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p26" data-id="p26"><span class="nb-dir">← Previous</span><span class="nb-label">📚 Additional Resources 🟢</span></a><a class="nav-btn next" href="#p28" data-id="p28"><span class="nb-dir">Next →</span><span class="nb-label">📄 The Copilot for Real: Installation, Plans &amp; First Real Session 🔴 — 14 min</span></a></nav></article><article id="p28"><div class="art-meta"><span class="badge sec">Module 3. Operating System: AI Copilots — 84 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 6</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>📄The copilot for real: installation, plans, and first real session 🔴 — 14 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 14 min</p>
 <h2>Where we are in the master&#39;s program</h2>
 <p>The two previous sessions established the two things that make a copilot perform:</p>
@@ -4191,7 +4221,7 @@ claude
 <blockquote>
 <p>💡 Lesson 3 goes into these patterns in depth. What matters today is <strong>recognizing that the working model is different from traditional chat</strong>: the agent is a collaborator that iterates, not an oracle that answers.</p>
 </blockquote>
-</article><article id="p29"><div class="crumb">Module 3. Operating System: AI Copilots — 84 min</div><h1>📄 Anatomy of a modern copilot 🔴 — 28 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p27" data-id="p27"><span class="nb-dir">← Previous</span><span class="nb-label">✍️ Pre-exercise: Context Audit &amp; Skill Creation 🔴</span></a><a class="nav-btn next" href="#p29" data-id="p29"><span class="nb-dir">Next →</span><span class="nb-label">📄 Anatomy of a Modern Copilot 🔴 — 28 min</span></a></nav></article><article id="p29"><div class="art-meta"><span class="badge sec">Module 3. Operating System: AI Copilots — 84 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 6</span><span class="dot">·</span><span class="badge time">⏱ 14 min</span></div><h1>📄 Anatomy of a modern copilot 🔴 — 28 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 28 min</p>
 <h2>The thesis: the tools are converging on the same primitives</h2>
 <p>A year ago, comparing Claude Code with Cursor with Copilot with Cline was comparing products. Today it&#39;s comparing <strong>surfaces over the same set of primitives</strong>. The New Stack described it in March as a <em>&quot;composable AI coding stack&quot;</em> that nobody planned: the functions converged, the names didn&#39;t.</p>
@@ -4226,7 +4256,7 @@ ln -s AGENTS.md CLAUDE.md
 </code></pre>
 <p>That&#39;s it. Your <code>AGENTS.md</code> becomes the single source of truth and Claude Code reads it through the symlink.</p>
 <h3>Recommended repo structure</h3>
-<pre><code>your-repo/
+<pre><code class="language-diagram">your-repo/
 ├── AGENTS.md                       ← Source of truth multi-tool
 ├── CLAUDE.md → AGENTS.md           ← Symlink
 ├── .github/
@@ -4268,7 +4298,7 @@ ln -s AGENTS.md CLAUDE.md
 <h2>2 · Skills — reusable workflows</h2>
 <p>Skills are <strong>packaged instructions the agent can invoke</strong> (manually or automatically) when the context applies. In October 2025 Anthropic merged <em>commands</em> and <em>skills</em> into a single primitive. Today the difference is operational, not conceptual.</p>
 <h3>Anatomy of a skill in Claude Code</h3>
-<pre><code>.claude/
+<pre><code class="language-diagram">.claude/
 └── skills/
     └── pr-review/
         └── SKILL.md
@@ -4383,7 +4413,7 @@ Sé conciso. Cita rutas/líneas y URLs específicas. No propongas implementació
 </ul>
 <h3>Typical output</h3>
 <p>When it finishes, the agent presents you with:</p>
-<pre><code>Accept plan?
+<pre><code class="language-diagram">Accept plan?
   ▶ Yes, auto-accept future similar tool calls
     Yes, manually approve each tool call
     No, keep planning
@@ -4546,7 +4576,7 @@ claude mcp remove &lt;nombre&gt;
 <h2>Bonus · Plugins: how everything above gets distributed</h2>
 <p>The 7 primitives are what the copilot <em>does</em>. Plugins are <strong>how they get packaged and shared</strong>. They&#39;re not another primitive; they&#39;re the distribution mechanism for the previous ones.</p>
 <h3>Anatomy of a Claude Code plugin</h3>
-<pre><code>my-plugin/
+<pre><code class="language-diagram">my-plugin/
 ├── .claude-plugin/
 │   └── plugin.json          ← Manifest obligatorio
 ├── skills/                   ← Skills bundled
@@ -4604,12 +4634,12 @@ claude mcp remove &lt;nombre&gt;
 <blockquote>
 <p>📌 <strong>Practical implication for the master</strong>: when the client switches copilots in 2 years, what moves with you isn&#39;t the plugins (tied to the tool). What moves is <a href="http://agents.md/"><strong>AGENTS.md</strong></a> <strong>and the logic of your skills</strong>. Design your plugins as <em>thin layers over portable primitives</em>, not as vendor-locked ecosystems.</p>
 </blockquote>
-</article><article id="p30"><div class="crumb">Module 3. Operating System: AI Copilots — 84 min</div><h1>📄 How to work: Explore-Plan-Execute and SDD-aware copilots 🔴 — 22 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p28" data-id="p28"><span class="nb-dir">← Previous</span><span class="nb-label">📄 The Copilot for Real: Installation, Plans &amp; First Real Session 🔴 — 14 min</span></a><a class="nav-btn next" href="#p30" data-id="p30"><span class="nb-dir">Next →</span><span class="nb-label">📄 How We Work: Explore-Plan-Execute &amp; SDD-aware Copilots 🔴 — 22 min</span></a></nav></article><article id="p30"><div class="art-meta"><span class="badge sec">Module 3. Operating System: AI Copilots — 84 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 6</span><span class="dot">·</span><span class="badge time">⏱ 13 min</span></div><h1>📄 How to work: Explore-Plan-Execute and SDD-aware copilots 🔴 — 22 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 22 min</p>
 <h2>The canonical pipeline: Explore-Plan-Execute (EPE)</h2>
 <p>Nobody in particular invented EPE. It appeared in parallel in the Anthropic blogs (subagents, April 2026), Cursor (Lee Robinson, &quot;Agent best practices&quot;, January 2026), and in the talks by Boris Cherny (creator of Claude Code) during fall 2025. Today it&#39;s the implicit pattern everyone assumes when they talk about &quot;serious agentic coding&quot;.</p>
 <p>The idea is trivial: <strong>separate exploration, planning, and execution into distinct phases, with different models and permissions</strong>.</p>
-<pre><code>┌──────────────┐        ┌──────────────┐        ┌──────────────┐
+<pre><code class="language-diagram">┌──────────────┐        ┌──────────────┐        ┌──────────────┐
 │   EXPLORE    │   →    │     PLAN     │   →    │   EXECUTE    │
 ├──────────────┤        ├──────────────┤        ├──────────────┤
 │ Read-only    │        │ Razonamiento │        │ Edit + Bash  │
@@ -4673,7 +4703,7 @@ claude mcp remove &lt;nombre&gt;
 <p>The plan, on the other hand, is <strong>the exact moment where a mistake becomes expensive</strong>: if you approve a bad plan, you&#39;re going to waste expensive tokens, dirty your repo, and possibly break something. That&#39;s where it&#39;s worth investing 2 minutes of reading.</p>
 <hr>
 <h2>Plan mode vs direct agentic: decision tree</h2>
-<pre><code>¿La tarea toca &gt; 3 archivos?
+<pre><code class="language-diagram">¿La tarea toca &gt; 3 archivos?
 ├── Sí → PLAN MODE
 └── No → ¿Tiene side-effects (DB, deploy, rm, secrets)?
            ├── Sí → PLAN MODE + hooks PreToolUse
@@ -4900,7 +4930,7 @@ Cambios listos para commit.
 </li>
 </ul>
 <p>That&#39;s the <em>real uplift</em> of a well-used copilot: not writing the same code faster, but <strong>raising the level of abstraction at which you operate</strong>.</p>
-</article><article id="p31"><div class="crumb">Module 3. Operating System: AI Copilots — 84 min</div><h1>📄 Senior decisions: when to use what, real costs, governance 🔴 — 20 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p29" data-id="p29"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Anatomy of a Modern Copilot 🔴 — 28 min</span></a><a class="nav-btn next" href="#p31" data-id="p31"><span class="nb-dir">Next →</span><span class="nb-label">📄 Senior Decisions: When to Use What, Real Costs, Governance 🔴 — 20 min</span></a></nav></article><article id="p31"><div class="art-meta"><span class="badge sec">Module 3. Operating System: AI Copilots — 84 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 6</span><span class="dot">·</span><span class="badge time">⏱ 11 min</span></div><h1>📄 Senior decisions: when to use what, real costs, governance 🔴 — 20 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 20 min</p>
 <h2>Claude Code vs Cursor: concrete decision matrix</h2>
 <p>The question isn&#39;t &quot;which one is better&quot;. It&#39;s &quot;which one do you use for this task right now&quot;. Field table:</p>
@@ -5124,7 +5154,7 @@ $ claude
 <blockquote>
 <p>💡 <strong>What&#39;s missing from this Monday</strong>: Cowork (long async sessions), Agent Teams (coordinated multi-agent), Cursor automations (cron + Slack). Those are more advanced patterns covered in later sessions. What you saw today is the <em>core</em>: EPE, primitives, the right tool for each moment.</p>
 </blockquote>
-</article><article id="p32"><div class="crumb">Module 3. Operating System: AI Copilots — 84 min</div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p30" data-id="p30"><span class="nb-dir">← Previous</span><span class="nb-label">📄 How We Work: Explore-Plan-Execute &amp; SDD-aware Copilots 🔴 — 22 min</span></a><a class="nav-btn next" href="#p32" data-id="p32"><span class="nb-dir">Next →</span><span class="nb-label">📚 Additional Resources 🟢</span></a></nav></article><article id="p32"><div class="art-meta"><span class="badge sec">Module 3. Operating System: AI Copilots — 84 min</span><span class="dot">·</span><span class="badge idx">Lesson 6 of 6</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
 <h2>Official documentation</h2>
 <p>The primary source. When something in the rest of the resources contradicts these links, <strong>the official documentation wins</strong>.</p>
 <h3>Claude Code</h3>
@@ -5367,7 +5397,7 @@ $ claude
 <li><p><strong>Karpathy</strong> — his talks set trends (he coined &quot;vibe coding&quot; and later &quot;agentic engineering&quot;).</p>
 </li>
 </ul>
-</article><article id="p33"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>✍️Pre-session exercise: Backlog inventory🔴 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p31" data-id="p31"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Senior Decisions: When to Use What, Real Costs, Governance 🔴 — 20 min</span></a><a class="nav-btn next" href="#p33" data-id="p33"><span class="nb-dir">Next →</span><span class="nb-label">✍️ Pre-exercise: Backlog Inventory 🔴</span></a></nav></article><article id="p33"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 7</span><span class="dot">·</span><span class="badge time">⏱ 11 min</span></div><h1>✍️Pre-session exercise: Backlog inventory🔴 | AI4Devs 2026/06 Seniors</h1>
 <p><strong>Due date: JUNE 29, end of day</strong></p>
 <hr>
 <h2>Objective</h2>
@@ -5440,7 +5470,7 @@ is missing or what you assumed.
 <hr>
 <h2>What to deliver</h2>
 <p>Upload to your <code>alumno/&lt;nombre-apellido&gt;</code> branch of the program repo a folder <code>entregables/sesion-04/</code> with:</p>
-<pre><code>entregables/sesion-04/
+<pre><code class="language-diagram">entregables/sesion-04/
 ├── prompt.md         # Your complete prompt
 ├── output.md         # The raw AI output (untouched)
 ├── poke-holes.md     # The 3-5 findings from Part 3
@@ -5637,7 +5667,7 @@ The MVP is considered successful if, after 4 weeks with real users:
 - **Synchronization**: the process by which FlowSync tasks are reflected as events in Google Calendar.
 - **Google connection**: the OAuth authorization that allows FlowSync to read and write to the user&#39;s calendar.
 </code></pre>
-</article><article id="p34"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>📄 Planning changes: new paradigms 🔴— 11 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p32" data-id="p32"><span class="nb-dir">← Previous</span><span class="nb-label">📚 Additional Resources 🟢</span></a><a class="nav-btn next" href="#p34" data-id="p34"><span class="nb-dir">Next →</span><span class="nb-label">📄 Planning Is Changing: New Paradigms 🔴 — 11 min</span></a></nav></article><article id="p34"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 7</span><span class="dot">·</span><span class="badge time">⏱ 6 min</span></div><h1>📄 Planning changes: new paradigms 🔴— 11 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 11 min</p>
 <h2>The shift almost nobody is naming</h2>
 <p>For 20 years, agile planning had a stable geometry: the bottleneck was <strong>implementation</strong>. We refined stories, estimated them in story points, and the team&#39;s actual velocity was measured against that estimate. If something went wrong, it was almost always because the story was misunderstood or bigger than it appeared. AI hasn&#39;t changed that geometry — <strong>it has inverted it</strong>.</p>
@@ -5713,7 +5743,7 @@ The MVP is considered successful if, after 4 weeks with real users:
 <hr>
 <h2>The new geometry of uncertainty</h2>
 <p>If you had to draw where risk concentrates in a project in 2026 vs 2020, the peaks have shifted:</p>
-<pre><code>2020 (sin IA):                2026 (con IA):
+<pre><code class="language-diagram">2020 (sin IA):                2026 (con IA):
    ▁▂▆█▆▂▁                       ▆██▂▁▁▁▂▆
    D R I T D                      D R I T D
                                   ▲ ▲     ▲
@@ -5722,7 +5752,7 @@ The MVP is considered successful if, after 4 weeks with real users:
 </code></pre>
 <p>(D=Discovery, R=Refinement, I=Implementation, T=Testing, D=Deployment)</p>
 <p>The operational conclusion is direct: <strong>you invest more in discovery and refinement, less in implementation, and you invest heavily again in deployment</strong> (because there&#39;s more code and more attack surface). Planning moves toward the extremes.</p>
-</article><article id="p35"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>📄 Anatomy of an AI-ready backlog 🔴— 16 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p33" data-id="p33"><span class="nb-dir">← Previous</span><span class="nb-label">✍️ Pre-exercise: Backlog Inventory 🔴</span></a><a class="nav-btn next" href="#p35" data-id="p35"><span class="nb-dir">Next →</span><span class="nb-label">📄 Anatomy of an AI-Ready Backlog 🔴 — 16 min</span></a></nav></article><article id="p35"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 7</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>📄 Anatomy of an AI-ready backlog 🔴— 16 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 16 min</p>
 <h2>The hierarchy didn&#39;t change. What changed is who you write it for.</h2>
 <p>There are still PRDs, epics, user stories, tasks, and acceptance criteria. The structure has been the same for 15 years. What is radically different is that the reader is no longer just the team:</p>
@@ -5735,7 +5765,7 @@ The MVP is considered successful if, after 4 weeks with real users:
 <p>This changes the relative cost of ambiguity. In the pre-AI era, a somewhat vague story eventually got clarified; now the agent may have implemented it in the worst plausible way before anyone notices. <strong>An AI-ready backlog isn&#39;t more detailed for its own sake: it&#39;s more detailed where ambiguity can slip into code without anyone noticing.</strong></p>
 <hr>
 <h2>The pyramid and what each layer does</h2>
-<pre><code>┌──────────────────────┐  Visión, alcance MVP, decisiones de
+<pre><code class="language-diagram">┌──────────────────────┐  Visión, alcance MVP, decisiones de
 │         PRD          │  arquitectura, métricas de éxito.
 └──────────┬───────────┘  (Producto + Tech, semanas/meses)
            │
@@ -5831,7 +5861,7 @@ Scenario: Filtro con valor inválido
 <p>This is where S4 connects with S2 without stepping on it. They are two layers with different purposes:</p>
 <p><img src="https://media1-production-mightynetworks.imgix.net/asset/b9803a69-f13d-4718-a2e8-a4cb728b7e47/bfafa15f239e6750.png?ixlib=rails-4.3.1&fm=jpg&q=75&auto=format&w=1400&h=1400&fit=max&impolicy=ResizeCrop&constraint=downsize&aspect=fit" alt="image.png" title="image.png"></p>
 <h3>The canonical flow of a well-planned story</h3>
-<pre><code>PRD          ────► User Story            ────► OpenSpec change       ────► Código
+<pre><code class="language-diagram">PRD          ────► User Story            ────► OpenSpec change       ────► Código
 (página/    (Linear/Jira ticket          (openspec/changes/...        (PR mergeable)
  docs)       con AC en GWT)               markdown formal)
                   │                            ▲
@@ -5895,7 +5925,7 @@ una llamada extra desde el frontend.
 </blockquote>
 <hr>
 <h2>Operational recap</h2>
-<pre><code>┌─────────────────────────────────────────────────────────┐
+<pre><code class="language-diagram">┌─────────────────────────────────────────────────────────┐
 │ Una story es AI-ready si:                               │
 │                                                         │
 │  ✓ Pasa INVEST (los 6, especialmente Small y Testable)  │
@@ -5908,7 +5938,7 @@ una llamada extra desde el frontend.
 │     OpenSpec change cuando entre al sprint              │
 └─────────────────────────────────────────────────────────┘
 </code></pre>
-</article><article id="p36"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>📄 AI-assisted estimation 🔴— 13 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p34" data-id="p34"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Planning Is Changing: New Paradigms 🔴 — 11 min</span></a><a class="nav-btn next" href="#p36" data-id="p36"><span class="nb-dir">Next →</span><span class="nb-label">📄 AI-Assisted Estimation 🔴 — 13 min</span></a></nav></article><article id="p36"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 7</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>📄 AI-assisted estimation 🔴— 13 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 13 min</p>
 <h2>The big fake debate: SP vs hours vs t-shirts</h2>
 <p>The debate is still active and half the industry is still wrong in one direction or another. Quick read so you don&#39;t waste time:</p>
@@ -6055,7 +6085,7 @@ Buffer AI-aware (30%):                     28 SP comprometidos
 </blockquote>
 <p>That&#39;s why AI-as-peer in planning poker is valuable: the AI forces a conversation when it gives a different estimate. AI-as-oracle (it decides) is poisonous: it cuts off the conversation.</p>
 <hr>
-</article><article id="p37"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>📄 PM tools + AI in 2026 🔴— 13 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p35" data-id="p35"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Anatomy of an AI-Ready Backlog 🔴 — 16 min</span></a><a class="nav-btn next" href="#p37" data-id="p37"><span class="nb-dir">Next →</span><span class="nb-label">📄 PM Tools + AI in 2026 🔴 — 13 min</span></a></nav></article><article id="p37"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 7</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>📄 PM tools + AI in 2026 🔴— 13 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 13 min</p>
 <h2>The ecosystem on one page</h2>
 <p>The PM tools landscape in 2026 reorganized around three new axes:</p>
@@ -6177,15 +6207,15 @@ Buffer AI-aware (30%):                     28 SP comprometidos
 <h2>Integration patterns: read-only, write, two-way</h2>
 <p>When you configure the Claude Code ↔ your PM tool connection, there are three permission levels. Choose consciously:</p>
 <h3>Read-only</h3>
-<pre><code>Claude Code ──► (read) ──► Linear/Jira
+<pre><code class="language-diagram">Claude Code ──► (read) ──► Linear/Jira
 </code></pre>
 <p>The agent can only read. Useful for <strong>research, summaries, generating reports</strong>. It cannot create, modify, or close issues. It&#39;s the minimum risk. I recommend it as the entry point for any new team.</p>
 <h3>Write (controlled)</h3>
-<pre><code>Claude Code ──► (read + create) ──► Linear/Jira
+<pre><code class="language-diagram">Claude Code ──► (read + create) ──► Linear/Jira
 </code></pre>
 <p>The agent can read and create, but not modify/close/move. Useful for <strong>bulk creation</strong> from a PRD, generating bug tickets from logs, etc. The human is still the one who closes and prioritizes.</p>
 <h3>Two-way (full)</h3>
-<pre><code>Claude Code ──► (read + create + update + close) ──► Linear/Jira
+<pre><code class="language-diagram">Claude Code ──► (read + create + update + close) ──► Linear/Jira
 </code></pre>
 <p>The agent can do everything. <strong>Real risk of accidentally losing tickets</strong> if the prompt is ambiguous. Reserve this for specific skills/automations with a bounded scope, not for interactive use.</p>
 <blockquote>
@@ -6215,7 +6245,7 @@ Buffer AI-aware (30%):                     28 SP comprometidos
 </ol>
 <hr>
 <h2>AI4Devs operational decision</h2>
-<pre><code>┌──────────────────────────────────────────────────┐
+<pre><code class="language-diagram">┌──────────────────────────────────────────────────┐
 │ Stack PM para FlowSync (este proyecto):          │
 │                                                  │
 │   📝 Notion       — PRD, docs, decisiones        │
@@ -6232,7 +6262,7 @@ Buffer AI-aware (30%):                     28 SP comprometidos
 │ los skills generan tickets de calidad.           │
 └──────────────────────────────────────────────────┘
 </code></pre>
-</article><article id="p38"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>📄 Continuous agile planning 🔴— 12 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p36" data-id="p36"><span class="nb-dir">← Previous</span><span class="nb-label">📄 AI-Assisted Estimation 🔴 — 13 min</span></a><a class="nav-btn next" href="#p38" data-id="p38"><span class="nb-dir">Next →</span><span class="nb-label">📄 Continuous Agile Planning 🔴 — 12 min</span></a></nav></article><article id="p38"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 6 of 7</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>📄 Continuous agile planning 🔴— 12 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 12 min</p>
 <h2>Refinement is no longer a ceremony, it&#39;s a background process</h2>
 <p>The classic &quot;backlog refinement&quot; ceremony — the whole team, one hour, once per sprint — still exists, but it&#39;s losing its monopoly. With AI in the flow, refinement becomes <strong>continuous and asynchronous</strong>:</p>
@@ -6342,7 +6372,7 @@ fi
 </li>
 </ul>
 <h3>Metrics that matter, segmented</h3>
-<pre><code>                 Velocity   Bugs/PR   Time-to-merge   Rework rate
+<pre><code class="language-diagram">                 Velocity   Bugs/PR   Time-to-merge   Rework rate
 ─────────────────────────────────────────────────────────────────
 Human only        15 SP      0.3        2.1 days        8%
 Human+copilot     22 SP      0.4        1.6 days        12%
@@ -6404,7 +6434,7 @@ calendars without recurrences.&quot;
 <p>🛡 <strong>Risk to avoid</strong>: the AI detecting &quot;patterns&quot; about individuals (&quot;dev X has more bugs than dev Y&quot;). That&#39;s noise + bias and it breaks trust. Configure the prompts so it always looks <strong>at the team level or the process level</strong>, never the individual level.</p>
 <hr>
 <h2>The loop that closes everything</h2>
-<pre><code>┌─────────────────────────────────────────────────────────┐
+<pre><code class="language-diagram">┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │    ┌─────────┐      ┌──────────┐      ┌──────────┐      │
 │    │   PRD   │──►───│ Backlog  │──►───│  Sprint  │      │
@@ -6428,7 +6458,7 @@ calendars without recurrences.&quot;
 └─────────────────────────────────────────────────────────┘
 </code></pre>
 <p>Every arrow is a concrete pattern you&#39;ve seen in these 5 lessons. The missing piece — the pre-session exercise — is in the next lesson.</p>
-</article><article id="p39"><div class="crumb">Module 4. Effective Planning with AI — 65 min</div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p37" data-id="p37"><span class="nb-dir">← Previous</span><span class="nb-label">📄 PM Tools + AI in 2026 🔴 — 13 min</span></a><a class="nav-btn next" href="#p39" data-id="p39"><span class="nb-dir">Next →</span><span class="nb-label">📚 Additional Resources 🟢</span></a></nav></article><article id="p39"><div class="art-meta"><span class="badge sec">Module 4. Effective Planning with AI — 65 min</span><span class="dot">·</span><span class="badge idx">Lesson 7 of 7</span><span class="dot">·</span><span class="badge time">⏱ 6 min</span></div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
 <h2>🧠 On AI-assisted planning in general</h2>
 <ul>
 <li><p>📖 <a href="https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report">DORA 2025 — State of AI-assisted Software Development</a> · The AI Capabilities Model and why high-performance teams adjust processes, not just tools. <strong>Required reading if you lead a team</strong>.</p>
@@ -6568,7 +6598,7 @@ calendars without recurrences.&quot;
 <li><p>🎙 <strong>Café Codely</strong> · podcast featuring real practices from Spanish-speaking teams.</p>
 </li>
 </ul>
-</article><article id="p40"><div class="crumb">Module 5. Effective Documentation with AI — 138 min</div><h1>📄 The documentation deficit in the AI era 🔴 — 10 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p38" data-id="p38"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Continuous Agile Planning 🔴 — 12 min</span></a><a class="nav-btn next" href="#p40" data-id="p40"><span class="nb-dir">Next →</span><span class="nb-label">📄 The Documentation Deficit in the AI Era 🔴 — 10 min</span></a></nav></article><article id="p40"><div class="art-meta"><span class="badge sec">Module 5. Effective Documentation with AI — 138 min</span><span class="dot">·</span><span class="badge idx">Lesson 1 of 5</span><span class="dot">·</span><span class="badge time">⏱ 5 min</span></div><h1>📄 The documentation deficit in the AI era 🔴 — 10 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 10 min</p>
 <h2>The new problem nobody warned you about</h2>
 <p>There is a structural irony in AI-assisted development that is rarely named openly: <strong>AI accelerates code production, but it does not accelerate documentation</strong>. The result is a deficit that keeps growing.</p>
@@ -6583,7 +6613,7 @@ calendars without recurrences.&quot;
 <hr>
 <h2>The map: types of documentation and who they&#39;re for</h2>
 <p>Before talking about tools, you need a clear mental map. Technical documentation has four layers with distinct audiences. Mixing them in the same place is the root of most maintenance problems.</p>
-<pre><code>┌─────────────────────────────────────────────────────────────┐
+<pre><code class="language-diagram">┌─────────────────────────────────────────────────────────────┐
 │  LAYER             AUDIENCE           LIFECYCLE              │
 ├─────────────────────────────────────────────────────────────┤
 │  Architecture      Technical team     Slow (months)          │
@@ -6660,7 +6690,7 @@ calendars without recurrences.&quot;
 <p>In S2 you learned that a well-written spec gives AI context to implement. In S5 you are going to see the reverse movement: <strong>well-annotated code gives AI context to document</strong>. The two flows are complementary, not alternatives.</p>
 </blockquote>
 <hr>
-</article><article id="p41"><div class="crumb">Module 5. Effective Documentation with AI — 138 min</div><h1>📄 Documented architecture: ADRs + C4 diagrams with AI 🔴— 14 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p39" data-id="p39"><span class="nb-dir">← Previous</span><span class="nb-label">📚 Additional Resources 🟢</span></a><a class="nav-btn next" href="#p41" data-id="p41"><span class="nb-dir">Next →</span><span class="nb-label">📄 Documented Architecture: ADRs + C4 Diagrams with AI 🔴 — 14 min</span></a></nav></article><article id="p41"><div class="art-meta"><span class="badge sec">Module 5. Effective Documentation with AI — 138 min</span><span class="dot">·</span><span class="badge idx">Lesson 2 of 5</span><span class="dot">·</span><span class="badge time">⏱ 8 min</span></div><h1>📄 Documented architecture: ADRs + C4 diagrams with AI 🔴— 14 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 14 min</p>
 <h2>Why diagrams and ADRs die first</h2>
 <p>Architecture documentation is the first to become outdated and the most costly not to have. The PowerPoint diagrams from the kick-off become obsolete in the first refactor sprint. The ADRs nobody writes turn into Slack conversations nobody can find two years later.</p>
@@ -6720,7 +6750,7 @@ npx log4brains adr new &quot;Uso de SQLite en lugar de PostgreSQL&quot;
 npx log4brains preview
 </code></pre>
 <p>The structure <code>log4brains init</code> creates:</p>
-<pre><code>docs/
+<pre><code class="language-diagram">docs/
 └── adr/
     ├── README.md              # Index of ADRs
     ├── 20260101-uso-de-adonisjs-7.md
@@ -6890,7 +6920,7 @@ docker run -it --rm -p 8080:8080 \\
 </code></pre>
 <p>The &quot;does it deserve Structurizr?&quot; criterion is pragmatic: if the Mermaid diagram in the README explains the architecture well enough to a new developer, you don&#39;t need more. If you have multiple services or the system has more than 3-4 non-trivial containers, Structurizr pays for its complexity.</p>
 <hr>
-</article><article id="p42"><div class="crumb">Module 5. Effective Documentation with AI — 138 min</div><h1>📄 API and code documentation 🔴 — 16 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p40" data-id="p40"><span class="nb-dir">← Previous</span><span class="nb-label">📄 The Documentation Deficit in the AI Era 🔴 — 10 min</span></a><a class="nav-btn next" href="#p42" data-id="p42"><span class="nb-dir">Next →</span><span class="nb-label">📄 API &amp; Code Documentation 🔴 — 16 min</span></a></nav></article><article id="p42"><div class="art-meta"><span class="badge sec">Module 5. Effective Documentation with AI — 138 min</span><span class="dot">·</span><span class="badge idx">Lesson 3 of 5</span><span class="dot">·</span><span class="badge time">⏱ 9 min</span></div><h1>📄 API and code documentation 🔴 — 16 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 16 min</p>
 <h2>Two layers, one single source of truth</h2>
 <p>API documentation and TypeScript code documentation are two distinct layers with different audiences, but they share the same principle: <strong>the source of truth is the code</strong>, not an external document.</p>
@@ -7166,7 +7196,7 @@ The developer writes less in each turn
 More room for business logic, less for technical instructions
 </code></pre>
 <p>The <a href="http://claude.md/">CLAUDE.md</a> you&#39;ve had since S1 is the project&#39;s instruction layer. The TSDoc + TypeDoc documentation is the code&#39;s knowledge layer. Together, they ensure that the AI agent working on your project at turn 50 of a long session has the same level of understanding as at turn 1.</p>
-</article><article id="p43"><div class="crumb">Module 5. Effective Documentation with AI — 138 min</div><h1>📄 Documentation testing in CI and docs for LLMs 🔴 — 13 min | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p41" data-id="p41"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Documented Architecture: ADRs + C4 Diagrams with AI 🔴 — 14 min</span></a><a class="nav-btn next" href="#p43" data-id="p43"><span class="nb-dir">Next →</span><span class="nb-label">📄 Testing Docs in CI &amp; Docs for LLMs 🔴 — 13 min</span></a></nav></article><article id="p43"><div class="art-meta"><span class="badge sec">Module 5. Effective Documentation with AI — 138 min</span><span class="dot">·</span><span class="badge idx">Lesson 4 of 5</span><span class="dot">·</span><span class="badge time">⏱ 7 min</span></div><h1>📄 Documentation testing in CI and docs for LLMs 🔴 — 13 min | AI4Devs 2026/06 Seniors</h1>
 <p>⏳ Estimated time: 13 min</p>
 <h2>Documentation is tested too</h2>
 <p>If code without tests is technical debt, documentation without automated validation is documentary debt. The difference is that documentary debt is silent: the broken links nobody notices, the Markdown that breaks the site build, the prose that uses inconsistent terminology — all of it reaches the reader without anyone seeing it in the PR.</p>
@@ -7417,7 +7447,7 @@ Para el contexto completo (más verboso), ver llms-full.txt
 <p>The <code>llms-full.txt</code> file is an expanded version with all the documentation serialized, intended for tools that consume the full context programmatically.</p>
 <h3>Where to put these files</h3>
 <p>At the project root and, if you have a docs site, at the site root:</p>
-<pre><code>flowsync/
+<pre><code class="language-diagram">flowsync/
 ├── llms.txt           # Versión concisa para el repo
 ├── llms-full.txt      # Versión expandida (generada, no escrita a mano)
 └── docs/site/
@@ -7440,7 +7470,7 @@ Para el contexto completo (más verboso), ver llms-full.txt
 </blockquote>
 <hr>
 <h2>The complete docs pipeline in a single image</h2>
-<pre><code>Código + Markdown en el repo
+<pre><code class="language-diagram">Código + Markdown en el repo
         │
         ├── Push a main
         │       │
@@ -7460,7 +7490,7 @@ Para el contexto completo (más verboso), ver llms-full.txt
                 └── Vale comenta en el PR con sugerencias de estilo
 </code></pre>
 <p>With this pipeline, documentation has the same level of guarantees as code: it cannot reach <code>main</code> broken, syntactically out of date, or with dead links.</p>
-</article><article id="p44"><div class="crumb">Module 5. Effective Documentation with AI — 138 min</div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
+<nav class="art-nav"><a class="nav-btn prev" href="#p42" data-id="p42"><span class="nb-dir">← Previous</span><span class="nb-label">📄 API &amp; Code Documentation 🔴 — 16 min</span></a><a class="nav-btn next" href="#p44" data-id="p44"><span class="nb-dir">Next →</span><span class="nb-label">📚 Additional Resources 🟢</span></a></nav></article><article id="p44"><div class="art-meta"><span class="badge sec">Module 5. Effective Documentation with AI — 138 min</span><span class="dot">·</span><span class="badge idx">Lesson 5 of 5</span><span class="dot">·</span><span class="badge time">⏱ 5 min</span></div><h1>📚  Additional resources 🟢 | AI4Devs 2026/06 Seniors</h1>
 <h2>Docs-as-code and documentation frameworks</h2>
 <h3>Tools (official documentation)</h3>
 <ul>
@@ -7670,23 +7700,42 @@ Para el contexto completo (más verboso), ver llms-full.txt
 </ul>
 </li>
 </ul>
-</article></div></div>
+<nav class="art-nav"><a class="nav-btn prev" href="#p43" data-id="p43"><span class="nb-dir">← Previous</span><span class="nb-label">📄 Testing Docs in CI &amp; Docs for LLMs 🔴 — 13 min</span></a><span class="nav-btn next done">🎉 That's the course</span></nav></article></div></div>
 </div><script>
 const arts=[...document.querySelectorAll('article')];
-const links=[...document.querySelectorAll('.mod a[data-id]')];
+const navLinks=[...document.querySelectorAll('.mod a[data-id]')];
+const visitedKey='a4d-visited-en';
+let visited;try{visited=new Set(JSON.parse(localStorage.getItem(visitedKey)||'[]'));}catch(e){visited=new Set();}
+function saveVisited(){try{localStorage.setItem(visitedKey,JSON.stringify([...visited]));}catch(e){}}
+function updateProgress(){
+ document.querySelectorAll('.mod').forEach(mod=>{
+  const links=[...mod.querySelectorAll('a[data-id]')];
+  if(!links.length)return;
+  const done=links.filter(l=>visited.has(l.dataset.id)).length;
+  const badge=mod.querySelector('.mod-count'); if(badge) badge.textContent=done+'/'+links.length;
+  links.forEach(l=>l.classList.toggle('done',visited.has(l.dataset.id)));
+ });
+ const total=navLinks.length,done=navLinks.filter(l=>visited.has(l.dataset.id)).length;
+ const bar=document.getElementById('progressbar'); if(bar) bar.style.width=(total?done/total*100:0)+'%';
+}
 function show(id){
  const a=document.getElementById(id); if(!a)return;
  arts.forEach(x=>x.classList.remove('show')); a.classList.add('show');
- links.forEach(l=>l.classList.toggle('active',l.dataset.id===id));
+ navLinks.forEach(l=>l.classList.toggle('active',l.dataset.id===id));
  document.getElementById('main').scrollTop=0;
  document.body.classList.remove('open');
+ visited.add(id); saveVisited(); updateProgress();
 }
-links.forEach(l=>l.addEventListener('click',e=>{e.preventDefault();history.replaceState(null,'','#'+l.dataset.id);show(l.dataset.id);}));
+document.addEventListener('click',e=>{
+ const el=e.target.closest('[data-id]'); if(!el)return;
+ e.preventDefault(); history.replaceState(null,'','#'+el.dataset.id); show(el.dataset.id);
+});
 document.getElementById('burger').addEventListener('click',()=>document.body.classList.toggle('open'));
 const tbtn=document.getElementById('theme');
 function setTheme(t){document.documentElement.setAttribute('data-theme',t);tbtn.textContent=t==='dark'?'☀️':'🌙';try{localStorage.setItem('a4d-theme',t);}catch(e){}}
 tbtn.addEventListener('click',()=>setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'));
 let saved;try{saved=localStorage.getItem('a4d-theme');}catch(e){}
 setTheme(saved||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+updateProgress();
 show((location.hash||'#p1').slice(1));
 </script></body></html>
