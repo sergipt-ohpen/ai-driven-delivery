@@ -59,18 +59,6 @@ Turn this into a personal Claude skill I can run with /sprint-summary
 Ask me anything you need to generalize it, then create the skill file.
 ```
 
-From then on, typing `/sprint-summary` does what used to take a full copy-paste.
-
-## 🛠️ Try it with Claude
-
-```
-Look at the prompts I use most from the Copy-Paste Playbook. Ask me which
-2-3 I run most often, then: (1) draft my personal CLAUDE.md with the
-standing preferences that apply across all of them, and (2) turn each one
-into a personal skill I can invoke with /name. Show me everything before
-you save it.
-```
-
-Do this once, and the Playbook stops being something you copy from — it becomes something Claude already knows.
+From then on, typing `/sprint-summary` does what used to take a full copy-paste. Do the same with whichever 2-3 Playbook prompts you actually reach for most — that's the whole exercise, and the Playbook stops being something you copy from and becomes something Claude already knows.
 
 A skill is the right tool when the repeated thing is *one prompt*. When the repeated thing is a whole procedure with its own rules — building every screen of a POC the same disciplined way, say — that's a job for a dedicated agent instead. The next lesson builds one.
