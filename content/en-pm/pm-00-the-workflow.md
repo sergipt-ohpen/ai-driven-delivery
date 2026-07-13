@@ -94,6 +94,7 @@ You don't need to run SDD yourself to benefit from it: the clearer your ticket, 
 - **Set it up once** — two short pages: get your project into Claude, then connect Jira & Confluence. Do these once and forget them.
 - **Using it day to day** — the four things you actually do, each grounded in the real project.
 - **Playbook** — copy-paste prompts for when you just want to get going.
-- **Going further** (optional): once the daily workflow feels natural, teach Claude your own preferences so you stop copy-pasting, and scaffold a brand-new POC from an empty folder.
+- **Make it yours**: the real payoff. Install a ready-made pack of skills so the prompts you copy become one-word commands you never paste again. Don't skip this one.
+- **Going further** (optional): scaffold a brand-new POC from an empty folder.
 
 Skim the daily-use pages, then live in the Playbook. You don't need to remember any of this — you need to do it once and feel the difference.

@@ -2,7 +2,7 @@
 
 Your ready-made prompts for this exact setup: the **project folder attached** in Claude Desktop, and **Jira + Confluence connected**. Copy one, fill the `[PLACEHOLDERS]`, and go. Each prompt asks Claude to check with you before running off in the wrong direction.
 
-This is the starting point, not the end state. Once you notice you keep reaching for the same 2-3 prompts, the next lesson shows you how to stop copying them altogether.
+Every prompt here is a skill waiting to happen. Copy-pasting is the starting point, not the destination: the moment you reach for one of these two or three times, the next lesson turns it into a one-word command you never paste again. That's where the real time savings are, so don't treat it as optional.
 
 Click a row to open it.
 

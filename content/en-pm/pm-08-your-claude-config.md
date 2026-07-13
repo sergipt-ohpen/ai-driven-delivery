@@ -1,64 +1,62 @@
 # ⚙️ Configure Your Own Claude
 
-The Playbook works, but you're still retyping the same setup every time: "ground this in the real project," "ask before you create anything in Jira," "ask clarifying questions first." This lesson is the next rung: say it once in the right place, and Claude already knows it before you ask — no more copying.
+The Playbook works, but you're still pasting the same prompts every day. This lesson makes that stop. The important part: **you do all of it just by talking to Claude in Code mode.** Nothing to install, no folders to find, no files to copy by hand. You paste a message, Claude writes whatever it needs on your machine, exactly like every other prompt in this guide.
 
-## Two places to configure Claude — and why the difference matters
+## Skills: turn a Playbook prompt into one word
 
-Claude reads instructions from a file called `CLAUDE.md`, and there are two of them:
+A **skill** is a saved prompt you run by typing `/its-name` instead of pasting the whole thing. `/sprint-summary` instead of the twelve-line summary prompt. That's the entire idea.
 
-- **Project `CLAUDE.md`** — lives inside the repository, travels with git, applies to *everyone* who opens that project in Claude. Engineers usually already have one, full of their own conventions.
-- **Personal `CLAUDE.md`** — lives on your own laptop (at `~/.claude/CLAUDE.md`), applies to *every* project you open, and only affects your own sessions.
-
-**Put your preferences in the personal one.** Editing the project's shared file with your own habits means every engineer's session changes too — that's not your call to make alone. Your personal file is exactly the right amount of yours: nobody else sees it, and it follows you into any project you attach.
-
-## Set it up — let Claude interview you
-
-Don't write this from a blank page. Ask Claude to draft it *with* you:
+And you don't build them one at a time. **Paste this once** and Claude creates your whole PM pack for you:
 
 ```
-I want to set up my personal Claude configuration (~/.claude/CLAUDE.md).
-Interview me with a handful of short questions about how I like to work:
-what I always want you to check before acting, what output formats I prefer,
-what tone I want in drafts, and anything that's bitten me before (things you've
-done that I had to correct). Then write the file for me and show me what
-you wrote before saving.
+Set up my personal PM skill pack. Create these as personal Claude skills
+(~/.claude/skills/<name>/SKILL.md, not inside any project). For each, write a
+SKILL.md in the grounded style from this guide: read the attached project
+first, ask before creating anything in Jira or Confluence, and show me a draft
+before publishing.
+
+- /refine-story: turn a rough idea or notes into one ready user story
+- /poke-holes: a skeptical-engineer review of a story before a sprint
+- /draft-prd: interview me, then draft a PRD grounded in the real project
+- /estimate-check: decompose a story against the real code, surface hidden work
+- /sprint-summary: a sprint or release summary from Jira plus what actually changed
+- /new-skill: interview me about a task I keep repeating, then create a new
+  personal skill for it
+
+When you're done, show me the list of files you created.
 ```
 
-## A starter you can react to
+Claude writes all six files itself. You never open a folder or move anything. From now on, typing `/refine-story` does what used to take a full copy-paste, in every project you open.
 
-If you'd rather start from something concrete and edit it, here's a reasonable default for a PO/PM. Paste it in, then tell Claude what to change:
+*This works because you're in Code mode, where Claude can write to your own machine (the same setup from "Get Your Project into Claude"). If you're ever in plain chat, switch to Code mode first.*
 
-```text
-## How I work
+## Need a new one later? Just describe it
 
-- Always ground answers in the attached project — say so plainly if
-  something isn't there instead of guessing.
-- Never create or update a Jira issue or Confluence page without
-  showing me the draft first.
-- If a request is ambiguous, ask up to 3 clarifying questions before
-  producing anything.
-- Default output: short and structured (tables or bullets), not long prose.
-- Flag hidden work and assumptions explicitly — don't fold them into
-  a confident-sounding answer.
-```
-
-That last block of five lines is genuinely all it takes — Claude reads it automatically from now on, in every project, without you pasting anything.
-
-## Skills: turn a whole Playbook prompt into one word
-
-A **Skill** is a saved procedure Claude can run on command — you type `/name` instead of pasting the whole prompt. Like `CLAUDE.md`, skills come in two flavors: **project** skills (shared, in the repo) and **personal** skills (`~/.claude/skills/<name>/SKILL.md`, yours, everywhere). For your own recurring tasks, personal is what you want.
-
-You don't need to write the file yourself — ask Claude to do it from a Playbook entry you already like:
+The last skill in that list, `/new-skill`, is the one that means you never write another skill by hand. Whenever you catch yourself repeating something, type:
 
 ```
-Turn this into a personal Claude skill I can run with /sprint-summary
-(save it under my personal skills, not the project's):
-
-[PASTE THE "Sprint-review / release-notes summary" PROMPT FROM THE PLAYBOOK]
-
-Ask me anything you need to generalize it, then create the skill file.
+/new-skill
 ```
 
-From then on, typing `/sprint-summary` does what used to take a full copy-paste. Do the same with whichever 2-3 Playbook prompts you actually reach for most — that's the whole exercise, and the Playbook stops being something you copy from and becomes something Claude already knows.
+Claude asks what the task is, what it should check, and what output you want, then writes the skill for you. You describe the goal in plain words. You never learn where files go or how a skill is built. That's Claude's job, not yours.
 
-A skill is the right tool when the repeated thing is *one prompt*. When the repeated thing is a whole procedure with its own rules — building every screen of a POC the same disciplined way, say — that's a job for a dedicated agent instead. The next lesson builds one.
+## Set your preferences once, too
+
+Skills are per-task. Your **preferences** are the things you want in *every* answer: ground it in the real project, ask before creating anything, keep drafts short. Those live in one personal file Claude reads automatically, and you set it up the same way, by talking:
+
+```
+Set up my personal Claude preferences (~/.claude/CLAUDE.md). Interview me with a
+few short questions about how I like to work: what you should always check
+before acting, what output format I prefer, and anything that has tripped us up
+before. Then write the file and show me what you wrote before saving.
+```
+
+Answer the questions and you're done. From then on every chat and every skill follows those preferences without you repeating them.
+
+## Where all this lives (only if you're curious)
+
+You never have to touch these. But if you want to look: your skills are small text files at `~/.claude/skills/<name>/SKILL.md`, and your preferences are at `~/.claude/CLAUDE.md`. Both are **personal**, on your laptop only, and they follow you into every project you open. Engineers also keep a **project** version of both inside the repo, shared with the team. Leave those to them and keep your own habits in the personal ones.
+
+## The next rung
+
+A skill is the right tool when the repeated thing is *one prompt*. When it's a whole procedure with its own rules, like building every screen of a new app the same disciplined way, that is a job for a dedicated **agent**. The next lesson builds one from scratch.
