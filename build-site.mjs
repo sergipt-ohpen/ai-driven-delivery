@@ -94,6 +94,8 @@ body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;colo
 #brand{position:sticky;top:0;background:var(--side);padding:18px 52px 18px 20px;border-bottom:1px solid var(--line);z-index:2;}
 #brand b{display:block;font-size:15px;}
 #brand span{font-size:12px;color:var(--muted);}
+#allcourses{display:block;font-size:11px;color:var(--muted);text-decoration:none;margin-bottom:8px;}
+#allcourses:hover{color:var(--accent);}
 #theme{position:absolute;top:16px;right:16px;width:32px;height:32px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;cursor:pointer;font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center;}
 #theme:hover{background:var(--hover);}
 .mod{padding:10px 0;}
@@ -229,7 +231,7 @@ show((location.hash||'#${firstId}').slice(1));
 
 const out = `<!doctype html><html lang="${manifest.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(manifest.title)}</title><style>${css}</style></head>
 <body><button id="burger">☰</button><div id="layout">
-<nav id="side"><div id="brand"><b>${esc(manifest.brand)}</b><span>${esc(manifest.subtitle)}</span><button id="theme" title="${esc(manifest.ui.theme)}">🌙</button></div>${nav}</nav>
+<nav id="side"><div id="brand"><a id="allcourses" href="../index.html">← All courses</a><b>${esc(manifest.brand)}</b><span>${esc(manifest.subtitle)}</span><button id="theme" title="${esc(manifest.ui.theme)}">🌙</button></div>${nav}</nav>
 <div id="main"><div id="progresswrap"><div id="progressbar"></div></div><div id="content">${articles}</div></div>
 </div><script>${js}</script></body></html>`;
 
