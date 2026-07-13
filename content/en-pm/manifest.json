@@ -36,7 +36,8 @@
     {
       "title": "Going further",
       "items": [
-        { "type": "page", "label": "⚙️ Configure Your Own Claude", "file": "pm-08-your-claude-config.md" }
+        { "type": "page", "label": "⚙️ Configure Your Own Claude", "file": "pm-08-your-claude-config.md" },
+        { "type": "page", "label": "🚀 Build a POC From Scratch", "file": "pm-09-build-a-poc.md" }
       ]
     }
   ]
