@@ -12,7 +12,7 @@ A POC that stays disciplined as it grows needs a few things in place *before* th
 
 - **A rules file** (`AGENTS.md`) — what this POC is, what stack it uses, which existing product (if any) it should look and behave like, and what's explicitly out of scope.
 - **An orchestration file** (`CLAUDE.md`) — points Claude at the rules and the workflow, in order.
-- **A spec-driven workflow** (`openspec/`) — the same Spec-Driven Development approach from earlier in this course, applied per screen: `proposal.md` → `specs.md` (Given/When/Then) → `design.md` → `tasks.md`, with a template folder to copy for each new screen.
+- **A spec-driven workflow** (`openspec/`) — the Spec-Driven Development approach named back in The Workflow, now made concrete per screen: `proposal.md` → `specs.md` (Given/When/Then) → `design.md` → `tasks.md`, with a template folder to copy for each new screen.
 - **Matching skills** for the loop: refine the spec → confirm it → build it → verify it → iterate → commit and archive.
 - **An implementer with guardrails** — a subagent that enforces "reuse the existing component library, don't invent your own," "match the reference product's structure," and "speak up if you can't find the reference — never guess."
 
