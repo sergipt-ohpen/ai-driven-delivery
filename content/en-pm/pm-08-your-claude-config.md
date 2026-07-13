@@ -1,6 +1,6 @@
 # ⚙️ Configure Your Own Claude
 
-The Playbook works, but you're still retyping the same setup every time: "ground this in the real project," "ask before you create anything in Jira," "ask clarifying questions first." Say it once in the right place, and Claude already knows it before you ask.
+The Playbook works, but you're still retyping the same setup every time: "ground this in the real project," "ask before you create anything in Jira," "ask clarifying questions first." This lesson is the next rung: say it once in the right place, and Claude already knows it before you ask — no more copying.
 
 ## Two places to configure Claude — and why the difference matters
 
@@ -72,3 +72,5 @@ you save it.
 ```
 
 Do this once, and the Playbook stops being something you copy from — it becomes something Claude already knows.
+
+A skill is the right tool when the repeated thing is *one prompt*. When the repeated thing is a whole procedure with its own rules — building every screen of a POC the same disciplined way, say — that's a job for a dedicated agent instead. The next lesson builds one.

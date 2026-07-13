@@ -4,6 +4,8 @@ Everything else in this guide assumes a real project already exists — you atta
 
 This is the other half of **AI-driven Delivery**: the same discipline (spec first, guardrails enforced, nothing invented), applied before any project exists at all.
 
+It's also where the last lesson's ladder ends. A single prompt became a Playbook entry, a repeated Playbook entry became a personal skill — and a whole recurring procedure, with its own rules baked in, becomes a dedicated **agent**. That's what this lesson builds.
+
 ## What a good POC scaffold looks like
 
 A POC that stays disciplined as it grows needs a few things in place *before* the first screen gets built:

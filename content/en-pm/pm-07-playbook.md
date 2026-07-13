@@ -2,6 +2,8 @@
 
 Your ready-made prompts for this exact setup: the **project folder attached** in Claude Desktop, and **Jira + Confluence connected**. Copy one, fill the `[PLACEHOLDERS]`, and go. Each prompt asks Claude to check with you before running off in the wrong direction.
 
+This is the starting point, not the end state. Once you notice you keep reaching for the same 2-3 prompts, the next lesson shows you how to stop copying them altogether.
+
 Click a row to open it.
 
 <div class="cat">🚀 Start here</div>
